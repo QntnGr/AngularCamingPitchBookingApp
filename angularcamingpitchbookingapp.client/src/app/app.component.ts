@@ -23,14 +23,14 @@ export class AppComponent implements OnInit {
   }
 
   getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
-      (result) => {
+    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe({
+      next:(result) => {
         this.forecasts = result;
       },
-      (error) => {
+      error: (error) => {
         console.error(error);
       }
-    );
+    });
   }
 
   title = 'angularcamingpitchbookingapp.client';

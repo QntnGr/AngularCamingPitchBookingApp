@@ -7,7 +7,7 @@ namespace AngularCamingPitchBookingApp.Server.Services;
 
 public class BookingService : IBookingService
 {
-    IHttpContextAccessor _httpContextAccessor;
+    readonly IHttpContextAccessor _httpContextAccessor;
     public BookingService(IHttpContextAccessor httpContextAccessor)
     {
         _httpContextAccessor = httpContextAccessor;
@@ -25,7 +25,7 @@ public class BookingService : IBookingService
         };
 
         var cookieValue = JsonSerializer.Serialize(item);
-        _httpContextAccessor.HttpContext.Response.Cookies.Append(Constants.BookingCookiesName, cookieValue, options);
+        _httpContextAccessor.HttpContext?.Response.Cookies.Append(Constants.BookingCookiesName, cookieValue, options);
 
         return new OkObjectResult("Cookie Booking added.");
     }

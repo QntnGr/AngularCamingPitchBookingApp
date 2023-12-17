@@ -25,6 +25,7 @@ public class BasketController : ControllerBase
     [ProducesResponseType(403)]
     public OkObjectResult AddToBasket(Booking booking)
     {
+        _logger.LogInformation($"add booking");
         return _bookingService.AddCookieBooking(booking);
     }
 
