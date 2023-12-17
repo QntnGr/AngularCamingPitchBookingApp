@@ -1,0 +1,6 @@
+@AngularCamingPitchBookingApp.Server_HostAddress = http://localhost:5152
+
+GET {{AngularCamingPitchBookingApp.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
