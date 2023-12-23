@@ -17,7 +17,7 @@ class Booking {
   imports: [
     CommonModule,
   ],
-  template: `<p>basket works!</p>`,
+  template: `<p>basket works fine!</p>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BasketComponent { 
@@ -26,10 +26,10 @@ export class BasketComponent {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.getForecasts();
+    this.postBooking();
   }
 
-  getForecasts() {
+  postBooking() {
     this.http.post<string>('/basket', new Booking(1, new Date(), new Date(), 2)).subscribe({
       next:(result) => {
         this.bookingRslt = result;

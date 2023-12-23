@@ -5,7 +5,7 @@ namespace AngularCamingPitchBookingApp.Server.Services;
 
 public class CatalogService : ICatalogService
 {
-    CatalogContext _dbContext;
+    readonly CatalogContext _dbContext;
     public CatalogService(CatalogContext catalogContext)
     {
         _dbContext = catalogContext;

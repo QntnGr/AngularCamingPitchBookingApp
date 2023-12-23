@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularCamingPitchBookingApp.Server", "AngularCamingPitchBookingApp.Server\AngularCamingPitchBookingApp.Server.csproj", "{EB6FE771-B087-4D96-B199-F7CDD2D88AB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularCamingPitchBookingApp.Server", "AngularCamingPitchBookingApp.Server\AngularCamingPitchBookingApp.Server.csproj", "{EB6FE771-B087-4D96-B199-F7CDD2D88AB6}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "angularcamingpitchbookingapp.client", "angularcamingpitchbookingapp.client\angularcamingpitchbookingapp.client.esproj", "{385B9602-4F94-4A04-B76E-BDF05ED8C162}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{3FE7EB1B-FEFC-49D1-B755-FCA008F3A23E}"
+	ProjectSection(SolutionItems) = preProject
+		DockerFile.txt = DockerFile.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

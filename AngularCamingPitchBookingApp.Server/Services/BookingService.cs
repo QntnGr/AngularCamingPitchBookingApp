@@ -15,13 +15,14 @@ public class BookingService : IBookingService
 
     public OkObjectResult AddCookieBooking(Booking item)
     {
+        string? currentDomain = _httpContextAccessor.HttpContext?.Request.Host.ToString().Split(':').FirstOrDefault();
         var options = new CookieOptions
         {
-            Domain = "Booking",
+            Domain = currentDomain,
             Path = "/",
             HttpOnly = false,
             Secure = false,
-            Expires = DateTime.Now.AddHours(1) // Définir la durée de vie du cookie
+            Expires = DateTime.Now.AddHours(1) //durée de vie du cookie en heure 
         };
 
         var cookieValue = JsonSerializer.Serialize(item);
