@@ -7,11 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularCamingPitchBookingAp
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "angularcamingpitchbookingapp.client", "angularcamingpitchbookingapp.client\angularcamingpitchbookingapp.client.esproj", "{385B9602-4F94-4A04-B76E-BDF05ED8C162}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{3FE7EB1B-FEFC-49D1-B755-FCA008F3A23E}"
-	ProjectSection(SolutionItems) = preProject
-		DockerFile.txt = DockerFile.txt
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
