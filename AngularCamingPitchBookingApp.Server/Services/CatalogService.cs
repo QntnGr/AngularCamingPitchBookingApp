@@ -1,5 +1,6 @@
 ﻿using AngularCamingPitchBookingApp.Server.Entities;
 using AngularCamingPitchBookingApp.Server.Infrastruture;
+using Microsoft.EntityFrameworkCore;
 
 namespace AngularCamingPitchBookingApp.Server.Services;
 
@@ -10,19 +11,31 @@ public class CatalogService : ICatalogService
     {
         _dbContext = catalogContext;
     }
-    List<CampingPitch> ICatalogService.GetAll()
+
+    public async Task<int> DeleteById(int id)
+    {
+        return await _dbContext.CampingPitches.Where(cp => cp.Id == id).ExecuteDeleteAsync();
+    }
+
+    public List<CampingPitch> GetAll()
     {
         return _dbContext.CampingPitches.ToList();
     }
 
-    CampingPitch ICatalogService.GetLastItem()
+    public CampingPitch GetLastItem()
     {
         return _dbContext.CampingPitches.OrderByDescending(cp => cp.Id).First();
     }
 
-    void ICatalogService.Insert(CampingPitch item)
+    public async Task Insert(CampingPitch item)
     {
-        _dbContext.Add(item);
-        _dbContext.SaveChanges();
+        await _dbContext.AddAsync(item);
+        await _dbContext.SaveChangesAsync();
+    }
+
+    public async Task UpadteImageUrlById(int id, string url)
+    {
+        await _dbContext.CampingPitches.Where(cp => cp.Id == id)
+            .ExecuteUpdateAsync(setter => setter.SetProperty(item => item.ImageUrl, url));
     }
 }

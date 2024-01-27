@@ -20,17 +20,31 @@ public class HomeController : ControllerBase
         _catalogService = catalogService;
     }
 
-    [HttpGet("GetAllCampingPitchCatalog")]
-    public List<CampingPitch> Get()
+    [HttpGet(nameof(GetAllCatalog))]
+    public List<CampingPitch> GetAllCatalog()
     {
         return _catalogService.GetAll();
     }
 
-    [HttpPost("InsertCampingPitchItem")]
-    public CampingPitch Insert(CampingPitch item)
+    [HttpPost(nameof(InsertItem))]
+    public async Task<CampingPitch> InsertItem(CampingPitch item)
     {
-        _catalogService.Insert(item);
-        _logger.LogInformation($"item inserted : {item.Id}");
+        await _catalogService.Insert(item);
+        _logger.LogInformation($"inserted itemId: {item.Id}");
         return _catalogService.GetLastItem();
+    }
+
+    [HttpPost(nameof(DeleteItemById))]
+    public async Task<int> DeleteItemById(int id)
+    {
+        _logger.LogWarning($"deleted itemId: {id}");
+        return await _catalogService.DeleteById(id);
+    }
+
+    [HttpPut(nameof(UpdateImageUrlById))]
+    public async Task UpdateImageUrlById(int id, string url)
+    {
+        _logger.LogWarning($"update ImageUrl: {url} | itemId: {id}");
+        await _catalogService.UpadteImageUrlById(id, url);
     }
 }
