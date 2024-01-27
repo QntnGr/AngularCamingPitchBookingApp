@@ -6,5 +6,6 @@ public interface ICatalogService
 {
     void Insert(CampingPitch item);
     List<CampingPitch> GetAll();
+    CampingPitch GetLastItem();
 }
 

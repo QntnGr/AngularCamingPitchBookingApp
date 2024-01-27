@@ -12,7 +12,12 @@ public class CatalogService : ICatalogService
     }
     List<CampingPitch> ICatalogService.GetAll()
     {
-        return _dbContext.CampingPitches.Select(ci => ci).ToList();
+        return _dbContext.CampingPitches.ToList();
+    }
+
+    CampingPitch ICatalogService.GetLastItem()
+    {
+        return _dbContext.CampingPitches.OrderByDescending(cp => cp.Id).First();
     }
 
     void ICatalogService.Insert(CampingPitch item)

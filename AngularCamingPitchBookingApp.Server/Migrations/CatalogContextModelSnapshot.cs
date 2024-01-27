@@ -49,7 +49,6 @@ namespace AngularCamingPitchBookingApp.Server.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Label")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int?>("LocalisationId")
@@ -74,7 +73,6 @@ namespace AngularCamingPitchBookingApp.Server.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Latitude")
@@ -84,7 +82,6 @@ namespace AngularCamingPitchBookingApp.Server.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ZipCode")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

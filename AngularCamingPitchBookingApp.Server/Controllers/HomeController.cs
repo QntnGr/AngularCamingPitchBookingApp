@@ -1,6 +1,7 @@
 ﻿using AngularCamingPitchBookingApp.Server.Entities;
 using AngularCamingPitchBookingApp.Server.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
 
 namespace AngularCamingPitchBookingApp.Server.Controllers;
 
@@ -19,9 +20,17 @@ public class HomeController : ControllerBase
         _catalogService = catalogService;
     }
 
-    [HttpGet]
-    public IEnumerable<CampingPitch> Get()
+    [HttpGet("GetAllCampingPitchCatalog")]
+    public List<CampingPitch> Get()
     {
         return _catalogService.GetAll();
+    }
+
+    [HttpPost("InsertCampingPitchItem")]
+    public CampingPitch Insert(CampingPitch item)
+    {
+        _catalogService.Insert(item);
+        _logger.LogInformation($"item inserted : {item.Id}");
+        return _catalogService.GetLastItem();
     }
 }

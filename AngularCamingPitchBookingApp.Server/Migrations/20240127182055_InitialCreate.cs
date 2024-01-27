@@ -11,6 +11,7 @@ namespace AngularCamingPitchBookingApp.Server.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            Down(migrationBuilder);
             migrationBuilder.CreateTable(
                 name: "Localisations",
                 columns: table => new
@@ -19,8 +20,8 @@ namespace AngularCamingPitchBookingApp.Server.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Latitude = table.Column<decimal>(type: "TEXT", nullable: false),
                     Longitude = table.Column<decimal>(type: "TEXT", nullable: false),
-                    City = table.Column<string>(type: "TEXT", nullable: false),
-                    ZipCode = table.Column<string>(type: "TEXT", nullable: false)
+                    City = table.Column<string>(type: "TEXT", nullable: true),
+                    ZipCode = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -46,7 +47,7 @@ namespace AngularCamingPitchBookingApp.Server.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Label = table.Column<string>(type: "TEXT", nullable: false),
+                    Label = table.Column<string>(type: "TEXT", nullable: true),
                     PriceId = table.Column<int>(type: "INTEGER", nullable: true),
                     ImageUrl = table.Column<string>(type: "TEXT", nullable: true),
                     LocalisationId = table.Column<int>(type: "INTEGER", nullable: true)

@@ -20,7 +20,7 @@ public class BasketController : ControllerBase
         _bookingService = bookingService;
     }
 
-    [HttpPost]
+    [HttpPost("AddCookieBooking")]
     [ProducesResponseType(typeof(OkObjectResult), 200)]
     [ProducesResponseType(403)]
     public OkObjectResult AddToBasket(Booking booking)
@@ -29,10 +29,10 @@ public class BasketController : ControllerBase
         return _bookingService.AddCookieBooking(booking);
     }
 
-    [HttpGet]
+    [HttpGet("GetBasketCookie")]
     [ProducesResponseType(typeof(Booking), 200)]
     [ProducesResponseType(403)]
-    public Booking GetBasketCookie()
+    public Booking? GetBasketCookie()
     {
         if (Request.Cookies.TryGetValue(Constants.BookingCookiesName, out var valeurDuCookie))
         {

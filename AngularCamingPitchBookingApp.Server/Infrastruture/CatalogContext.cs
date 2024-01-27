@@ -17,7 +17,7 @@ public class CatalogContext : DbContext
         var path = Environment.GetFolderPath(folder);
         DbPath = Path.Join(path, "camping.db");
     }
-    protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlite($"Data Source={DbPath}");
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlite($"Data Source={DbPath}");
 
 }

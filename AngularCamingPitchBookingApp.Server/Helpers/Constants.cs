@@ -1,6 +1,6 @@
 ﻿namespace AngularCamingPitchBookingApp.Server.Helpers;
 
-public class Constants
+public static class Constants
 {
 
     #region COOKIES
