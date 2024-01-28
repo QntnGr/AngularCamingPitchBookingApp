@@ -17,14 +17,14 @@ public class CatalogService : ICatalogService
         return await _dbContext.CampingPitches.Where(cp => cp.Id == id).ExecuteDeleteAsync();
     }
 
-    public List<CampingPitch> GetAll()
+    public async Task<List<CampingPitch>> GetAll()
     {
-        return _dbContext.CampingPitches.ToList();
+        return await _dbContext.CampingPitches.ToListAsync();
     }
 
-    public CampingPitch GetLastItem()
+    public async Task<CampingPitch> GetLastItem()
     {
-        return _dbContext.CampingPitches.OrderByDescending(cp => cp.Id).First();
+        return await _dbContext.CampingPitches.OrderByDescending(cp => cp.Id).FirstAsync();
     }
 
     public async Task Insert(CampingPitch item)

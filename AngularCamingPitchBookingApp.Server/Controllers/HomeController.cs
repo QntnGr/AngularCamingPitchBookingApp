@@ -21,9 +21,9 @@ public class HomeController : ControllerBase
     }
 
     [HttpGet(nameof(GetAllCatalog))]
-    public List<CampingPitch> GetAllCatalog()
+    public async Task<List<CampingPitch>> GetAllCatalog()
     {
-        return _catalogService.GetAll();
+        return await _catalogService.GetAll();
     }
 
     [HttpPost(nameof(InsertItem))]
@@ -31,7 +31,7 @@ public class HomeController : ControllerBase
     {
         await _catalogService.Insert(item);
         _logger.LogInformation($"inserted itemId: {item.Id}");
-        return _catalogService.GetLastItem();
+        return await _catalogService.GetLastItem();
     }
 
     [HttpDelete(nameof(DeleteItemById))]
