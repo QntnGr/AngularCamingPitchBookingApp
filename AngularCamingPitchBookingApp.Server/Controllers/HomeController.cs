@@ -34,7 +34,7 @@ public class HomeController : ControllerBase
         return _catalogService.GetLastItem();
     }
 
-    [HttpPost(nameof(DeleteItemById))]
+    [HttpDelete(nameof(DeleteItemById))]
     public async Task<int> DeleteItemById(int id)
     {
         _logger.LogWarning($"deleted itemId: {id}");
