@@ -1,43 +1,33 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-class Booking {
-  constructor(private id:number
-    , private start:Date
-    , private end:Date
-    , private campingpitchid: number){
-  }
-}
+import { IAnnonce } from '../models/annonce.model';
 
 @Component({
-  selector: 'app-basket',
+  selector: 'app-annonce',
   standalone: true,
   imports: [
     CommonModule,
   ],
-  template: `<p>basket works fine!</p>`,
+  templateUrl: './annonces.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class AnnoncesComponent { 
-  
+
+    public annonce: IAnnonce;
+
     public bookingRslt = "";
-    constructor(private http: HttpClient) {}
 
-    ngOnInit() {
-        this.postBooking();
+    constructor(private http: HttpClient){
+      this.annonce = {
+        id: 1,
+        message: "mon annonnce de test",
+        title: "Annonce Test",
+        imageUrl: "fakeUrl.com"
+      }
     }
 
-    postBooking() {
-        this.http.post<string>('/basket', new Booking(1, new Date(), new Date(), 2)).subscribe({
-            next:(result) => {
-            this.bookingRslt = result;
-            },
-            error: (error) => {
-            console.error(error);
-            }
-        });
-    }
 
     title = 'angularcamingpitchbookingapp.client';
 }
