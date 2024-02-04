@@ -7,4 +7,18 @@
     <!-- Folder where production build objects will be placed -->
     <PublishAssetsDirectory>$(MSBuildProjectDirectory)\dist\angularcamingpitchbookingapp.client\</PublishAssetsDirectory>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="src\app\annonces\basket.component.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\annonces\components\" />
+    <Folder Include="src\app\annonces\models\" />
+    <Folder Include="src\app\annonces\services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="src\app\home\NewFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="src\app\home\NewFile.txt" />
+  </ItemGroup>
 </Project>

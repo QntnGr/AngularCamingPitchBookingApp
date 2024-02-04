@@ -27,7 +27,7 @@ public class HomeController : ControllerBase
     }
 
     [HttpPost(nameof(InsertItem))]
-    public async Task<CampingPitch> InsertItem(CampingPitch item)
+    public async Task<CampingPitch?> InsertItem(CampingPitch item)
     {
         await _catalogService.Insert(item);
         _logger.LogInformation($"inserted itemId: {item.Id}");

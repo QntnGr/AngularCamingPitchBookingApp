@@ -22,14 +22,18 @@ public class CatalogService : ICatalogService
         return await _dbContext.CampingPitches.ToListAsync();
     }
 
-    public async Task<CampingPitch> GetLastItem()
+    public async Task<CampingPitch?> GetLastItem()
     {
-        return await _dbContext.CampingPitches.OrderByDescending(cp => cp.Id).FirstAsync();
+        return await _dbContext.CampingPitches.OrderByDescending(cp => cp.Id).FirstOrDefaultAsync();
     }
 
     public async Task Insert(CampingPitch item)
     {
+        // pas d'écriture en bdd
+        // ma requête = Insert into
         await _dbContext.AddAsync(item);
+
+        // exécution de l'insert
         await _dbContext.SaveChangesAsync();
     }
 

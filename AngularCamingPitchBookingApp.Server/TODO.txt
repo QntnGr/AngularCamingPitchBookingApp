@@ -1,0 +1,23 @@
+﻿1) back-Office :
+	1.1 BackEnd	NOK
+		- Gestion des annonces : Opération CRUD 
+		- Gestion des emplacements : Opération CRUD
+		- Gestion des droits
+		- Statistiques : informations à définir
+		- A voir : utilisation temporal table
+	1.2 FrontEnd
+		- Angular Material / PrimeNG (TabMenu) , tailwindCSS
+		- Implementation des écrans annonces, emplacements & droits 
+
+2) authentification :
+	- table login : login + actif
+	- table gestion de droits : id user / id droits
+	- table référentiel de droits : id + nom
+	- contrôle d'accès : authorizationhandler back + guard (gestion des rediections et accès) côté front
+
+3) Gestion du panier :
+	- Insertion d'un BookingItem en bdd une fois la reservation terminée
+	- lors de la navigation : utilisation du local storage + json pour record les infos du panier
+	- enregistrement des infos une fois le workflow d'achat fini en bdd + vidage du local storage
+
+
