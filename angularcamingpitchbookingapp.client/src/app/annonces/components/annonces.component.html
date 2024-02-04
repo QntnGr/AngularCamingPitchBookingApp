@@ -1,3 +1,12 @@
+
 <div>
-    ma super annonce
+    <ng-container *ngIf="annonce else tmp1">
+        <div>{{ annonce.title }}</div>
+        <div>{{ annonce.message }}</div>
+        <img [src]="annonce.imageUrl" alt=""/>
+    </ng-container>
 </div>
+
+<ng-template #tmp1>
+    <div>Rien à charger</div>
+</ng-template>

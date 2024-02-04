@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IAnnonce } from '../models/annonce.model';
+import { Annonce } from '../models/annonce.model';
 
 @Component({
   selector: 'app-annonce',
@@ -15,7 +15,7 @@ import { IAnnonce } from '../models/annonce.model';
 
 export class AnnoncesComponent { 
 
-    public annonce: IAnnonce;
+    public annonce: Annonce | null;
 
     public bookingRslt = "";
 
