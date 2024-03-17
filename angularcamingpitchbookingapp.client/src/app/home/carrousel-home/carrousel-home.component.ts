@@ -16,10 +16,4 @@ export class CarrouselHomeComponent {
   
   @ViewChild('swiper-container', { static: false }) swiper?: SwiperContainer;  
   
-  slideNext(){
-    this.swiper?.swiper.autoplay.start();
-  }
-  slidePrev(){
-    this.swiper?.swiper.slidePrev(100);
-  }
 }
