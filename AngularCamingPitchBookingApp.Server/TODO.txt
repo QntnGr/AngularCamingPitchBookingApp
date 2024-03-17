@@ -19,3 +19,4 @@
 	- Insertion d'un BookingItem en bdd une fois la reservation terminée
 	- lors de la navigation : utilisation du local storage + json pour record les infos du panier
 	- enregistrement des infos une fois le workflow d'achat fini en bdd + vidage du local storage
+
