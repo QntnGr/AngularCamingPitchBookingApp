@@ -1,13 +1,9 @@
 <swiper-container 
-    pagination="true" pagination-clickable="true" space-between="0" 
-    centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+    pagination="true" pagination-clickable="true" space-between="0"
+    centered-slides="true" autoplay-delay="2000" autoplay-disable-on-interaction="false"
+    loop="true">
     <swiper-slide class="swiper-slide" *ngFor="let image of images">
         <img [src]="image.srcUrl" [alt]="image.imgAlt" class="slider-img">
     </swiper-slide>
-    <div class="autoplay-progress" slot="container-end">
-      <svg viewBox="0 0 48 48">
-        <circle cx="24" cy="24" r="20"></circle>
-      </svg>
-      <span></span>
-    </div>
 </swiper-container>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
