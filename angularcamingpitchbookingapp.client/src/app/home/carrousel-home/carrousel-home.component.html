@@ -1,7 +1,7 @@
 <swiper-container 
-    pagination="true" pagination-clickable="true" space-between="0"
-    centered-slides="true" autoplay-delay="3000" autoplay-disable-on-interaction="false"
-    loop="true" css-mode="true">
+    pagination="true" space-between="0" css-mode="true"
+    centered-slides="true" autoplay-delay="5000" autoplay-disable-on-interaction="false"
+>
     <swiper-slide *ngFor="let image of images">
         <img [src]="image.srcUrl" [alt]="image.imgAlt">
     </swiper-slide>
