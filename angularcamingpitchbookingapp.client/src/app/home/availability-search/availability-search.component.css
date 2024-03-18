@@ -1,0 +1,24 @@
+.availability-search{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 1050px;
+    height: 134px;
+    border: 1px solid white;
+
+    .cta-size{
+        width: 208px;
+        height: 50px;
+        color: white;
+    }
+
+    #type-pitch{
+        background-color: transparent;
+        border: 1px solid white;
+    }
+
+    #availability-btn{
+        background-color: #FFA02F;
+        border: 0;
+    }
+}
