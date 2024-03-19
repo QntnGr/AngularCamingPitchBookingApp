@@ -1,6 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/*imports*/
+@import 'app/home/availability-search/availability-search.inject.css';
+
+/*gobal styles*/
 body{
     margin: 0;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+button{
+    transition: transform 0.3s ease;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

@@ -1,14 +1,14 @@
 <div class="availability-search">
-    <div class="cta-size datePicker">
+    <div class="datePicker">
         <mat-form-field>
-            <mat-label>Enter a date range</mat-label>
-            <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
-              <input matStartDate formControlName="start" placeholder="Start date">
-              <input matEndDate formControlName="end" placeholder="End date">
+            <mat-date-range-input [formGroup]="range" [rangePicker]="picker" [disabled]="true">
+              <input matStartDate formControlName="start" >
+              <input matEndDate formControlName="end" >
             </mat-date-range-input>
-            <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-date-range-picker #picker></mat-date-range-picker>
+            <mat-datepicker-toggle matIconSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon></mat-icon>
+            </mat-datepicker-toggle>
+            <mat-date-range-picker #picker [disabled]="false"></mat-date-range-picker>
           
             @if (range.controls.start.hasError('matStartDateInvalid')) {
               <mat-error>Invalid start date</mat-error>
@@ -18,9 +18,7 @@
             }
           </mat-form-field>
     </div>
-    <div class="cta-size datePicker">
-        
-    </div>
+    
     <button id="type-pitch" class="cta-size">Type d’hébergement</button>
     <button id="availability-btn" class="cta-size">Disponibilités</button>
 </div>

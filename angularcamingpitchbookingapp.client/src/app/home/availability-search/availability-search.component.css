@@ -6,10 +6,30 @@
     height: 134px;
     border: 1px solid white;
 
+    mat-form-field{
+        border: 1px solid white;
+        background-color: transparent;
+    }
+
+    mat-icon{
+        background-image: url('../../../assets/Images/pictos/calendar_white.png');
+        background-size: cover;
+        width: 21px;
+        height: 25px; 
+        display: block;
+    }
+
+    mat-date-range-input{
+        input:disabled{
+            color: white;
+        }
+    }
+
     .cta-size{
-        width: 208px;
-        height: 50px;
+        width: 215px;
+        height: 58px;
         color: white;
+        font-size: 16px;
     }
 
     #type-pitch{
