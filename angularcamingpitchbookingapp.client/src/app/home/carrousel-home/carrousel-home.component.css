@@ -56,3 +56,21 @@ swiper-slide img {
     align-items: center;
   }
 }
+
+.title{
+  display: block;    
+  color: white;
+  position: relative;
+  z-index: 1;
+  padding-left: 9%;
+  h2{
+    font-weight: 400;
+    font-size: 48px;
+    margin: 0;
+  }
+  h1{
+    font-size: 48px;    
+    margin: 0;
+    margin-bottom: 60px;
+  }
+}
