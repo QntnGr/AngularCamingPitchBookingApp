@@ -1,5 +1,6 @@
 /*imports*/
 @import 'app/home/availability-search/availability-search.inject.css';
+@import 'app/home/carrousel-home/carrousel-home.inject.css';
 
 /*gobal styles*/
 body{
