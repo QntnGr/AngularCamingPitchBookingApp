@@ -15,3 +15,9 @@ button:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
+
+/*fonts*/
+@font-face {
+    font-family: LearningCurve;
+    src: url('./assets/Fonts/LearningCurve.ttf');
+}

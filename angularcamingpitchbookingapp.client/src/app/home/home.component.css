@@ -6,28 +6,47 @@
 
 .flex{
     display: flex;
-    background-color: #fbf9f3;
-    
-    .description{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 6% 8%;
-    }
-    .title{
-        color: #4e7e6d;
-        text-align: center;
 
-        h4{
-            font-weight: 400;
-            margin: 0;
-        }
+    &#map_accessibility{
+        color: #396153;
+        background-image: url('../../assets/Images/Home/Backgrounds/motif-vague.svg');
+        background-size: cover;
+        max-height: 750px;
+        
+        .description{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6% 8%;
+            width: 42%;
+            background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff5c);
 
-        h3{
-            margin-top: 16px;
-            margin-bottom: 38px;
-            font-size: 38px;
+            .title{
+                text-align: center;
+                
+                h4{
+                    font-weight: 400;
+                    margin: 0;
+                }
+
+                h3{
+                    margin-top: 16px;
+                    margin-bottom: 38px;
+                    font-size: 76px;
+                    font-family: 'LearningCurve', Helvetica, Arial, Verdana, Tahoma, sans-serif;
+                }
+            }   
+        }
+        
+        picture{
+            width: 50%;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
+
 }
