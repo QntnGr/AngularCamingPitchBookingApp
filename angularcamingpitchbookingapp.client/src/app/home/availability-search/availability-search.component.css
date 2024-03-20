@@ -1,0 +1,44 @@
+.availability-search{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 1050px;
+    height: 134px;
+    border: 1px solid white;
+
+    mat-form-field{
+        border: 1px solid white;
+        background-color: transparent;
+    }
+
+    mat-icon{
+        background-image: url('../../../assets/Images/pictos/calendar_white.png');
+        background-size: cover;
+        width: 21px;
+        height: 25px; 
+        display: block;
+    }
+
+    mat-date-range-input{
+        input:disabled{
+            color: white;
+        }
+    }
+
+    .cta-size{
+        width: 215px;
+        height: 58px;
+        color: white;
+        font-size: 16px;
+    }
+
+    #type-pitch{
+        background-color: transparent;
+        border: 1px solid white;
+    }
+
+    #availability-btn{
+        background-color: #396153;
+        border: 0;
+    }
+}
