@@ -1,1 +1,11 @@
-﻿
+﻿.darkGreen-btn{
+    background-color: #396153;
+    border: 0;
+}
+
+.cta-size{
+    width: 215px;
+    height: 58px;
+    color: white;
+    font-size: 16px;
+}

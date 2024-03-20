@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import 'app/home/availability-search/availability-search.inject.css';
 @import 'app/home/carrousel-home/carrousel-home.inject.css';
+@import 'app/app.component.css';
 
 /*gobal styles*/
 body{

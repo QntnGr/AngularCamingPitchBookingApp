@@ -25,20 +25,9 @@
         }
     }
 
-    .cta-size{
-        width: 215px;
-        height: 58px;
-        color: white;
-        font-size: 16px;
-    }
-
     #type-pitch{
         background-color: transparent;
         border: 1px solid white;
     }
 
-    #availability-btn{
-        background-color: #396153;
-        border: 0;
-    }
 }
