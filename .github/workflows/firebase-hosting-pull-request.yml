@@ -13,9 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: go to client project
+      - name: list files
         run: ls        
-      - name: go to client project
+      - name: install dep with path
+        run: cd angularcamingpitchbookingapp.client && npm install -g @angular/cli
+      - name: run build with path
         run: cd angularcamingpitchbookingapp.client && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
