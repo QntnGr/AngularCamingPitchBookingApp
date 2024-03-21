@@ -16,7 +16,7 @@ jobs:
       - name: list files
         run: ls        
       - name: install dep with path
-        run: cd angularcamingpitchbookingapp.client && npm install -g @angular/cli
+        run: cd angularcamingpitchbookingapp.client && npm install && npm install -g @angular/cli
       - name: run build with path
         run: cd angularcamingpitchbookingapp.client && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
