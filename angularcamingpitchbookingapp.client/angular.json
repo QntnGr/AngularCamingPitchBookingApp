@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "angularcamingpitchbookingapp.client",
+            "outputPath": "dist/angularcamingpitchbookingapp.client",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
