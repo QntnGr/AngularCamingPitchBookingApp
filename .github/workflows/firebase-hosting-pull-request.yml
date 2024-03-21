@@ -16,8 +16,7 @@ jobs:
       - name: go to client project
         run: ls        
       - name: go to client project
-        run: cd angularcamingpitchbookingapp.client
-      - run: npm run build
+        run: cd angularcamingpitchbookingapp.client && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
