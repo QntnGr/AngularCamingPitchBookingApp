@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Dependencies
-        run: ng install
+        run: npm install -g @angular/cli
       - uses: actions/checkout@v4
       - run: cd angularcamingpitchbookingapp.client && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
