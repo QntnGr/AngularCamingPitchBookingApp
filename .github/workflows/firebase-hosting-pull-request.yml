@@ -12,10 +12,10 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
-      - name: Install Dependencies
-        run: npm install -g @angular/cli
+      - name: go to client project
+        run: cd angularcamingpitchbookingapp.client
       - uses: actions/checkout@v4
-      - run: cd angularcamingpitchbookingapp.client && npm run build
+      - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
