@@ -12,9 +12,11 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - name: go to client project
+        run: ls        
       - name: go to client project
         run: cd angularcamingpitchbookingapp.client
-      - uses: actions/checkout@v4
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
