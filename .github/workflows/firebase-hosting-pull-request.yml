@@ -3,6 +3,9 @@
 
 name: Deploy to Firebase Hosting on PR
 'on': pull_request
+  push:
+    paths:
+      - 'angularcamingpitchbookingapp.client'
 permissions:
   checks: write
   contents: read
