@@ -14,3 +14,7 @@ mat-form-field{
         background-color: transparent;
     }
 }
+
+.cdk-overlay-container{
+    display: contents;
+}

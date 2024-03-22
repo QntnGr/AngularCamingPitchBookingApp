@@ -5,10 +5,21 @@
     width: 1050px;
     height: 134px;
     border: 1px solid white;
+    
+    @media (max-width: 780px) {
+        flex-direction: column;
+        height: auto;
+        border: 0;
+        padding-bottom: 2%;
+    }
 
     mat-form-field{
         border: 1px solid white;
         background-color: transparent;
+         
+        @media (max-width: 780px) {
+            width: 100%;
+        }
     }
 
     mat-icon{
@@ -29,5 +40,16 @@
         background-color: transparent;
         border: 1px solid white;
     }
+
+    @media (max-width: 780px) {
+        .mobile{
+            margin: 8px 0;
+            width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }      
+    }
+
 
 }

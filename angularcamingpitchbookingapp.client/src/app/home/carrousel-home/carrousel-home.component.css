@@ -44,18 +44,28 @@ swiper-slide img {
   .mask-top{
     width: 100%;
     height: 32%;
-    background-image: linear-gradient(#2a2a2a, transparent);
+    background-image: linear-gradient(#1a1a1a, transparent);
     z-index: 1;
+    
+    @media (max-width: 780px) {
+      align-items: flex-end;
+      height: 50%;
+    }
   }
 
   .mask-bottom{    
     width: 100%;
     height: 32%;
-    background-image: linear-gradient(transparent, #2a2a2a);
+    background-image: linear-gradient(transparent, #000000);
     z-index: 1;    
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    @media (max-width: 780px) {
+      align-items: flex-end;
+      height: 50%;
+    }
   }
 }
 
@@ -65,14 +75,26 @@ swiper-slide img {
   position: relative;
   z-index: 1;
   padding-left: 9%;
+  bottom: 6px;
+  font-size: 48px;  
+
+  h1{
+    margin: 0;
+    font-size: 48px;  
+
+    @media (max-width: 780px) {
+      font-size: 28px;      
+    }
+  }
+
   h2{
     font-weight: 400;
-    font-size: 48px;
     margin: 0;
+    font-size: 48px;  
+
+    @media (max-width: 780px) {
+      font-size: 28px;      
+    }
   }
-  h1{
-    font-size: 48px;    
-    margin: 0;
-    margin-bottom: 60px;
-  }
+
 }

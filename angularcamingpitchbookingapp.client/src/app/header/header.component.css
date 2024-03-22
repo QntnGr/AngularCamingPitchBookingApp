@@ -32,6 +32,12 @@
         height: 100px;
         border-bottom: 1px solid white;
         margin-left: 18px;
+        
+        @media (max-width: 780px) {
+            width: 20%;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         .language{
             margin-left: 24px;
@@ -57,6 +63,12 @@
         align-items: center;
         border-bottom: 1px solid white;
         margin-right: 18px;
+        
+        @media (max-width: 780px) {
+            width: 20%;
+            flex-direction: column;
+            justify-content: center;
+        }
         
         button{
             background-color: transparent;
