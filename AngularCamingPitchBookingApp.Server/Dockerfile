@@ -11,7 +11,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["angularcamingpitchbookingapp.client/nuget.config", "angularcamingpitchbookingapp.client/"]
 COPY ["AngularCamingPitchBookingApp.Server/AngularCamingPitchBookingApp.Server.csproj", "AngularCamingPitchBookingApp.Server/"]
-COPY ["angularcamingpitchbookingapp.client/angularcamingpitchbookingapp.client.esproj", "angularcamingpitchbookingapp.client/"]
+COPY ["../angularcamingpitchbookingapp.client/angularcamingpitchbookingapp.client.esproj", "angularcamingpitchbookingapp.client/"]
 RUN dotnet restore "./AngularCamingPitchBookingApp.Server/./AngularCamingPitchBookingApp.Server.csproj"
 COPY . .
 WORKDIR "/src/AngularCamingPitchBookingApp.Server"
