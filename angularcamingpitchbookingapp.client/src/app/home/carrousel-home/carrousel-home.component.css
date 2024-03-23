@@ -77,6 +77,11 @@ swiper-slide img {
   padding-left: 9%;
   bottom: 6px;
   font-size: 48px;  
+  
+  @media (max-width: 780px) {
+    padding-left: 5%;
+    bottom: 95px;      
+  }
 
   h1{
     margin: 0;

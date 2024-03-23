@@ -37,6 +37,7 @@
             width: 20%;
             flex-direction: column;
             justify-content: center;
+            align-items: flex-start;
         }
 
         .language{
@@ -46,12 +47,22 @@
             text-decoration: underline;
             color: white;
             font-family: 'Inter';
+
+            @media (max-width: 780px) {
+                font-size: 16px;
+                margin: 0;
+                margin-bottom: 16px;
+            }  
         }
 
         .menu{
             display: flex;
             flex-direction: column;
             font-family: 'Inter';
+            
+            @media (max-width: 780px) {
+                font-size: 18px;                
+            }  
         }
     }
 
@@ -69,6 +80,15 @@
             flex-direction: column;
             justify-content: center;
         }
+        @media (max-width: 780px) {
+            span{
+                width: 140px;
+                font-size: 14px;      
+                right: 18%;
+                padding-bottom: 14px;  
+                position: relative;
+            }
+        }
         
         button{
             background-color: transparent;
@@ -78,12 +98,21 @@
             height: 28px;
             margin-right: 37px;
             margin-left: 28px;
+
+            @media (max-width: 780px) {
+                width: 100px;
+                margin: 0;
+            }
         }
     }
 
     .logo{
         img{
             height: 190px;
+
+            @media (max-width: 780px) {
+                height: 140px;
+            }    
         }
     }
 }
