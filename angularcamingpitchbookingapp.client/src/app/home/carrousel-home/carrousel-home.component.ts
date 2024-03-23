@@ -6,7 +6,7 @@ import { AvailabilitySearchComponent} from '../availability-search/availability-
 @Component({
   selector: 'app-carrousel-home',
   templateUrl: './carrousel-home.component.html',
-  styleUrl: './carrousel-home.component.css',
+  styleUrl: './carrousel-home.component.scss',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [CommonModule, AvailabilitySearchComponent],

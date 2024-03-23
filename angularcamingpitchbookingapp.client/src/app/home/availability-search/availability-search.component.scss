@@ -1,10 +1,12 @@
+@import '../../../variables.scss';
+
 .availability-search{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 1050px;
     height: 134px;
-    border: 1px solid white;
+    border: 1px solid $white;
     
     @media (max-width: 780px) {
         flex-direction: column;
@@ -14,7 +16,7 @@
     }
 
     mat-form-field{
-        border: 1px solid white;
+        border: 1px solid $white;
         background-color: transparent;
          
         @media (max-width: 780px) {
@@ -32,13 +34,13 @@
 
     mat-date-range-input{
         input:disabled{
-            color: white;
+            color:$white;
         }
     }
 
     #type-pitch{
         background-color: transparent;
-        border: 1px solid white;
+        border: 1px solid $white;
     }
 
     @media (max-width: 780px) {

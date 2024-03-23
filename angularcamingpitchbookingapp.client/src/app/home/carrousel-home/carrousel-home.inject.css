@@ -4,4 +4,8 @@
     --swiper-pagination-bullet-height: 12px;
     --swiper-pagination-color: white;
     --swiper-pagination-bullet-inactive-opacity: 0.35;
+    @media (max-width: 780px) 
+    {
+        --swiper-pagination-bottom: 270px;        
+    }
 }

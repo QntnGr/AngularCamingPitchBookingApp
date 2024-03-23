@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .pre-heaer{
     position: absolute;
     z-index: 2;
@@ -5,7 +7,7 @@
     top: 0;
     height: 34px;
     background-color: black;
-    color: white;
+    color: $white;
     font-family: 'Inter';
     font-size: 16px;
     font-weight: 700;
@@ -21,7 +23,7 @@
     z-index: 2;
     width: 100%;
     top: 34px;
-    color: white;
+    color: $white;
     font-family: 'Inter';
     font-size: 15px;
 
@@ -30,7 +32,7 @@
         align-items: center;
         width: 38%;
         height: 100px;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid $white;
         margin-left: 18px;
         
         @media (max-width: 780px) {
@@ -45,7 +47,7 @@
             margin-right: 44px;
             font-size: 20px;
             text-decoration: underline;
-            color: white;
+            color:$white;
             font-family: 'Inter';
 
             @media (max-width: 780px) {
@@ -72,7 +74,7 @@
         height: 100px;
         justify-content: flex-end;
         align-items: center;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid $white;
         margin-right: 18px;
         
         @media (max-width: 780px) {
@@ -92,8 +94,8 @@
         
         button{
             background-color: transparent;
-            color: white;
-            border: 1px solid white;
+            color: $white;
+            border: 1px solid $white;
             width: 167px;
             height: 28px;
             margin-right: 37px;

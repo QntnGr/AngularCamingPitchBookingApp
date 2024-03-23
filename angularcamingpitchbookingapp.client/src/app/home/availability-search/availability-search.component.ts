@@ -9,7 +9,7 @@ import DateUtils from '../../helpers/date-utils';
 @Component({
   selector: 'app-availability-search',
   templateUrl: './availability-search.component.html',
-  styleUrl: './availability-search.component.css',
+  styleUrl: './availability-search.component.scss',
   standalone: true,
   providers: [provideNativeDateAdapter(), {provide: MAT_DATE_LOCALE, useValue: 'fr-FR'}],
   imports: [MatFormFieldModule, MatDatepickerModule, FormsModule, ReactiveFormsModule, JsonPipe],
