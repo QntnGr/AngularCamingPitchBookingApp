@@ -13,6 +13,17 @@
         background-size: cover;
         max-height: 750px;
         height: 100vh;
+           
+        @media (max-width: 780px) {
+            max-height: initial;
+            height: auto;
+            width: 100%;
+            background-image: url('../../assets/Images/Home/Backgrounds/wave-motif-mobile.svg');
+            background-repeat: repeat-y;
+            background-size: auto;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
         
         .description{
             display: flex;
@@ -22,6 +33,15 @@
             padding: 1% 8%;
             width: 42%;
             background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff00);
+
+            @media (max-width: 780px){
+                width: 100%;
+                padding: 14% 0;
+                
+                p{
+                    padding: 0 5%;
+                }
+            }
 
             .title{
                 text-align: center;
@@ -46,10 +66,21 @@
         
         picture{
             width: 50%;
+
+            @media (max-width: 780px){
+                width: 100%;
+            }
+
             img{
+                content: url('../../assets/Images/Home/Sections/carte-accessibilite.svg');
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+                
+                @media (max-width: 780px){
+                    height: auto;
+                    content: url('../../assets/Images/Home/Sections/accessibility-map-mobile.svg');
+                }
             }
         }
     }
