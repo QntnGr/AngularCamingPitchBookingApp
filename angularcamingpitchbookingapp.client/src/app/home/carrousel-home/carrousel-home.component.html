@@ -1,7 +1,5 @@
-<swiper-container 
-    space-between="0" css-mode="true" pagination="true"
-    centered-slides="true" autoplay-delay="5000" autoplay-disable-on-interaction="false"
->
+<swiper-container init="false">
+<div class="swiper-pagination"></div>
     <swiper-slide *ngFor="let image of images">
         <img [src]="image.srcUrl" [alt]="image.imgAlt">
     </swiper-slide>
@@ -9,8 +7,8 @@
 <div class="mask">
     <div class="mask-top"></div>
     <div class="title">
-        <h2>CRÉEZ DES SOUVENIRS INOUBLIABLES</h2>
-        <h1>DANS VOTRE CAMPING...</h1>       
+        <h2>{{ titleTop }}</h2>
+        <h1>{{titleBottom}}</h1>       
     </div>
     <div class="mask-bottom">
         <app-availability-search></app-availability-search>

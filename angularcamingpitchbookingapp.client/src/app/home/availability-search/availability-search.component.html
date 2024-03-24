@@ -9,17 +9,10 @@
               <mat-icon matDatepickerToggleIcon></mat-icon>
             </mat-datepicker-toggle>
             <mat-date-range-picker #picker [disabled]="false"></mat-date-range-picker>
-          
-            @if (range.controls.start.hasError('matStartDateInvalid')) {
-              <mat-error>Invalid start date</mat-error>
-            }
-            @if (range.controls.end.hasError('matEndDateInvalid')) {
-              <mat-error>Invalid end date</mat-error>
-            }
           </mat-form-field>
     </div>
     
-    <button id="type-pitch" class="cta-size mobile">Type d’hébergement</button>
-    <button id="availability-btn" class="darkGreen-btn cta-size mobile">Disponibilités</button>
+    <button id="type-pitch" class="button cta-size mobile">{{ typeButtonLabel }}</button>
+    <button id="availability-btn" class="button darkGreen-btn cta-size mobile">{{ availabilityButtonLabel }}</button>
 </div>
 

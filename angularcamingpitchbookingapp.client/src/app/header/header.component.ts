@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
-
+  bookButtonLabel : string = "RÉSERVER";
+  menuButtonLabel : string = "MENU";
+  preheaderMessage : string = "Réservez vite vos vacances";
 }

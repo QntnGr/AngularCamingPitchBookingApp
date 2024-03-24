@@ -19,4 +19,6 @@ export class AvailabilitySearchComponent {
     start: new FormControl<Date | null>(new Date()),
     end: new FormControl<Date | null>(DateUtils.addOneMonthToDate(new Date())),
   });
+  typeButtonLabel : string = "Type d’hébergement";
+  availabilityButtonLabel : string = "Disponibilités";
 }

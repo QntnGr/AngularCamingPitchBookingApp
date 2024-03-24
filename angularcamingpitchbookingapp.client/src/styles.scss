@@ -10,10 +10,10 @@ body{
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
-button{
+.button{
     transition: transform 0.3s ease;
 }
-button:hover{
+.button:hover{
     cursor: pointer;
     transform: scale(1.1);
 }
