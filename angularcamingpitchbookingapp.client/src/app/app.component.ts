@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {  }
 
-  title = 'angularcamingpitchbookingapp.client';
+  title = 'Camping FrontEnd';
 }

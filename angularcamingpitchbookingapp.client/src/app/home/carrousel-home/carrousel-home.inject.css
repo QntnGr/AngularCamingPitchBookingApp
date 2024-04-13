@@ -7,7 +7,7 @@
     --swiper-pagination-bullet-inactive-opacity: 0.35;
     @media (max-width: 780px) 
     {
-        --swiper-pagination-bottom: 270px;        
+        --swiper-pagination-bottom: 280px;        
     }
     --mat-datepicker-calendar-date-selected-state-background-color: #396153;
     --mat-datepicker-calendar-date-in-range-state-background-color: #6DAE8E;

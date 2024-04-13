@@ -10,7 +10,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 @NgModule({
   imports: [
     BrowserModule, HttpClientModule,
-      AppRoutingModule, HomeModule
+      AppRoutingModule, HomeModule,
   ],
   providers: [
     provideAnimationsAsync()

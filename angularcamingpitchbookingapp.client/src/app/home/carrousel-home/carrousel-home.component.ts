@@ -3,6 +3,7 @@ import { Slide } from './slide';
 import { CommonModule } from '@angular/common';
 import { AvailabilitySearchComponent} from '../availability-search/availability-search.component'
 import Swiper from 'swiper';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-carrousel-home',
@@ -10,12 +11,17 @@ import Swiper from 'swiper';
   styleUrl: './carrousel-home.component.scss',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [CommonModule, AvailabilitySearchComponent],
+  imports: [CommonModule, AvailabilitySearchComponent, TranslateModule],
 })
 export class CarrouselHomeComponent {
   @Input() images: Slide[] = [];
   titleTop: string = 'CRÉEZ DES SOUVENIRS INOUBLIABLES';
   titleBottom: string = 'DANS VOTRE CAMPING...';
+
+  constructor(translate: TranslateService) {
+    translate.setDefaultLang('fr');
+    translate.use('fr');
+  }
   
   ngOnInit(){
     this.initSlider();
@@ -26,17 +32,17 @@ export class CarrouselHomeComponent {
       if(swiperEl){
         let swiperParams  = {
           spaceBetween: 0,
-          cssMode: true,
           pagination: true,
           allowTouchMove: false,
+          speed: 1000,
           autoplay: {
-            delay: 3000,
+            delay: 5000,
             disableOnInteraction: false
           },
           on: {
             init(this){
               let slider = new Swiper('swiper-container');
-              slider.autoplay.start(); 
+              slider.autoplay.start();
             }
           }    
         };
