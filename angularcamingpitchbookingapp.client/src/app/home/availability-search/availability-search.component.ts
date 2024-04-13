@@ -25,7 +25,7 @@ export class AvailabilitySearchComponent {
   availabilityButtonLabel : string = "Disponibilités";
   
   constructor(translate: TranslateService) {
-    translate.setDefaultLang('de');
-    translate.use('fr');//change language here
+    translate.setDefaultLang('fr');
+    translate.use('fr');
   }
 }

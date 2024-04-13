@@ -15,6 +15,6 @@ export class HeaderComponent {
   
   constructor(translate: TranslateService) {
     translate.setDefaultLang('fr');
-    translate.use('fr');
+    translate.use('fr');//change here
   }
 }
