@@ -1,10 +1,9 @@
-@import '../../../variables.scss';
 
 .flex{
     display: flex;
 
     &#map_accessibility{
-        color: $darkGreen;
+        color: var(--dark-green);
         background-image: url('../../../assets/Images/Home/Backgrounds/motif-vague.svg');
         background-size: cover;
         max-height: 750px;

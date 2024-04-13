@@ -1,4 +1,3 @@
-@import '../../variables.scss';
 
 .pre-heaer{
     position: absolute;
@@ -7,7 +6,7 @@
     top: 0;
     height: 34px;
     background-color: black;
-    color: $white;
+    color: var(--white);
     font-family: 'Inter';
     font-size: 16px;
     font-weight: 700;
@@ -23,16 +22,15 @@
     z-index: 2;
     width: 100%;
     top: 34px;
-    color: $white;
+    color: var(--white);
     font-family: 'Inter';
     font-size: 15px;
 
     .header-left{
         display: flex;
-        align-items: center;
         width: 38%;
         height: 100px;
-        border-bottom: 1px solid $white;
+        border-bottom: 1px solid var(--white);
         margin-left: 18px;
         
         @media (max-width: 780px) {
@@ -42,26 +40,58 @@
             align-items: flex-start;
         }
 
-        .language{
-            margin-left: 24px;
-            margin-right: 44px;
-            font-size: 20px;
-            text-decoration: underline;
-            color:$white;
-            font-family: 'Inter';
+        .language-containter{
+            display: block;
+            margin-top: 27px;
+                
+            .language-box{
+                display: flex;
+                flex-direction: column;
+                width: 60px;
 
-            @media (max-width: 780px) {
-                font-size: 16px;
-                margin: 0;
-                margin-bottom: 16px;
-            }  
+                .language{
+                    font-size: 20px;
+                    margin: 10px 0;
+                    text-decoration: underline;
+                    color: var(--white);
+                    font-family: 'Inter';
+                    padding-left: 20px;
+
+                    @media (max-width: 780px) {
+                        font-size: 16px;
+                        margin: 0;
+                        margin-bottom: 16px;
+                    }  
+                }
+
+                .hidden{
+                    display: none;
+                    color: var(--grey);
+
+                    &:hover{
+                        color: var(--white);
+                    }
+                }
+
+                &:hover{
+                    background-color: var(--dark-sand);
+                    border-radius: 5px;
+
+                    .hidden{
+                        display: block;
+                    }
+                }
+            }
         }
+
 
         .menu{
             display: flex;
             flex-direction: column;
+            justify-content: center;
             font-family: 'Inter';
             text-transform: uppercase;
+            margin-left: 20px;
             
             @media (max-width: 780px) {
                 font-size: 18px;                
@@ -75,7 +105,7 @@
         height: 100px;
         justify-content: flex-end;
         align-items: center;
-        border-bottom: 1px solid $white;
+        border-bottom: 1px solid var(--white);
         margin-right: 18px;
         
         @media (max-width: 780px) {
@@ -95,8 +125,8 @@
         
         button{
             background-color: transparent;
-            color: $white;
-            border: 1px solid $white;
+            color: var(--white);
+            border: 1px solid var(--white);
             width: 167px;
             height: 28px;
             margin-right: 37px;

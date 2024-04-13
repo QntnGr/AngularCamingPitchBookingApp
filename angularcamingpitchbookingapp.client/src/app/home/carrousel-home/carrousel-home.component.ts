@@ -34,7 +34,7 @@ export class CarrouselHomeComponent {
           spaceBetween: 0,
           pagination: true,
           allowTouchMove: false,
-          speed: 1000,
+          speed: 1100,
           autoplay: {
             delay: 5000,
             disableOnInteraction: false
