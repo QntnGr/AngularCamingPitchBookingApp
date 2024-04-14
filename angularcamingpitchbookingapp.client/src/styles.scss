@@ -1,17 +1,19 @@
 /*imports*/
+@import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import 'app/home/availability-search/availability-search.inject.css';
 @import 'app/home/carrousel-home/carrousel-home.inject.css';
+@import 'app/app.component.scss';
 
 /*gobal styles*/
 body{
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
-button{
+.button{
     transition: transform 0.3s ease;
 }
-button:hover{
+.button:hover{
     cursor: pointer;
     transform: scale(1.1);
 }

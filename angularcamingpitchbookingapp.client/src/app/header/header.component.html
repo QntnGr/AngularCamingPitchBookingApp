@@ -1,12 +1,22 @@
 <div class="pre-heaer">
-  <span>Réservez vite vos vacances</span>
+  <span>{{ 'home.header.preheaderMessage' | translate }}</span>
 </div>
 <div class="container-header">
-    <div class="header-left">      
-      <a class="language" href="#">Fr</a>
+    <div class="header-left">    
+      <div class="language-containter">
+        <div class="language-box">          
+          <a class="language" href="#" 
+          *ngFor="let language of languages" 
+            [class.hidden]="!language.isDefault" 
+            (click)="changeLanguage(language.value)"
+          >
+            {{language.label}}
+          </a>
+        </div>
+      </div>  
       <div class="menu">
         <i class="menu-logo"></i>
-        <span>MENU</span>
+        <span>{{ 'home.header.menu' | translate }}</span>
       </div>
     </div>
     <span class="logo">
@@ -14,6 +24,6 @@
     </span>
     <div class="header-right">
       <span>(+33) 7 84 56 89 52</span>
-      <button class="header-reservation">RÉSERVER</button>
+      <button class="button header-reservation">{{ 'home.header.booking' | translate }}</button>
     </div>
   </div>

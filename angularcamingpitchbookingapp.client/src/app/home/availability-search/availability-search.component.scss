@@ -1,0 +1,57 @@
+
+.availability-search{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 1050px;
+    height: 134px;
+    border: 1px solid var(--white);
+    
+    @media (max-width: 780px) {
+        flex-direction: column;
+        height: auto;
+        border: 0;
+        padding-bottom: 50px;
+        width: auto;
+    }
+
+    mat-form-field{
+        border: 1px solid var(--white);
+        background-color: transparent;
+         
+        @media (max-width: 780px) {
+            width: 100%;
+        }
+    }
+
+    mat-icon{
+        background-image: url('../../../assets/Images/pictos/calendar_white.png');
+        background-size: cover;
+        width: 21px;
+        height: 25px; 
+        display: block;
+    }
+
+    mat-date-range-input{
+        input:disabled{
+            color: var(--white);
+        }
+    }
+
+    #type-pitch{
+        background-color: transparent;
+        border: 1px solid var(--white);
+    }
+
+    @media (max-width: 780px) {
+        .mobile{
+            margin: 8px 0;
+            width: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }      
+    }
+
+
+}

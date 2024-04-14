@@ -4,11 +4,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {  }
 
-  title = 'angularcamingpitchbookingapp.client';
+  title = 'Camping FrontEnd';
 }

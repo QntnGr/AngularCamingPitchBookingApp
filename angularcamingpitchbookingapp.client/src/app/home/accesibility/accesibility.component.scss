@@ -1,0 +1,84 @@
+
+.flex{
+    display: flex;
+
+    &#map_accessibility{
+        color: var(--dark-green);
+        background-image: url('../../../assets/Images/Home/Backgrounds/motif-vague.svg');
+        background-size: cover;
+        max-height: 750px;
+        height: 100vh;
+           
+        @media (max-width: 780px) {
+            max-height: initial;
+            height: auto;
+            width: 100%;
+            background-image: url('../../../assets/Images/Home/Backgrounds/wave-motif-mobile.svg');
+            background-repeat: repeat-y;
+            background-size: auto;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        
+        .description{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1% 8%;
+            width: 42%;
+            background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff00);
+
+            @media (max-width: 780px){
+                width: 100%;
+                padding: 14% 0;
+                
+                p{
+                    padding: 0 8%;
+                }
+            }
+
+            .title{
+                text-align: center;
+                
+                h4{
+                    font-weight: 400;
+                    margin: 0;
+                }
+
+                h3{
+                    margin-top: 16px;
+                    margin-bottom: 38px;
+                    font-size: 76px;
+                    font-family: 'LearningCurve', Helvetica, Arial, Verdana, Tahoma, sans-serif;
+                }
+            }   
+
+            .bottom-gap3{
+                margin-bottom: 3rem;
+            }
+        }
+        
+        picture{
+            width: 50%;    
+            display: flex;
+
+            @media (max-width: 780px){
+                width: 100%;
+            }
+
+            img{
+                content: url('../../../assets/Images/Home/Sections/Accessibility/accessibillity_map.svg');
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                
+                @media (max-width: 780px){
+                    height: auto;
+                    content: url('../../../assets/Images/Home/Sections/Accessibility/accessibillity_map_mobile.svg');
+                }
+            }
+        }
+    }
+
+}
