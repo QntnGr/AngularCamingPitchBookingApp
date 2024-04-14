@@ -6,13 +6,21 @@
               <input matEndDate formControlName="end" >
             </mat-date-range-input>
             <mat-datepicker-toggle matIconSuffix [for]="picker">
-              <mat-icon matDatepickerToggleIcon></mat-icon>
+              <mat-icon matDatepickerToggleIcon>
+                <lucide-icon name="calendar-days" class="my-icon"></lucide-icon>
+              </mat-icon>
             </mat-datepicker-toggle>
             <mat-date-range-picker #picker [disabled]="false"></mat-date-range-picker>
           </mat-form-field>
     </div>
     
-    <button id="type-pitch" class="button cta-size mobile">{{ 'home.disponibilite.typeAccomodation' | translate }}</button>
-    <button id="availability-btn" class="button darkGreen-btn cta-size mobile">{{ 'home.disponibilite.disponibilite' | translate }}</button>
+    <button id="type-pitch" class="button cta-size mobile">
+      {{ 'home.disponibilite.typeAccomodation' | translate }}
+      <lucide-icon name="chevron-right" class="my-icon"></lucide-icon>
+    </button>
+    <button id="availability-btn" class="button darkGreen-btn cta-size mobile">
+      {{ 'home.disponibilite.disponibilite' | translate }}
+      <lucide-icon name="chevron-right" class="my-icon"></lucide-icon>
+    </button>
 </div>
 

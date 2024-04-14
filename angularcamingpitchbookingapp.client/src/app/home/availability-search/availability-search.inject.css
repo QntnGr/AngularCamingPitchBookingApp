@@ -18,3 +18,10 @@ mat-form-field{
 .cdk-overlay-container{
     display: contents;
 }
+
+.mdc-icon-button{
+    &:hover{
+        transform: scale(1.1);
+        background-color: var(--light-sand);
+    }
+}

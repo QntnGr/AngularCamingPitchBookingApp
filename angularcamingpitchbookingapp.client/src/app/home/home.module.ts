@@ -9,6 +9,10 @@ import { AccesibilityComponent } from './accesibility/accesibility.component';
 import { HttpClient } from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { LucideAngularModule, Home, Menu, CalendarDays, Trees, Calendar, 
+    MapPin, Tent, Phone, X, ChevronDown, ChevronLeft, ChevronRight, 
+    ChevronUp } from 'lucide-angular';
+import { MenuComponent } from '../header/menu/menu.component';
 
 @NgModule({
     imports: [
@@ -21,12 +25,16 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
               useFactory: HttpLoaderFactory,
               deps: [HttpClient]
           }
-        })
+        }),
+        LucideAngularModule.pick({Home, Menu, CalendarDays
+            , Trees, Calendar, MapPin, Tent, Phone, X, ChevronDown
+            , ChevronLeft, ChevronRight, ChevronUp })
     ],
     declarations: [
         HomeComponent,
         AccesibilityComponent,
-        HeaderComponent
+        HeaderComponent, 
+        MenuComponent
     ],
     exports: [
         HomeComponent
