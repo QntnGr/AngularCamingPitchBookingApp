@@ -68,14 +68,14 @@
             }
 
             img{
-                content: url('../../../assets/Images/Home/Sections/carte-accessibilite.svg');
+                content: url('../../../assets/Images/Home/Sections/Accessibility/accessibillity_map.svg');
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
                 
                 @media (max-width: 780px){
                     height: auto;
-                    content: url('../../../assets/Images/Home/Sections/accessibility-map-mobile.svg');
+                    content: url('../../../assets/Images/Home/Sections/Accessibility/accessibillity_map_mobile.svg');
                 }
             }
         }
