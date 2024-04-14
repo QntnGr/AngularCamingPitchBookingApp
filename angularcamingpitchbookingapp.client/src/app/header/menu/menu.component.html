@@ -1,0 +1,14 @@
+<div id="mask-menu" [ngClass]="{'hidden': !isMenuVisible}">
+    <div id="frame-menu">
+        <a href="javascript:void(0);" (click)="closeMenu()">
+            <lucide-icon name="x" [size]="34" class="my-icon"></lucide-icon>
+        </a>
+        <div class="container-menu">
+            <button class="menu"
+            *ngFor="let menu of getVisibleMenus()" 
+            (click)="redirectTo(menu.url)">
+                {{menu.idTranslate | translate}}
+            </button>
+        </div>
+    </div>
+</div>

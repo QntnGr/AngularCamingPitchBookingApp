@@ -34,6 +34,7 @@ export class HeaderComponent {
       value: "es"
     }
   ]; 
+  isMenuVisible: boolean = false;
 
   constructor(public translate: TranslateService) {
     translate.setDefaultLang('fr');
@@ -45,6 +46,10 @@ export class HeaderComponent {
       this.translate.use(languageValue);
       setLanguage(this.languages, languageValue);
     }
+  }
+
+  onMenuVisibilityChange(visibility: boolean){
+    this.isMenuVisible = visibility;
   }
 }
 

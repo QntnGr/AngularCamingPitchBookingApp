@@ -12,6 +12,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { LucideAngularModule, Home, Menu, CalendarDays, Trees, Calendar, 
     MapPin, Tent, Phone, X, ChevronDown, ChevronLeft, ChevronRight, 
     ChevronUp } from 'lucide-angular';
+import { MenuComponent } from '../header/menu/menu.component';
 
 @NgModule({
     imports: [
@@ -32,7 +33,8 @@ import { LucideAngularModule, Home, Menu, CalendarDays, Trees, Calendar,
     declarations: [
         HomeComponent,
         AccesibilityComponent,
-        HeaderComponent
+        HeaderComponent, 
+        MenuComponent
     ],
     exports: [
         HomeComponent

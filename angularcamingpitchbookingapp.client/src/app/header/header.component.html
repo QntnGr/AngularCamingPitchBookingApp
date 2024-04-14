@@ -15,7 +15,7 @@
         </div>
       </div>  
       <div class="menu">
-        <lucide-icon name="menu" class="my-icon"></lucide-icon>
+        <lucide-icon name="menu" class="my-icon" (click)="onMenuVisibilityChange(true)"></lucide-icon>
       </div>
     </div>
     <span class="logo">
@@ -25,4 +25,5 @@
       <span>(+33) 7 84 56 89 52</span>
       <button class="button header-reservation">{{ 'home.header.booking' | translate }}</button>
     </div>
-  </div>
+</div>
+<app-menu [isMenuVisible]="isMenuVisible" (menuVisibilityChange)="onMenuVisibilityChange($event)"></app-menu>
