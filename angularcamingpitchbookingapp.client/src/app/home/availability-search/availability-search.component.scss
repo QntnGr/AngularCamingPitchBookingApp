@@ -25,7 +25,6 @@
     }
 
     mat-icon{
-        background-image: url('../../../assets/Images/pictos/calendar_white.png');
         background-size: cover;
         width: 21px;
         height: 25px; 
@@ -51,6 +50,15 @@
             justify-content: center;
             align-items: center;
         }      
+    }
+    .button{
+        position: relative;
+
+        lucide-icon[name="chevron-right"] {
+            position: absolute;
+            right: 4px;
+            top: 16px;
+        }
     }
 
 
