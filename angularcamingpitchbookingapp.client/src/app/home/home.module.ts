@@ -13,6 +13,7 @@ import { LucideAngularModule, Home, Menu, CalendarDays, Trees, Calendar,
     MapPin, Tent, Phone, X, ChevronDown, ChevronLeft, ChevronRight, 
     ChevronUp } from 'lucide-angular';
 import { MenuComponent } from '../header/menu/menu.component';
+import { ImportantInfoComponent } from './important-info/important-info.component';
 
 @NgModule({
     imports: [
@@ -34,7 +35,7 @@ import { MenuComponent } from '../header/menu/menu.component';
         HomeComponent,
         AccesibilityComponent,
         HeaderComponent, 
-        MenuComponent
+        MenuComponent, ImportantInfoComponent
     ],
     exports: [
         HomeComponent
