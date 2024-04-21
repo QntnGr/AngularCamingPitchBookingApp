@@ -8,9 +8,9 @@
     .pitch-card{
         display: flex;
         flex-direction: column;
-        margin-top: 5rem;
         position: relative;
         color: var(--grey);
+        margin: 5rem 0.8rem;
 
         img{
             width: 280px;
@@ -28,27 +28,9 @@
             position: absolute;
             display: none;
         }
-        
-        &:hover{
-            p{
-                display: initial;
-                transition: 0.4;
-            }
-
-            h3{
-                position: absolute;
-                bottom: initial;
-                top: 2rem;
-                right: initial;
-                left: 2rem;
-            }
-            .gradient-overlay:before{
-                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0 0 0) 33%);
-            }
-        }
     }
 
-    .gradient-overlay:before{
+    .pitch-card.gradient-overlay:before{
         content: "";
         position: absolute;
         top: 0;
@@ -56,6 +38,29 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 66%, rgb(0 0 0) 100%);
+        transition: background 0.9s ease;
+    }
+    
+    .pitch-card:hover.gradient-overlay{
+
+        &:before{
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 66%);
+            transition: background 0.9s ease;
+        }
+
+        p{
+            display: initial;
+            padding: 5rem 2rem;
+        }
+
+        h3{
+            position: absolute;
+            bottom: initial;
+            top: 2rem;
+            transition: top 0.9;
+            right: initial;
+            left: 2rem;
+        }
     }
 
     .bloc-title{
