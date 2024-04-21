@@ -5,11 +5,10 @@
     <div class="header-left">    
       <div class="language-containter">
         <div class="language-box">          
-          <a class="language" href="#" 
+          <a class="language"
           *ngFor="let language of languages" 
-            [class.hidden]="!language.isDefault" 
-            (click)="changeLanguage(language.value)"
-          >
+          [class.hidden]="!language.isDefault" 
+          (click)="changeLanguage(language.value)">
             {{language.label}}
           </a>
         </div>

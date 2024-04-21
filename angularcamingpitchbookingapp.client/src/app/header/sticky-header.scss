@@ -1,0 +1,23 @@
+
+.scrolled {
+    position: fixed !important;
+    top: 0 !important;
+    transition: 0.4s;
+    background-color: #000000a5;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 
+                0 1px 7px 0 rgba(0, 0, 0, 0.12), 
+                0 3px 1px -1px rgba(0, 0, 0, 0.2);    
+    .logo{
+        img{
+            height: 80px !important;
+        }
+    }
+    .header-left, .header-right{
+        border: 0 !important;
+        height: 80px !important;
+
+        .language-containter{
+            margin-top: 1rem !important;
+        }
+    }
+}
