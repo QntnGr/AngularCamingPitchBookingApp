@@ -1,7 +1,7 @@
 <div class="container">
     <ng-container *ngFor="let info of informations">
         <div class="info-container">
-            <lucide-icon name="{{info.picto_name}}" [size]="100" [strokeWidth]="1" class="my-icon"></lucide-icon>
+            <lucide-icon name="{{info.picto_name}}" [size]="100" [strokeWidth]="0.5" class="my-icon"></lucide-icon>
             <span class="info-texts">
                 <h3>{{info.title | translate}}</h3>
                 <p [innerHTML]="info.text | translate"></p>
