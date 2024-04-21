@@ -25,3 +25,10 @@ body{
     font-family: LearningCurve;
     src: url('./assets/Fonts/LearningCurve.ttf');
 }
+$font-curve: 'LearningCurve', sans-serif;
+
+@font-face {
+    font-family: OPTIBerlingBold-Agency;
+    src: url('./assets/Fonts/OPTIBerlingBold-Agency.otf') format('opentype');
+}
+$font-title-section: 'OPTIBerlingBold-Agency';
