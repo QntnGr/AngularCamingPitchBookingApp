@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 
 export class AccesibilityComponent {
-  preTitle : string = "BIENVENU AU CAMPING";
+  preTitle : string = 'home.bienvenu-section.sous-titre';
   title : string = "Montacabana !";
-  contactButtonLabel : string = "CONACTEZ NOUS";
+  contactButtonLabel : string = 'home.bienvenu-section.contactez-nous';
+  textBienvenu : string = 'home.bienvenu-section.text';
   
   topParagraph : string = "Réservez vite vos vacances";
   middleParagraph : string = "Réservez vite vos vacances";
