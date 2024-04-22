@@ -3,4 +3,5 @@ export interface PitchCard{
     title: string;
     text: string;
     alt: string;
+    hover_background_color: string;
   }

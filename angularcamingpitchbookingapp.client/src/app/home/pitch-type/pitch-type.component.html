@@ -1,11 +1,12 @@
+<div class="bloc-title">
+    <h2>{{titlePitchTypeSection | translate}}</h2>
+</div>
 <div class="container">
-    <div class="bloc-title">
-        <h2>{{titlePitchTypeSection | translate}}</h2>
-    </div>
-    <picture class="pitch-card gradient-overlay"
-    *ngFor="let pitch of pitches">
+    <picture 
+    *ngFor="let pitch of pitches"
+    class="pitch-card gradient-overlay {{pitch.hover_background_color}}">
         <img src="{{pitch.image_url}}" alt="{{pitch.alt}}"/>
-        <h3>{{pitch.title | translate}}</h3>
+        <h3 class="pitch-title">{{pitch.title | translate}}</h3>
         <p [innerHTML]="pitch.text | translate"></p>
     </picture>
 </div>

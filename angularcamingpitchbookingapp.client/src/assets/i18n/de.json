@@ -19,5 +19,12 @@
 	"home.menu.le-tourisme": "Tourismus",
 	"home.menu.les-hebergements": "Die Unterkünfte",
 	"home.title.titleBottom": "AUF IHREM CAMPINGPLATZ",
-	"home.title.titleTop": "SCHAFFEN SIE UNVERGESSLICHE ERINNERUNGEN"
+	"home.title.titleTop": "SCHAFFEN SIE UNVERGESSLICHE ERINNERUNGEN",
+	"home.types-emplacements.camping-car.text": "",
+	"home.types-emplacements.camping-car.titre": "Wohnmobil",
+	"home.types-emplacements.tente.text": "",
+	"home.types-emplacements.tente.titre": "Zelt",
+	"home.types-emplacements.tente-lodge.text": "",
+	"home.types-emplacements.tente-lodge.titre": "Lodge-Zelt",
+	"home.types-emplacements.titre-section": "Arten von Standorten"
 }

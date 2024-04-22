@@ -5,77 +5,118 @@
     position: relative;
     justify-content: center;
 
+    @media (max-width: 780px){
+        flex-direction: column;
+        margin-top: 10rem;
+    }
+
     .pitch-card{
         display: flex;
         flex-direction: column;
         position: relative;
         color: var(--grey);
-        margin: 5rem 0.8rem;
+        margin: 0 0.8rem;
+        margin-top: 8rem;
+        overflow: hidden;
+        width: 30%;
+        height: 100%;
+
+        @media (max-width: 780px){
+            width: 94%;
+            margin-top: 2rem;
+        }
 
         img{
-            width: 320px;
-            height: 480px;
+            width: 100%;
+            height: calc(100vh - 185px);
+            max-height: 700px;
             object-fit: cover;
+            z-index: -1;
         }
 
-        h3{
+        .pitch-title{
             position: absolute;
-            bottom: 1rem;
-            right: 2rem;
+            text-transform: uppercase;
+            font-size: 34px;
+            text-align: center;
+            width: 100%;
+            bottom: 2rem;
+            transform: translate(0px, 100%);
+            transition: transform 0.5s linear;
         }
 
         p{
             position: absolute;
-            display: none;
+            padding: 5rem 2rem;
+            bottom: 2rem;
+            transform: translate(0px, 150%);
+            transition: transform 0.5s linear 0s;
+        }
+
+        &:hover{
+            p{
+                transform: translate(0px, 10%);
+                top: 10%;
+            }
+    
+            .pitch-title{
+                position: absolute;
+                transform: translate(0px, -10%);
+                top: 10%;
+            }
         }
     }
 
-    .pitch-card.gradient-overlay:before{
+    .gradient-overlay{
         content: "";
-        position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 66%, rgb(0 0 0) 100%);
-        transition: background 0.9s ease;
+        background: #00000000;
+        box-shadow: 0 -100px 60px #000000b6 inset;
+        transition: background 1s, box-shadow 1s ease;
+
+        &:hover{         
+            cursor: crosshair;
+            box-shadow: 0 200px 100px -100px #00000045 inset;
+
+            &.purpule{
+                background: var(--purpule-deep-opa);
+            }
+            &.blue{
+                background: var(--blue-pastel-opa);
+            }
+            &.green{
+                background: var(--green-light-opa);
+            }
+        }
+    }    
+}
+
+.bloc-title{
+    background: linear-gradient(45deg, #6db893 57%, #8a75a3);
+    position: absolute;
+    width: 100%;
+    height: 340px;
+    z-index: -1;
+    left: 0;
+    margin-top: 2rem;
+
+    @media (max-width: 780px){
+        height: calc(3*70%);
     }
-    
-    .pitch-card:hover.gradient-overlay{
-
-        &:before{
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 66%);
-            transition: background 0.9s ease;
-        }
-
-        p{
-            display: initial;
-            padding: 5rem 2rem;
-        }
-
-        h3{
-            position: absolute;
-            bottom: initial;
-            top: 2rem;
-            transition: top 0.9;
-            right: initial;
-            left: 2rem;
-        }
-    }
-
-    .bloc-title{
-        background: linear-gradient(45deg, #6db893 57%, #8a75a3);
-        position: absolute;
+      
+    h2{
+        font-family: 'OPTIBerlingBold-Agency';
+        color: var(--white);
         width: 50%;
-        height: 240px;
-        z-index: -1;
-        left: 0;
+        text-align: center;
+        margin-left: 2rem;
+        font-size: 3rem;
 
-        h2{
-            font-family: 'OPTIBerlingBold-Agency';
-            color: var(--white);
-            width: 100%;
-            text-align: center;
-        }        
-    }
+        @media (max-width: 780px){
+            width: 94%;
+            font-size: 2.5rem;
+            margin-left: 3%;
+        }
+    }        
 }

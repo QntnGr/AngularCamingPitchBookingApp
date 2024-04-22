@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 angularcamingpitchbookingapp.client/public
+angularcamingpitchbookingapp.client/.nx/cache/18.3.3-nx.win32-x64-msvc.node

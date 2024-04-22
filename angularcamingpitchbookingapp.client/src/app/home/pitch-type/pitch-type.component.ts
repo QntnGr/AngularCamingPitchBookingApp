@@ -7,25 +7,29 @@ import { PitchCard } from './pitch-card';
   styleUrl: './pitch-type.component.scss'
 })
 export class PitchTypeComponent {
-  titlePitchTypeSection: string = "Types d'emplacements";
+  titlePitchTypeSection: string = "home.types-emplacements.titre-section";
   pitches: PitchCard[] = [
     {
       image_url : '../../../assets/Images/Home/Sections/PitchTypes/tente-lodge.png',
-      title : "Tente Lodge",
+      title : "home.types-emplacements.tente-lodge.titre",
       text : "ma super tente lodge",
-      alt : "type tente lodge"
+      alt : "type tente lodge",
+      hover_background_color: "blue"
     },
     {
       image_url : '../../../assets/Images/Home/Sections/PitchTypes/caping-car.png',
-      title : "Camping Car",
+      title : "home.types-emplacements.camping-car.titre",
       text : "mon super Camping Car",
-      alt : "type camping-car"
+      alt : "type camping-car",
+      hover_background_color: "purpule"
     },
     {
       image_url : '../../../assets/Images/Home/Sections/PitchTypes/tente.png',
-      title : "Tente",
+      title : "home.types-emplacements.tente.titre",
       text : "ma super tente, ma super tente , ma super tente <br> ma super tente ",
-      alt : "type tente"
+      alt : "type tente",
+      hover_background_color : "green"
     },
   ];
+
 }

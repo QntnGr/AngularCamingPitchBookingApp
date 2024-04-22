@@ -1,11 +1,11 @@
 ﻿
 .darkGreen-btn{
-    background-color: var(--dark-green);
+    background: linear-gradient(45deg, var(--blue-pastel) 66%, var(--purpule-deep));
     border: 0;
 }
 
 .cta-size{
-    width: 215px;
+    min-width: 215px;
     height: 58px;
     color: var(--white);
     font-size: 16px;

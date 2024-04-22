@@ -19,5 +19,12 @@
 	"home.menu.le-tourisme": "Turismo",
 	"home.menu.les-hebergements": "Alojamiento",
 	"home.title.titleBottom": "EN SU CAMPING...",
-	"home.title.titleTop": "CREAR RECUERDOS INOLVIDABLES"
+	"home.title.titleTop": "CREAR RECUERDOS INOLVIDABLES",
+	"home.types-emplacements.camping-car.text": "",
+	"home.types-emplacements.camping-car.titre": "Autocaravana",
+	"home.types-emplacements.tente.text": "",
+	"home.types-emplacements.tente.titre": "Tienda",
+	"home.types-emplacements.tente-lodge.text": "",
+	"home.types-emplacements.tente-lodge.titre": "Tienda de campaña",
+	"home.types-emplacements.titre-section": "Tipos de ubicación"
 }
