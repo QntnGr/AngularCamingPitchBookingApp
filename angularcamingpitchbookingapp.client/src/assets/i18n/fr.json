@@ -19,5 +19,12 @@
 	"home.menu.le-tourisme": "Le tourisme",
 	"home.menu.les-hebergements": "Les hébergements",
 	"home.title.titleBottom": "DANS VOTRE CAMPING...",
-	"home.title.titleTop": "CRÉEZ DES SOUVENIRS INOUBLIABLES"
+	"home.title.titleTop": "CRÉEZ DES SOUVENIRS INOUBLIABLES",
+	"home.types-emplacements.camping-car.text": "",
+	"home.types-emplacements.camping-car.titre": "Camping-car",
+	"home.types-emplacements.tente.text": "",
+	"home.types-emplacements.tente.titre": "tente",
+	"home.types-emplacements.tente-lodge.text": "",
+	"home.types-emplacements.tente-lodge.titre": "Tente lodge",
+	"home.types-emplacements.titre-section": "Types d 'emplacements"
 }

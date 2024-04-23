@@ -19,5 +19,12 @@
 	"home.menu.le-tourisme": "Tourism",
 	"home.menu.les-hebergements": "Accommodation",
 	"home.title.titleBottom": "IN YOUR CAMPSITE...",
-	"home.title.titleTop": "CREATE UNFORGETTABLE MEMORIES"
+	"home.title.titleTop": "CREATE UNFORGETTABLE MEMORIES",
+	"home.types-emplacements.camping-car.text": "",
+	"home.types-emplacements.camping-car.titre": "Motorhome",
+	"home.types-emplacements.tente.text": "",
+	"home.types-emplacements.tente.titre": "tent",
+	"home.types-emplacements.tente-lodge.text": "",
+	"home.types-emplacements.tente-lodge.titre": "Lodge tent",
+	"home.types-emplacements.titre-section": "Location types"
 }

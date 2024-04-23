@@ -89,7 +89,7 @@
                 }
 
                 &:hover{
-                    background-color: var(--light-sand);
+                    background-color: var(--blue-dark-opa);
                     border-radius: 5px;
                     @media (max-width: 780px){
                         background-color: var(--black-shadow);
@@ -120,7 +120,7 @@
                 &:hover{
                     cursor: pointer;
                     transform: scale(1.2);
-                    background-color: var(--light-sand);
+                    background-color: var(--blue-dark-opa);
                 }
             }
 

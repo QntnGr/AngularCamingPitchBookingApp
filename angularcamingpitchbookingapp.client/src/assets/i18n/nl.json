@@ -19,5 +19,12 @@
 	"home.menu.le-tourisme": "Toerisme",
 	"home.menu.les-hebergements": "Accommodatie",
 	"home.title.titleBottom": "OP UW CAMPING...",
-	"home.title.titleTop": "CREËER ONVERGETELIJKE HERINNERINGEN"
+	"home.title.titleTop": "CREËER ONVERGETELIJKE HERINNERINGEN",
+	"home.types-emplacements.camping-car.text": "",
+	"home.types-emplacements.camping-car.titre": "Camper",
+	"home.types-emplacements.tente.text": "",
+	"home.types-emplacements.tente.titre": "tent",
+	"home.types-emplacements.tente-lodge.text": "",
+	"home.types-emplacements.tente-lodge.titre": "Lodge tent",
+	"home.types-emplacements.titre-section": "Soorten locaties"
 }

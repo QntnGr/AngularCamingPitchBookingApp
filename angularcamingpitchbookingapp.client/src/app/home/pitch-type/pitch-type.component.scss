@@ -1,0 +1,130 @@
+
+.container{
+    margin: 3rem 3%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    @media (max-width: 780px){
+        flex-direction: column;
+        margin-top: 10rem;
+    }
+
+    .pitch-card{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        color: var(--grey);
+        margin: 0 0.8rem;
+        margin-top: 10rem;
+        overflow: hidden;
+        width: 30%;
+        height: 100%;
+        background: #00000000;
+        transition: background 0.5s;
+
+        @media (max-width: 780px){
+            width: 94%;
+            margin-top: 2rem;
+        }
+
+        img{
+            width: 100%;
+            height: calc(100vh - 185px);
+            max-height: 700px;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .pitch-title{
+            position: absolute;
+            text-transform: uppercase;
+            font-size: 34px;
+            text-align: center;
+            width: 100%;
+            bottom: 2rem;
+            transform: translate(0px, 100%);
+            transition: transform 0.3s linear;
+        }
+
+        p{
+            position: absolute;
+            padding: 5rem 2rem;
+            bottom: 2rem;
+            transform: translate(0px, 150%);
+            transition: transform 0.3s linear 0s;
+        }
+
+        .gradient-overlay{ 
+            position: absolute;
+            width: 100%;        
+            background: linear-gradient(#00000000, #000000);
+            bottom: 0;
+            height: 50%;
+            transition: all 0.3s ease;
+        }
+
+        &:hover{
+            cursor: crosshair;
+            transition: background 0.5s;
+
+            .gradient-overlay{
+                height: 0%;
+                transition: all 0.3s ease-in;
+            }
+
+            p{
+                transform: translate(0px, 10%);
+                top: 10%;
+            }
+    
+            .pitch-title{
+                position: absolute;
+                transform: translate(0px, -10%);
+                top: 10%;
+            }
+
+            &.purpule{
+                background: var(--purpule-deep-opa);
+            }
+
+            &.blue{
+                background: var(--blue-pastel-opa);
+            }
+
+            &.green{
+                background: var(--green-light-opa);
+            }
+        }
+    }    
+}
+
+.bloc-title{
+    background: linear-gradient(45deg, #6db893 57%, #8a75a3);
+    position: absolute;
+    width: 100%;
+    height: 340px;
+    z-index: -1;
+    left: 0;
+    margin-top: 2rem;
+
+    @media (max-width: 780px){
+        height: calc(3*70%);
+    }
+      
+    h2{
+        font-family: 'LearningCurve';//'OPTIBerlingBold-Agency';
+        color: var(--white);
+        width: 50%;
+        text-align: center;
+        margin-left: 2rem;
+        font-size: 6rem;
+        line-height: 2rem;
+
+        @media (max-width: 780px){
+            width: 94%;
+            font-size: 2.5rem;
+            margin-left: 3%;
+        }
+    }        
+}
