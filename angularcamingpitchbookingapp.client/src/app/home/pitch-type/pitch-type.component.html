@@ -4,8 +4,9 @@
 <div class="container">
     <picture 
     *ngFor="let pitch of pitches"
-    class="pitch-card gradient-overlay {{pitch.hover_background_color}}">
+    class="pitch-card {{pitch.hover_background_color}}">
         <img src="{{pitch.image_url}}" alt="{{pitch.alt}}"/>
+        <div class="gradient-overlay"></div>
         <h3 class="pitch-title">{{pitch.title | translate}}</h3>
         <p [innerHTML]="pitch.text | translate"></p>
     </picture>

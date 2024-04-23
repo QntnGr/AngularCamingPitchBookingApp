@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PitchCard } from './pitch-card';
+import { Card } from './pitch-card';
 
 @Component({
   selector: 'app-pitch-type',
@@ -8,7 +8,7 @@ import { PitchCard } from './pitch-card';
 })
 export class PitchTypeComponent {
   titlePitchTypeSection: string = "home.types-emplacements.titre-section";
-  pitches: PitchCard[] = [
+  pitches: Card[] = [
     {
       image_url : '../../../assets/Images/Home/Sections/PitchTypes/tente-lodge.png',
       title : "home.types-emplacements.tente-lodge.titre",

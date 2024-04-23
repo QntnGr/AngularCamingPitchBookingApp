@@ -1,4 +1,4 @@
-export interface PitchCard{
+export interface Card{
     image_url: string;
     title: string;
     text: string;
