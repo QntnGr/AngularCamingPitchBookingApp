@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { Card } from '../pitch-type/card';
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
 import { SwiperContainer } from 'swiper/element';
 
 @Component({
@@ -16,8 +14,8 @@ export class ActivitySliderComponent {
   activities: Card[] = [
     {
       image_url : this.baseUrl + 'thio-marche-vendays-montalivet-medoc-atlantique-tiny.jpg',
-      title : "home.activites.le-camping.titre",
-      text : "home.activites.le-camping.text",
+      title : "home.activites.le-marche.titre",
+      text : "home.activites.le-marche.text",
       alt : "le marché de vendays-montalivet",
       hover_background_color: "black"
     },
@@ -40,6 +38,13 @@ export class ActivitySliderComponent {
       title : "home.activites.vignobles.titre",
       text : "home.activites.vignobles.text",
       alt : "activité vignobles",
+      hover_background_color : "black"
+    },
+    {
+      image_url : this.baseUrl + 'parc-a-laventure-tiny.jpg',
+      title : "home.activites.parc-de-l-aventure.titre",
+      text : "home.activites.parc-de-l-aventure.text",
+      alt : "activité Parc de l'aventure",
       hover_background_color : "black"
     },
   ];
@@ -76,8 +81,14 @@ export class ActivitySliderComponent {
         },
         on: {
           init() {
-            setTimeout(that.goToNextSlide, 1000);
+            setTimeout(that.goToNextSlide, 200);
           },
+        },
+        speed: 1300,
+        parallax: true,
+        freeMode: {
+          enabled: true,
+          sticky: true,
         },
       };
       Object.assign(swiperEl, swiperParams);
@@ -85,9 +96,14 @@ export class ActivitySliderComponent {
     }
   }
   goToNextSlide(): void{
-    let swiper_activities = document.querySelector('.swiper-acivities') as SwiperContainer;
+    const swiper_activities = document.querySelector('.swiper-acivities') as SwiperContainer;
     if(swiper_activities){
       swiper_activities.swiper.slideNext();
+      swiper_activities.swiper.on('slideChange', function (event) {
+        if(swiper_activities.swiper.isBeginning){
+          swiper_activities.swiper.slideNext();
+        }
+      });
     }
   }
 }

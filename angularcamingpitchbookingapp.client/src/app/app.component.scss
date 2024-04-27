@@ -30,7 +30,14 @@
     margin-top: 2rem;
 
     &.gradient-blue-purpule{
-        background: linear-gradient(45deg, var(--blue-pastel) 57%, var(--purpule-deep));
+        background: transparent;//linear-gradient(45deg, var(--blue-pastel) 57%, var(--purpule-deep));
+
+        h2{
+            background: -webkit-linear-gradient(45deg, var(--blue-pastel) 60%, var(--purpule-deep));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 5rem;
+        }
 
         @media (max-width: 780px){
             height: 34%;
@@ -58,4 +65,9 @@
             margin-left: 3%;
         }
     }        
+}
+.link{
+    color: var(--grey);
+    text-align: left;
+    display: flex;
 }

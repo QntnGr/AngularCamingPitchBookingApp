@@ -8,7 +8,7 @@
             <div class="info-box {{activity.hover_background_color}}">
                 <div class="gradient-overlay"></div>
                 <h3 class="pitch-title">{{activity.title | translate}}</h3>
-                <p [innerHTML]="activity.text | translate"></p>
+                <p [innerHTML]="activity.text | translate | replaceLinks"></p>
             </div>
         </swiper-slide>
     </swiper-container>
