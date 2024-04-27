@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { AnnoncesComponent } from '../annonces/components/annonces.component';
@@ -11,10 +11,16 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { LucideAngularModule, Home, Menu, CalendarDays, Trees, Calendar, 
     MapPin, Tent, Phone, X, ChevronDown, ChevronLeft, ChevronRight, 
-    ChevronUp } from 'lucide-angular';
+    ChevronUp, 
+    MoveLeft,
+    MoveRight} from 'lucide-angular';
 import { MenuComponent } from '../header/menu/menu.component';
 import { ImportantInfoComponent } from './important-info/important-info.component';
 import { PitchTypeComponent } from './pitch-type/pitch-type.component';
+import { ActivitySliderComponent } from './activity-slider/activity-slider.component';
+import { register } from 'swiper/element/bundle';
+import { ReplaceLinksPipe } from '../pipes/replace-link';
+register();
 
 @NgModule({
     imports: [
@@ -30,17 +36,19 @@ import { PitchTypeComponent } from './pitch-type/pitch-type.component';
         }),
         LucideAngularModule.pick({Home, Menu, CalendarDays
             , Trees, Calendar, MapPin, Tent, Phone, X, ChevronDown
-            , ChevronLeft, ChevronRight, ChevronUp })
+            , ChevronLeft, ChevronRight, ChevronUp, MoveLeft, MoveRight }),
+        ReplaceLinksPipe
     ],
     declarations: [
         HomeComponent,
         AccesibilityComponent,
         HeaderComponent, 
-        MenuComponent, ImportantInfoComponent, PitchTypeComponent
+        MenuComponent, ImportantInfoComponent, PitchTypeComponent, ActivitySliderComponent
     ],
     exports: [
-        HomeComponent
-    ]
+        HomeComponent,
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class HomeModule{}

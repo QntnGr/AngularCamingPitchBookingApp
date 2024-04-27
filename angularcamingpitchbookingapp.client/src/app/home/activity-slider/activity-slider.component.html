@@ -1,0 +1,23 @@
+<div class="bloc-title gradient-blue-purpule">
+    <h2>{{titleActivities | translate}}</h2>
+</div>
+<div class="container">
+    <swiper-container init="false" class="swiper-acivities">
+        <swiper-slide *ngFor="let activity of activities">
+            <img [src]="activity.image_url" [alt]="activity.alt">     
+            <div class="info-box {{activity.hover_background_color}}">
+                <div class="gradient-overlay"></div>
+                <h3 class="pitch-title">{{activity.title | translate}}</h3>
+                <p [innerHTML]="activity.text | translate | replaceLinks"></p>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+    <div class="swiper-btn-box">
+        <div class="swiper-button-prev nav-btn">
+            <lucide-icon name="move-left" [size]="50" [strokeWidth]="0.5" class="my-icon"></lucide-icon>
+        </div>
+        <div class="swiper-button-next nav-btn">
+            <lucide-icon name="move-right" [size]="50" [strokeWidth]="0.5" class="my-icon"></lucide-icon>
+        </div>
+    </div>
+</div>

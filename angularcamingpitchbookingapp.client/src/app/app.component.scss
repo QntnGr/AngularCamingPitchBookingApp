@@ -18,3 +18,56 @@
     align-items: center;
     justify-content: center;
 }
+
+
+.bloc-title{
+    background: linear-gradient(45deg, var(--green-light) 57%, var(--blue-pastel));
+    position: absolute;
+    width: 100%;
+    height: 340px;
+    z-index: -1;
+    left: 0;
+    margin-top: 2rem;
+
+    &.gradient-blue-purpule{
+        background: transparent;//linear-gradient(45deg, var(--blue-pastel) 57%, var(--purpule-deep));
+
+        h2{
+            background: -webkit-linear-gradient(45deg, var(--blue-pastel) 60%, var(--purpule-deep));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 5rem;
+        }
+
+        @media (max-width: 780px){
+            height: 34%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    @media (max-width: 780px){
+        height: calc(3*70%);
+    }
+      
+    h2{
+        font-family: 'LearningCurve';//'OPTIBerlingBold-Agency';
+        color: var(--white);
+        width: 50%;
+        text-align: center;
+        margin-left: 2rem;
+        font-size: 6rem;
+        line-height: 2rem;
+        white-space: nowrap;
+
+        @media (max-width: 780px){
+            width: 94%;
+            font-size: 2.5rem;
+            margin-left: 3%;
+        }
+    }        
+}
+.link{
+    color: var(--grey);
+    text-align: left;
+    display: flex;
+}
