@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Card } from './pitch-card';
+import { Card } from './card';
 
 @Component({
   selector: 'app-pitch-type',

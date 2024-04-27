@@ -1,0 +1,109 @@
+.container{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    position: relative;
+    overflow: visible;
+}
+swiper-container{
+    margin-top: 17rem;
+
+    @media (max-width: 780px){
+        margin-top: 13rem;
+    }
+}
+
+swiper-slide{
+    
+    img{
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+    }
+}
+.swiper-btn-box{
+    position: absolute;
+    display: flex;
+    right: 33.9%;
+    gap: 1rem;
+
+    .nav-btn{
+        color: var(--purpule-deep);
+        cursor: pointer;
+        user-select: none;
+        
+        &:hover{
+            transform: scale(1.1);
+            color: var(--blue-pastel);
+        }
+    }
+}
+.info-box{
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    .gradient-overlay{ 
+        position: absolute;
+        width: 100%;        
+        background: linear-gradient(#00000000, #000000);
+        bottom: 0;
+        height: 50%;
+        transition: all 0.3s ease;
+    }
+    .pitch-title{
+        position: absolute;
+        font-size: 34px;
+        text-align: center;
+        width: 100%;
+        bottom: 2rem;
+        transform: translate(0px, 100%);
+        transition: transform 0.3s linear;
+        color: var(--grey);
+        
+        @media (max-width: 780px){
+            padding-top: 1rem;
+        }
+    }
+    p{
+        position: absolute;
+        bottom: 2rem;
+        transform: translate(0px, 180%);
+        transition: transform 0.3s linear 0s;
+        color: var(--grey);
+        padding: 3rem 2rem;
+
+        @media (max-width: 780px){
+            padding-top: 1rem;
+        }
+    }
+    
+    &:hover{
+        transition: background 0.5s;
+
+        .gradient-overlay{
+            height: 0%;
+            transition: all 0.3s ease-in;
+        }
+
+        p{
+            transform: translate(0px, 10%);
+            top: 10%;
+        }
+
+        .pitch-title{
+            position: absolute;
+            transform: translate(0px, -10%);
+            top: 10%;
+            
+            @media (max-width: 780px){
+                top: 2%;
+            }
+        }
+
+        &.black{
+            background: var(--black-shadow);
+        }
+    }
+}

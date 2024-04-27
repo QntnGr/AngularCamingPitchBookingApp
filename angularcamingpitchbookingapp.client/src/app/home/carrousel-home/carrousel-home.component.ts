@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AvailabilitySearchComponent} from '../availability-search/availability-search.component'
 import Swiper from 'swiper';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SwiperContainer } from 'swiper/element';
 
 @Component({
   selector: 'app-carrousel-home',
@@ -28,7 +29,7 @@ export class CarrouselHomeComponent {
   }
 
   initSlider(): void{
-      let swiperEl = document.querySelector('swiper-container');
+      const swiperEl = document.querySelector('.swiper-home') as SwiperContainer;
       if(swiperEl){
         let swiperParams  = {
           spaceBetween: 0,
@@ -38,13 +39,7 @@ export class CarrouselHomeComponent {
           autoplay: {
             delay: 5000,
             disableOnInteraction: false
-          },
-          on: {
-            init(this){
-              let slider = new Swiper('swiper-container');
-              slider.autoplay.start();
-            }
-          }    
+          }   
         };
         Object.assign(swiperEl, swiperParams);
         swiperEl.initialize();
