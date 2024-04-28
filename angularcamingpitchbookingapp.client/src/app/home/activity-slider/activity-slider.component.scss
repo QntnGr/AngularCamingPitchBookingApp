@@ -9,12 +9,17 @@ swiper-container{
     margin-top: 17rem;
 
     @media (max-width: 780px){
-        margin-top: 13rem;
+        margin-top: 20rem;
     }
 }
 
 swiper-slide{
     transform: translateX(52%);
+
+    @media (max-width: 780px){        
+        transform: translateX(102%);
+    }
+
     img{
         width: 100%;
         height: 340px;
@@ -26,6 +31,12 @@ swiper-slide{
     display: flex;
     right: 17.5%;
     gap: 1rem;
+    
+    @media (max-width: 780px){
+        right: initial;
+        justify-content: center;
+        width: 100%;
+    }
 
     .nav-btn{
         color: var(--purpule-deep);

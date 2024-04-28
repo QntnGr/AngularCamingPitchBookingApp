@@ -12,6 +12,9 @@ body{
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
+app-root{
+    position: relative;
+}
 .button{
     transition: transform 0.3s ease;
 }

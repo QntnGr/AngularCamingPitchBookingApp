@@ -1,0 +1,15 @@
+
+<div class="footer-backgourd">
+</div>
+<div class="footer-container">
+    <div class="footer-content" *ngFor="let footerEl of footerEls">        
+        <h2 class="title {{footerEl.style}}">{{footerEl.title | translate}}</h2>
+        <ul>
+            <li class="row" *ngFor="let rowEl of footerEl.rows">
+                <lucide-icon *ngFor="let pictoName of rowEl.pictoNames" name="{{pictoName}}" [size]="20" class="my-icon"></lucide-icon>
+                <span class="{{rowEl.style}}" *ngIf="rowEl.text">{{rowEl.text! | translate}}</span>
+                <span class="footer-link" *ngIf="rowEl.url" [innerHTML]="rowEl.url | replaceLinks"></span>
+            </li>
+        </ul>
+    </div>
+</div>
