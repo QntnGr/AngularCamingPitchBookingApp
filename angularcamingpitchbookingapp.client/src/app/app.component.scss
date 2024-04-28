@@ -1,7 +1,7 @@
 ﻿app-footer{
     position: fixed;
     bottom: 0;
-    height: 400px;
+    height: 100%;
     width: 100%;
     z-index: 1;
 }
@@ -14,6 +14,10 @@ app-home{
     margin-bottom: 400px;
     padding-bottom: 4rem;
     background: #ffffff;
+
+    @media (max-width: 780px){
+        margin-bottom: 500px;
+    }
 }
 
 
@@ -51,13 +55,13 @@ app-home{
         background: linear-gradient(45deg, var(--blue-pastel) 57%, var(--purpule-deep));
 
         @media (max-width: 780px){
-            height: 34%;
+            height: 300px;
             margin-bottom: 2rem;
         }
     }
 
     @media (max-width: 780px){
-        height: calc(3*70%);
+        height: 500px;
     }
       
     h2{
@@ -72,8 +76,10 @@ app-home{
 
         @media (max-width: 780px){
             width: 94%;
-            font-size: 2.5rem;
+            font-size: 5rem;
             margin-left: 3%;
+            line-height: 4rem;
+            white-space: initial;
         }
     }        
 }
