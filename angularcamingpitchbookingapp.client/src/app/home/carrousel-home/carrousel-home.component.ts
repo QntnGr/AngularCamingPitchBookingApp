@@ -1,8 +1,7 @@
 import { Component, Input, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Slide } from './slide';
 import { CommonModule } from '@angular/common';
-import { AvailabilitySearchComponent} from '../availability-search/availability-search.component'
-import Swiper from 'swiper';
+import { AvailabilitySearchComponent} from '../availability-search/availability-search.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SwiperContainer } from 'swiper/element';
 

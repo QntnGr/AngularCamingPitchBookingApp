@@ -1,4 +1,22 @@
-﻿
+﻿app-footer{
+    position: fixed;
+    bottom: 0;
+    height: 400px;
+    width: 100%;
+    z-index: 1;
+}
+
+app-home{
+    position: relative;
+    z-index: 2;
+    display: block;
+    height: 100%;
+    margin-bottom: 400px;
+    padding-bottom: 4rem;
+    background: #ffffff;
+}
+
+
 .darkGreen-btn{
     background: linear-gradient(45deg, var(--blue-pastel) 66%, var(--purpule-deep));
     border: 0;
@@ -63,4 +81,10 @@
     color: var(--grey);
     text-align: left;
     display: flex;
+
+}
+.footer-link{
+    a{
+        color: var(--dark-green);
+    }
 }
