@@ -17,13 +17,6 @@ export class PitchTypeComponent {
       hover_background_color: "blue"
     },
     {
-      image_url : '../../../assets/Images/Home/Sections/PitchTypes/caping-car.png',
-      title : "home.types-emplacements.camping-car.titre",
-      text : "mon super Camping Car",
-      alt : "type camping-car",
-      hover_background_color: "purpule"
-    },
-    {
       image_url : '../../../assets/Images/Home/Sections/PitchTypes/tente.png',
       title : "home.types-emplacements.tente.titre",
       text : "ma super tente, ma super tente , ma super tente <br> ma super tente ",
