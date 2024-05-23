@@ -41,7 +41,8 @@
             justify-content: space-around;
             width: 78%;
             
-            button{
+            .menu{
+                text-decoration: none;
                 text-align: left;
                 text-transform: uppercase;
                 background-color: transparent;
@@ -49,7 +50,7 @@
                 border: 0;
                 border-bottom: 2px solid var(--grey-light2);
                 font-size: 20px;
-                min-height: 60px;
+                min-height: 42px;
 
                 &:hover{
                     color: var(--white);

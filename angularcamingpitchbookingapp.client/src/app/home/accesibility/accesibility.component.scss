@@ -3,12 +3,9 @@
     display: flex;
 
     &#map_accessibility{
-        color: var(--dark-green);
-        background-image: url('../../../assets/Images/Home/Backgrounds/motif-vague.svg');
-        background-size: cover;
+        color: var(--primary-btn);
         max-height: 750px;
         height: 100vh;
-        max-width: 100%;
         position: relative;
            
         @media (max-width: 780px) {
@@ -29,7 +26,7 @@
             justify-content: center;
             padding: 1% 8%;
             width: 53%;
-            background: radial-gradient(circle at 50% 50%, #ffffff, #ffffff00);
+            background: radial-gradient(circle at 50% 50%, var(--main-background), #ffffff00);
 
             @media (max-width: 780px){
                 width: 100%;
@@ -46,7 +43,6 @@
                 h4{
                     font-weight: 400;
                     margin: 0;
-                    color: var(--purpule-deep);
                 }
 
                 h3{
@@ -54,6 +50,7 @@
                     margin-bottom: 38px;
                     font-size: 76px;
                     font-family: 'LearningCurve', Helvetica, Arial, Verdana, Tahoma, sans-serif;
+                    color: var(--secondary-theme);
                 }
             }   
 
@@ -75,17 +72,34 @@
                 position: relative;
             }
 
-            img{
-                content: url('../../../assets/Images/Home/Sections/Accessibility/accessibillity_map.svg');
+            #details{
+                content: url('../../../assets/Images/Home/Sections/Accessibility/carte-details-villes-vert.png');
+                height: 100%;
+                object-fit: cover;
+                width: 1250px;
+                object-position: left;
+                left: 32px;
+                position: absolute;
+                z-index: 1;
+                
+                @media (max-width: 780px){
+                    height: auto;
+                }
+            }
+
+            #background{
+                content: url('../../../assets/Images/Home/Sections/Accessibility/carte-sans_details-verte-light.png');
                 height: 100%;
                 object-fit: cover;
                 width: 100%;
                 object-position: left;
+                position: absolute;
+                z-index: 0;
                 
                 @media (max-width: 780px){
                     height: auto;
-                    content: url('../../../assets/Images/Home/Sections/Accessibility/accessibillity_map_mobile.svg');
                 }
+
             }
         }
     }

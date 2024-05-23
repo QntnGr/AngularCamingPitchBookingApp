@@ -6,28 +6,22 @@
     z-index: 1;
 }
 
-app-home{
+.page{
     position: relative;
     z-index: 2;
     display: block;
     height: 100%;
     margin-bottom: 400px;
     padding-bottom: 12rem;
-    background: #ffffff;
+    background: var(--main-background);
 
     @media (max-width: 780px){
         margin-bottom: 500px;
     }
 }
 
-
-.darkGreen-btn{
-    background: var(--dark-green);
-    border: 0;
-}
-
-.purpule-btn{
-    background: var(--purpule-deep);
+.secondary-btn{
+    background: var(--secondary-theme);
     border: 0;
 }
 
@@ -56,8 +50,8 @@ app-home{
     left: 0;
     margin-top: 2rem;
 
-    &.gradient-blue-purpule{
-        background: var(--purpule-deep);
+    &.title-secondary{
+        background: var(--secondary-theme);
         width: 67%;
 
         h2{

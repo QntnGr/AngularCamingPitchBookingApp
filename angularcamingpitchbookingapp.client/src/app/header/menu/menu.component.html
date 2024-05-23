@@ -4,11 +4,11 @@
             <lucide-icon name="x" [size]="34" class="my-icon"></lucide-icon>
         </a>
         <div class="container-menu">
-            <button class="menu"
-            *ngFor="let menu of getVisibleMenus()" 
-            (click)="redirectTo(menu.url)">
+            <a class="menu"
+            *ngFor="let menu of getVisibleMenus(); let i = index" 
+            [routerLink]="menu.url" [state]="{tracingId: (i + 1)}">
                 {{menu.idTranslate | translate}}
-            </button>
+            </a>
         </div>
     </div>
 </div>
