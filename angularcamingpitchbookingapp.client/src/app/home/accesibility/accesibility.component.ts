@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-declare function parallax(elements: any, speed: number): void;
+declare function parallax(elements: any, speed: number, maxPositionX: number): void;
+import { getDocumentYPosition, getElementYPosition} from './helper-positon-elements';
 
 @Component({
   selector: 'app-accesibility',
@@ -18,11 +19,20 @@ export class AccesibilityComponent {
   bottomParagraph : string = "Réservez vite vos vacances";
 
   
-@HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll', ['$event'])
   onScroll(e: any) {
     const parallaxElements = document.querySelectorAll('.parallax');
     const parallaxSlowElements = document.querySelectorAll('.parallax-fast');
-    parallax(parallaxElements, 0.1);
-    parallax(parallaxSlowElements, 0.13);
+
+    let fastSpeed = 0.07;
+    let limitFast = 57;
+    let slowSpeed = 0.11;
+    let limitSlow = 90;
+    
+    
+    parallax(parallaxElements, fastSpeed, limitFast);
+    parallax(parallaxSlowElements, slowSpeed, limitSlow);
   }
+
 }
+
