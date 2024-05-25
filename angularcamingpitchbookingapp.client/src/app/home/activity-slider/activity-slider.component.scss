@@ -3,13 +3,18 @@
     margin-bottom: 5rem;
     position: relative;
     overflow: visible;
+    
+    @media (max-width: 780px){
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 swiper-container{
     margin-top: 17rem;
 
     @media (max-width: 780px){
-        margin-top: 20rem;
+        margin-top: 0;
     }
 }
 

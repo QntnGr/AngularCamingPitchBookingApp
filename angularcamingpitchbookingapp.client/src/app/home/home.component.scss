@@ -9,4 +9,15 @@ app-accesibility{
 }
 app-pitch-type{
     margin-top: 0.5rem;
+    position: relative;
+
+    @media (max-width: 780px){
+        display: block;
+        margin-bottom: 8rem;
+    }
+}
+
+app-activity-slider{
+    margin-top: 0.5rem;
+    position: relative;
 }

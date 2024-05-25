@@ -14,14 +14,14 @@ export class PitchTypeComponent {
       title : "home.types-emplacements.tente-lodge.titre",
       text : "ma super tente lodge",
       alt : "type tente lodge",
-      hover_background_color: "blue"
+      hover_background_color: "black"
     },
     {
       image_url : '../../../assets/Images/Home/Sections/PitchTypes/tente.png',
       title : "home.types-emplacements.tente.titre",
       text : "ma super tente, ma super tente , ma super tente <br> ma super tente ",
       alt : "type tente",
-      hover_background_color : "green"
+      hover_background_color : "black"
     },
   ];
 

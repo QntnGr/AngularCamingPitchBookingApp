@@ -1,14 +1,16 @@
-/*COLORS*/
+
 
 :root{
+    /*COLORS*/
     --green: #069965;
     --dark-green: #396153;
     --main-background: #FFFDF8;
     --primary-theme: #5F6F52;
+    --primary-theme-light: #5f6f523d;
     --secondary-theme: #D88254;
     --secondary-theme-light: #FFF3EC;
     --secondary-theme-light2: #F4DCC4;
-    --white: #fff;
+    --white: #ffffffef;
     --grey: #e7e6e6;
     --grey-light2: #c3c3c3;
     --dark-sand: #282518d4;
@@ -21,4 +23,8 @@
     --blue-pastel-opa: #6D8DAEd7;
     --green-light: #6DAE8E;
     --green-light-opa: #6DAE8Ed7;
+
+    /*FONT SIZE*/
+    --section-title: 5.4rem;
+    --section-title-mobile: 3.6rem;
 }
