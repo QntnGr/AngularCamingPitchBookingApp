@@ -81,7 +81,9 @@ export class ActivitySliderComponent {
         },
         on: {
           init() {
-            setTimeout(that.goToNextSlide, 200);
+            if(window.innerWidth > 780){
+              setTimeout(that.goToNextSlide, 200);
+            }
           },
         },
         speed: 1300,
