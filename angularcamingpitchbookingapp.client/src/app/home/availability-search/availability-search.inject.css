@@ -22,6 +22,6 @@ mat-form-field{
 .mdc-icon-button{
     &:hover{
         transform: scale(1.1);
-        background-color: var(--blue-dark-opa);
+        background-color: var(--black-shadow);
     }
 }

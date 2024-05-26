@@ -26,6 +26,11 @@
     border: 0;
 }
 
+.primary-btn{
+    background: var(--primary-theme);
+    border: 0;
+}
+
 .gradient-blue-green-btn{
     background: linear-gradient(-135deg, var(--blue-pastel) 33%, var(--green-light));
     border: 0;

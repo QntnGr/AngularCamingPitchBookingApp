@@ -1,3 +1,4 @@
+$header-height: 70px;
 
 .scrolled {
     position: fixed !important;
@@ -8,13 +9,15 @@
                 0 1px 7px 0 rgba(0, 0, 0, 0.12), 
                 0 3px 1px -1px rgba(0, 0, 0, 0.2);    
     .logo{
+        margin: 0 !important;
+
         img{
-            height: 80px !important;
+            height: $header-height !important;
         }
     }
     .header-left, .header-right{
         border: 0 !important;
-        height: 80px !important;
+        height: $header-height !important;
 
         .language-containter{
             margin-top: 1rem !important;

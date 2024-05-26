@@ -8,6 +8,7 @@ import { SwiperContainer } from 'swiper/element';
   styleUrl: './activity-slider.component.scss',
 })
 export class ActivitySliderComponent {
+  contactButtonLabel : string = 'home.bienvenu-section.contactez-nous';
   baseUrl: string = "../../../assets/Images/Home/Sections/Activities/";
   titleActivities: string = "home.activites.titre-section";
 
