@@ -109,6 +109,10 @@
             justify-content: center;
             margin-left: 20px;
 
+            &.hidden{
+                display: none;
+            }
+
             lucide-icon{
                 width: 42px;
                 height: 42px;
