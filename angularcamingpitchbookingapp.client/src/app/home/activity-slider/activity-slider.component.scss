@@ -2,6 +2,8 @@
 .container-button{
     display: flex;
     justify-content: center;
+    z-index: 2;
+    position: relative;
 }
 
 .container{
@@ -9,18 +11,14 @@
     margin-bottom: 5rem;
     position: relative;
     overflow: visible;
+    top: 13rem;
+    height: 35rem;
     
     @media (max-width: 780px){
         margin-top: 0;
         margin-bottom: 3rem;
-    }
-}
-
-swiper-container{
-    margin-top: 17rem;
-
-    @media (max-width: 780px){
-        margin-top: 0;
+        top: initial;
+        height: initial;
     }
 }
 
