@@ -48,13 +48,13 @@ swiper-slide{
     }
 
     .nav-btn{
-        color: var(--primary-theme);
+        color: var(--primary-theme-light);
         cursor: pointer;
         user-select: none;
         
         &:hover{
             transform: scale(1.1);
-            color: var(--blue-pastel);
+            color: var(--secondary-theme);
         }
     }
 }

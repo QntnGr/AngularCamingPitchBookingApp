@@ -11,7 +11,6 @@
     z-index: 2;
     display: block;
     height: 100%;
-    margin-bottom: 400px;
     padding-bottom: 4rem;
     background: var(--main-background);
 
@@ -27,7 +26,7 @@
 }
 
 .primary-btn{
-    background: var(--primary-theme);
+    background: var(--primary-theme-light);
     border: 0;
 }
 
@@ -38,7 +37,7 @@
 
 .cta-size{
     min-width: 215px;
-    height: 58px;
+    min-height: 58px;
     color: var(--white);
     font-size: 16px;
     display: flex;
@@ -79,7 +78,7 @@
     }
       
     h2{
-        font-family: 'LearningCurve';//'OPTIBerlingBold-Agency';
+        font-family: 'Inter';//'OPTIBerlingBold-Agency';
         color: var(--white);
         width: 67%;
         text-align: center;
@@ -87,6 +86,7 @@
         font-size: var(--section-title);
         line-height: 2rem;
         white-space: nowrap;
+        font-weight: 400;
 
         @media (max-width: 780px){
             width: 94%;
@@ -107,4 +107,8 @@
     a{
         color: var(--primary-theme);
     }
+}
+
+.hidden{
+    display: none;
 }

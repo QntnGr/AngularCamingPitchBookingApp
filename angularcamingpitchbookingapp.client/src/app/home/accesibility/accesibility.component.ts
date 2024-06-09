@@ -20,13 +20,13 @@ export class AccesibilityComponent {
   
   @HostListener('window:scroll', ['$event'])
   onScroll(e: any) {    
-    if(window.innerWidth > 780){
+    if(window.innerWidth > 770){
       const parallaxElements = document.querySelectorAll('.parallax');
       const parallaxSlowElements = document.querySelectorAll('.parallax-fast');
   
-      let fastSpeed = 0.07;
-      let limitFast = 57;
-      let slowSpeed = 0.11;
+      let fastSpeed = 0.10;
+      let limitFast = 60;
+      let slowSpeed = 0.16;
       let limitSlow = 90;
 
       parallax(parallaxElements, fastSpeed, limitFast);

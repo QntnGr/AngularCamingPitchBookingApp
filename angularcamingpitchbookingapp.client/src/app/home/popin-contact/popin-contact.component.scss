@@ -1,0 +1,40 @@
+.contact{
+    position: relative;
+    display: flex;
+    height: 350px;
+    width: 50%;
+    background-color: var(--primary-theme-2);
+    border-radius: 50px;
+    color: var(--grey);
+    flex-direction: column;
+    align-items: center;
+
+    .quit{
+        position: absolute;
+        top: 24px;
+        right: 24px;
+
+        lucide-icon{
+            &:hover{
+                transform: scale(1.1);
+                color: var(--white);
+                cursor: pointer;
+            }
+        }
+    }
+
+    h2{
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        font-size: 28px;
+    }
+
+    .info-box{    
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        width: 440px;
+    }
+
+}

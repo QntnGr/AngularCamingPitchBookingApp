@@ -1,20 +1,25 @@
 <div class="bloc-title-pitch">
     <div class="container-title">
-        <div class="highlight"><span></span></div>
         <h2>{{titlePitchTypeSection | translate}}</h2>
     </div>
 </div>
 <div class="container">
-    <picture class="pitch-card first {{pitches[0].hover_background_color}}">
+    <picture class="pitch-card {{pitches[0].hover_background_color}}">
         <img src="{{pitches[0].image_url}}" alt="{{pitches[0].alt}}"/>
         <div class="gradient-overlay"></div>
-        <h3 class="pitch-title">{{pitches[0].title | translate}}</h3>
+        <h3 class="pitch-title">
+            {{pitches[0].title | translate}}
+            <lucide-icon name="arrow-up-left" [size]="44" [strokeWidth]="1.5" class="my-icon"></lucide-icon>
+        </h3>
         <p [innerHTML]="pitches[0].text | translate"></p>
     </picture>
-    <picture class="pitch-card second {{pitches[1].hover_background_color}}">
+    <picture class="pitch-card {{pitches[1].hover_background_color}}">
         <img src="{{pitches[1].image_url}}" alt="{{pitches[1].alt}}"/>
         <div class="gradient-overlay"></div>
-        <h3 class="pitch-title">{{pitches[1].title | translate}}</h3>
+        <h3 class="pitch-title">
+            {{pitches[1].title | translate}}
+            <lucide-icon name="arrow-up-left" [size]="44" [strokeWidth]="1.5" class="my-icon"></lucide-icon>
+        </h3>
         <p [innerHTML]="pitches[1].text | translate"></p>
     </picture>
 </div>
