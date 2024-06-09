@@ -20,6 +20,7 @@ import { PitchTypeComponent } from './pitch-type/pitch-type.component';
 import { ActivitySliderComponent } from './activity-slider/activity-slider.component';
 import { register } from 'swiper/element/bundle';
 import { ReplaceLinksPipe } from '../pipes/replace-link';
+import { AppRoutingModule } from '../app-routing.module';
 register();
 
 @NgModule({
@@ -37,7 +38,8 @@ register();
         LucideAngularModule.pick({Home, Menu, CalendarDays
             , Trees, Calendar, MapPin, Tent, Phone, X, ChevronDown
             , ChevronLeft, ChevronRight, ChevronUp, MoveLeft, MoveRight }),
-        ReplaceLinksPipe
+        ReplaceLinksPipe,
+        AppRoutingModule
     ],
     declarations: [
         HomeComponent,

@@ -24,7 +24,7 @@ export class CarrouselHomeComponent {
   }
   
   ngOnInit(){
-    this.initSlider();
+    setTimeout(this.initSlider, 100);
   }
 
   initSlider(): void{

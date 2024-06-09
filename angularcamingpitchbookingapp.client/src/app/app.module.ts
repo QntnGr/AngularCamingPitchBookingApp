@@ -10,19 +10,20 @@ import { FooterComponent } from './footer/footer.component';
 import { Facebook, Instagram, LucideAngularModule, Phone, Youtube} from 'lucide-angular';
 import { TranslateModule } from '@ngx-translate/core';
 import { ReplaceLinksPipe } from "./pipes/replace-link";
+import { AccommodationComponent } from './accommodation/accommodation.component';
 
 @NgModule({
     providers: [
-        provideAnimationsAsync()
+        provideAnimationsAsync(),
     ],
     bootstrap: [AppComponent],
-    declarations: [AppComponent, FooterComponent],
+    declarations: [AppComponent, FooterComponent, AccommodationComponent],
     imports: [
         BrowserModule, HttpClientModule,
         AppRoutingModule, HomeModule,
         LucideAngularModule.pick({ Phone, Facebook, Instagram, Youtube }),
         TranslateModule,
-        ReplaceLinksPipe
-    ]
+        ReplaceLinksPipe,
+    ],
 })
 export class AppModule { }

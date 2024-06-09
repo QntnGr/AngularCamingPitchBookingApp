@@ -7,21 +7,6 @@
         flex-direction: column;
     }
 
-    .separator{
-        height: 100px;
-        width: 2px;
-        border-radius: 10%;
-        background-color: var(--dark-green);
-
-        @media (max-width: 780px){
-            display: none;
-        }
-
-        &:last-child{
-            display: none;
-        }
-    }
-
     .info-container{
         display: flex;
         font-size: 16px;
@@ -31,7 +16,7 @@
         }
 
         .my-icon{
-            color: var(--dark-green);
+            color: var(--primary-theme);
             
             @media (max-width: 780px){
                 width: 30%;
@@ -52,12 +37,14 @@
                 margin: 0;
                 margin-bottom: 4px;
                 text-transform: uppercase;
+                color: var(--secondary-theme);
             }
             p{
                 margin: 0;
                 line-height: 1.4rem;
                 text-align: center;
                 text-transform: uppercase;
+                color: var(--black-shadow);
             }
         }
     }

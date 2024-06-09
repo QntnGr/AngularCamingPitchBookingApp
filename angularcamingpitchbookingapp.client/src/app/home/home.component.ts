@@ -4,6 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
+  host: {
+      class:'page'
+  }
 })
 export class HomeComponent {
 
@@ -12,14 +15,14 @@ export class HomeComponent {
       srcUrl: 'assets/Images/Home/Slider/feret_pins.jpg',
       imgAlt: 'foret des landes'
     },
-    {
-      srcUrl: 'assets/Images/Home/Slider/camping_dans_foret.png',
-      imgAlt: 'camping foret'
-    },
-    {
-      srcUrl: 'assets/Images/Home/Slider/plage_cabane.png',
-      imgAlt: 'camping foret'
-    }
+    // {
+    //   srcUrl: 'assets/Images/Home/Slider/camping_dans_foret.png',
+    //   imgAlt: 'camping foret'
+    // },
+    // {
+    //   srcUrl: 'assets/Images/Home/Slider/plage_cabane.png',
+    //   imgAlt: 'camping foret'
+    // }
   ];
 
 }

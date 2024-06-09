@@ -2,8 +2,23 @@ app-important-info{
     margin: 0 0.5rem;
 }
 app-accesibility{
-    margin: 0 0.5rem;
+    width: 100%;
+    display: block;
+    overflow-x: hidden;
+    background-image: url('../../assets/Images/Home/Backgrounds/vague-motif-vert-ligt.png');
 }
 app-pitch-type{
     margin-top: 0.5rem;
+    position: relative;
+    display: block;
+
+    @media (max-width: 780px){
+        margin-bottom: 8rem;
+    }
+}
+
+app-activity-slider{
+    margin-top: 0.5rem;
+    position: relative;
+    display: block;
 }

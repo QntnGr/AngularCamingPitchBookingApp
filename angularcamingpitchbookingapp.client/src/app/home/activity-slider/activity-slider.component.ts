@@ -8,6 +8,7 @@ import { SwiperContainer } from 'swiper/element';
   styleUrl: './activity-slider.component.scss',
 })
 export class ActivitySliderComponent {
+  contactButtonLabel : string = 'home.bienvenu-section.contactez-nous';
   baseUrl: string = "../../../assets/Images/Home/Sections/Activities/";
   titleActivities: string = "home.activites.titre-section";
 
@@ -81,7 +82,9 @@ export class ActivitySliderComponent {
         },
         on: {
           init() {
-            setTimeout(that.goToNextSlide, 200);
+            if(window.innerWidth > 780){
+              setTimeout(that.goToNextSlide, 200);
+            }
           },
         },
         speed: 1300,

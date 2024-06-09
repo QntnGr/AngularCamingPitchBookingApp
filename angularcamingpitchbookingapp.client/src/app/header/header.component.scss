@@ -1,4 +1,5 @@
 
+
 .pre-heaer{
     position: absolute;
     z-index: 2;
@@ -8,8 +9,8 @@
     background-color: black;
     color: var(--white);
     font-family: 'Inter';
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: var(--medium);
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -29,9 +30,9 @@
     .header-left{
         display: flex;
         width: 38%;
-        height: 100px;
+        height: 133px;
         border-bottom: 1px solid var(--white);
-        margin-left: 18px;
+        margin-left: 4%;
         position: relative;
         
         @media (max-width: 780px) {
@@ -43,7 +44,8 @@
 
         .language-containter{
             display: block;
-            margin-top: 25px;
+            margin-top: 45px;
+            margin-left: 1rem;
 
             @media (max-width: 780px){
                 display: flex;
@@ -89,7 +91,7 @@
                 }
 
                 &:hover{
-                    background-color: var(--blue-dark-opa);
+                    background-color: var(--black-shadow);
                     border-radius: 5px;
                     @media (max-width: 780px){
                         background-color: var(--black-shadow);
@@ -109,6 +111,10 @@
             justify-content: center;
             margin-left: 20px;
 
+            &.hidden{
+                display: none;
+            }
+
             lucide-icon{
                 width: 42px;
                 height: 42px;
@@ -120,7 +126,7 @@
                 &:hover{
                     cursor: pointer;
                     transform: scale(1.2);
-                    background-color: var(--blue-dark-opa);
+                    background-color: var(--black-shadow);
                 }
             }
 
@@ -137,11 +143,11 @@
     .header-right{
         display: flex;
         width: 38%;
-        height: 100px;
+        height: 133px;
         justify-content: flex-end;
         align-items: center;
-        border-bottom: 1px solid var(--white);
-        margin-right: 18px;
+        border-bottom: 1px solid var(--white);        
+        margin-right: 4%;
         
         @media (max-width: 780px) {
             width: 20%;
@@ -175,8 +181,10 @@
     }
 
     .logo{
+        margin: 1rem 4rem;
+
         img{
-            height: 190px;
+            height: 220px;
 
             @media (max-width: 780px) {
                 height: 140px;
