@@ -5,7 +5,9 @@ app-accesibility{
     width: 100%;
     display: block;
     overflow-x: hidden;
-    background-image: url('../../assets/Images/Home/Backgrounds/vague-motif-vert-ligt.png');
+    background-image: url('../../assets/Images/Home/Backgrounds/wave-motif-green.svg');
+    background-repeat: repeat;
+    background-size: 27rem;
 }
 app-pitch-type{
     margin-top: 0.5rem;
@@ -13,7 +15,7 @@ app-pitch-type{
     display: block;
 
     @media (max-width: 780px){
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
     }
 }
 

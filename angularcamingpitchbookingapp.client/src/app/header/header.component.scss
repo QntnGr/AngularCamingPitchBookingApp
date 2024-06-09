@@ -40,6 +40,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            border: 0;
         }
 
         .language-containter{
@@ -63,7 +64,8 @@
 
                 @media (max-width: 780px){
                     position: absolute;
-                    top: -11px;
+                    top: -16px;
+                    left: -7px;
                 }
 
                 .language{
@@ -76,7 +78,7 @@
                     cursor: pointer;
 
                     @media (max-width: 780px) {
-                        font-size: 16px;
+                        font-size: 18px;
                         margin: 8px 0;
                     }  
                 }
@@ -153,14 +155,15 @@
             width: 20%;
             flex-direction: column;
             justify-content: center;
-        }
-        @media (max-width: 780px) {
+            border: 0;
+
             span{
                 width: 140px;
                 font-size: 14px;      
-                right: 18%;
+                right: 10%;
                 padding-bottom: 14px;  
                 position: relative;
+                top: -1.5rem;
             }
         }
         
@@ -189,6 +192,11 @@
             @media (max-width: 780px) {
                 height: 140px;
             }    
+        }
+
+        @media (max-width: 780px){
+            margin: 0;
+            margin-top: 0.5rem;
         }
     }
 }

@@ -9,7 +9,7 @@ $header-height: 70px;
                 0 1px 7px 0 rgba(0, 0, 0, 0.12), 
                 0 3px 1px -1px rgba(0, 0, 0, 0.2);    
     .logo{
-        margin: 0 !important;
+        margin: 5px 0 !important;
 
         img{
             height: $header-height !important;
@@ -21,6 +21,15 @@ $header-height: 70px;
 
         .language-containter{
             margin-top: 1rem !important;
+            position: relative;
+            bottom: 8px;
+        }
+        .header-reservation{
+            @media (max-width: 780px){
+                right: 10%;
+                position: relative;
+                bottom: 8px;
+            }
         }
     }
 }

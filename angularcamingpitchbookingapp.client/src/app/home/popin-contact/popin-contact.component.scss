@@ -9,6 +9,10 @@
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: 780px){
+        width: 90%;
+    }
+
     .quit{
         position: absolute;
         top: 24px;
@@ -28,6 +32,12 @@
         margin-top: 4rem;
         margin-bottom: 3rem;
         font-size: 28px;
+
+        @media (max-width: 780px){
+            font-size: 24px;
+            width: 80%;
+            margin-bottom: 2rem;
+        }
     }
 
     .info-box{    
@@ -35,6 +45,12 @@
         align-items: center;
         gap: 28px;
         width: 440px;
+
+        @media (max-width: 780px){
+            width: 90%;
+            gap: 16px;
+            font-size: 14px;
+        }
     }
 
 }

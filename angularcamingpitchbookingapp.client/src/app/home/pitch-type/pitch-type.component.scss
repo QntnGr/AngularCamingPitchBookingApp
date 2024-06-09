@@ -12,24 +12,19 @@
         width: 100%;
         background-color: var(--primary-theme-light);
         z-index: -1;
-
-        @media (max-width: 780px){
-            top: 11rem;
-            height: 91%;
-        }
     }
+
     .container-title{
         display: flex;
         margin: 7rem 3%;
         height: 100%;
         position: relative;
         top: -15rem;
-
-         
-            
+        
         @media (max-width: 780px){
             width: 100%;
             margin: 3rem 0;
+            top: -12rem;
         }
 
         h2{
@@ -44,9 +39,8 @@
             
             @media (max-width: 780px){
                 width: 100%;
-                font-size: var(--section-title-mobile);
+                font-size: 2.9rem;
                 margin: 0;
-                white-space: nowrap;
             }
         }        
     }
@@ -62,7 +56,7 @@
 
     @media (max-width: 780px){
         flex-direction: column;
-        margin-top: 2rem;
+        margin-top: 10rem;
     }
 
     .pitch-card{

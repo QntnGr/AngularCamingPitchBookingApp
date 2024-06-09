@@ -85,7 +85,6 @@ swiper-slide img {
   
   @media (max-width: 780px) {
     padding-left: 5%;
-    bottom: 95px;      
   }
 
   h1{
@@ -93,7 +92,8 @@ swiper-slide img {
     font-size: 48px;  
 
     @media (max-width: 780px) {
-      font-size: 28px;      
+      font-size: 40px;
+      margin-top: 1rem;    
     }
   }
 
@@ -103,7 +103,7 @@ swiper-slide img {
     font-size: 48px;  
 
     @media (max-width: 780px) {
-      font-size: 28px;      
+      font-size: 30px;      
     }
   }
 
