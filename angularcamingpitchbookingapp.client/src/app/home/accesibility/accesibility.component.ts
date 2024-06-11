@@ -24,13 +24,13 @@ export class AccesibilityComponent {
       const parallaxElements = document.querySelectorAll('.parallax');
       const parallaxSlowElements = document.querySelectorAll('.parallax-fast');
   
-      let fastSpeed = 0.10;
+      let fastSpeed = 0.18;
       let limitFast = 60;
-      let slowSpeed = 0.16;
+      let slowSpeed = 0.20;
       let limitSlow = 90;
 
-      parallax(parallaxElements, fastSpeed, limitFast);
       parallax(parallaxSlowElements, slowSpeed, limitSlow);
+      parallax(parallaxElements, fastSpeed, limitFast);
     }    
   }
 
