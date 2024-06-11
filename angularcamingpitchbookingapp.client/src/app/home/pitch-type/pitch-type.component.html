@@ -4,22 +4,26 @@
     </div>
 </div>
 <div class="container">
-    <picture class="pitch-card {{pitches[0].hover_background_color}}">
-        <img src="{{pitches[0].image_url}}" alt="{{pitches[0].alt}}"/>
-        <div class="gradient-overlay"></div>
-        <h3 class="pitch-title">
-            {{pitches[0].title | translate}}
-            <lucide-icon name="arrow-up-left" [size]="44" [strokeWidth]="1.5" class="my-icon"></lucide-icon>
-        </h3>
-        <p [innerHTML]="pitches[0].text | translate"></p>
-    </picture>
-    <picture class="pitch-card {{pitches[1].hover_background_color}}">
-        <img src="{{pitches[1].image_url}}" alt="{{pitches[1].alt}}"/>
-        <div class="gradient-overlay"></div>
-        <h3 class="pitch-title">
-            {{pitches[1].title | translate}}
-            <lucide-icon name="arrow-up-left" [size]="44" [strokeWidth]="1.5" class="my-icon"></lucide-icon>
-        </h3>
-        <p [innerHTML]="pitches[1].text | translate"></p>
-    </picture>
+    <a href="../../../assets/files/TARIFS MONTACABANA 2024 final.pdf" target="_blank"    
+    *ngFor="let pitch of pitches">
+        <picture class="pitch-card {{pitch.hover_background_color}}">
+            <img src="{{pitch.image_url}}" alt="{{pitch.alt}}"/>
+            <div class="gradient-overlay"></div>
+            <h3 class="pitch-title">
+                {{pitch.title | translate}}
+                <lucide-icon name="arrow-up-left" [size]="44" [strokeWidth]="1.5" class="my-icon"></lucide-icon>
+            </h3>
+            <div class="offers-box">
+                <div class="offer" 
+                *ngFor="let offer of pitch.offers">
+                    <div class="row"
+                    *ngFor="let row of offer.rows">
+                        <lucide-icon name="{{row.picto_name}}" [size]="30" [strokeWidth]="1.5" class="my-icon"></lucide-icon>
+                        <div class="text" [innerHTML]="row.text | translate"></div>
+                    </div>
+                </div>
+                <lucide-icon name="pointer" [size]="38" [strokeWidth]="1" class="my-icon pointer"></lucide-icon>
+            </div>
+        </picture>
+    </a>
 </div>

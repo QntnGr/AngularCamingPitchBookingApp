@@ -59,6 +59,11 @@
         margin-top: 10rem;
     }
 
+    a{
+        width: 100%;
+        display: flex;
+    }
+
     .pitch-card{
         display: flex;
         flex-direction: column;
@@ -83,6 +88,7 @@
             min-height: 100%;
             max-height: 700px;
             object-fit: cover;
+            object-position: bottom;
             z-index: -1;
         }
 
@@ -102,12 +108,40 @@
             }
         }
 
-        p{
+        .offers-box{
             position: absolute;
-            padding: 5rem 2rem;
+            padding-top: 3rem;
             bottom: 2rem;
             transform: translate(0px, 150%);
             transition: transform 0.3s linear 0s;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            
+            .offer{
+
+                .row{
+                    display: flex;
+                    gap: 1rem;
+                    
+                    .text{
+                        position: relative;
+                        top: 6px;
+                    }
+                }
+            }
+
+            .my-icon.pointer{
+                position: absolute;
+                right: 1rem;
+                bottom: 1rem;
+
+                &:hover{
+                    transform: scale(1.2);
+                    color: #ffffff;
+                }
+            }
+
         }
 
         .gradient-overlay{ 
@@ -128,7 +162,7 @@
                 transition: all 0.3s ease-in;
             }
 
-            p{
+            .offers-box{
                 transform: translate(0px, 10%);
                 top: 10%;
             }

@@ -15,7 +15,16 @@ import { LucideAngularModule, Home, Menu, CalendarDays, Trees, Calendar,
     MoveLeft,
     MoveRight,
     Mail,
-    ArrowUpLeft} from 'lucide-angular';
+    ArrowUpLeft,
+    Pointer,
+    CookingPot,
+    Sun,
+    ShowerHead,
+    BedDouble,
+    Users,
+    Caravan,
+    Truck,
+    Zap} from 'lucide-angular';
 import { MenuComponent } from '../header/menu/menu.component';
 import { ImportantInfoComponent } from './important-info/important-info.component';
 import { PitchTypeComponent } from './pitch-type/pitch-type.component';
@@ -41,7 +50,8 @@ register();
         LucideAngularModule.pick({Home, Menu, CalendarDays
             , Trees, Calendar, MapPin, Tent, Phone, X, ChevronDown
             , ChevronLeft, ChevronRight, ChevronUp, MoveLeft, MoveRight
-            , Mail, ArrowUpLeft }),
+            , Mail, ArrowUpLeft, Pointer, CookingPot, Sun, ShowerHead
+            , BedDouble, Users, Caravan, Truck, Zap }),
         ReplaceLinksPipe,
         AppRoutingModule
     ],
