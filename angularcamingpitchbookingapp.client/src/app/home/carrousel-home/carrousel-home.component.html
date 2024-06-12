@@ -1,7 +1,7 @@
 <swiper-container init="false" class="swiper-home">
 <div class="swiper-pagination"></div>
-    <swiper-slide *ngFor="let image of images">
-        <img [src]="image.srcUrl" [alt]="image.imgAlt">
+    <swiper-slide *ngFor="let image of images; first as isFirst">
+        <img [src]="image.srcUrl" [alt]="image.imgAlt" [attr.fetchpriority]="isFirst ? 'hight' : null">
     </swiper-slide>
 </swiper-container>
 <div class="mask">
