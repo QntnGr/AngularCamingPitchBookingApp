@@ -18,7 +18,7 @@
                 *ngFor="let offer of pitch.offers">
                     <div class="row"
                     *ngFor="let row of offer.rows">
-                        <lucide-icon name="{{row.picto_name}}" [size]="30" [strokeWidth]="1.5" class="my-icon"></lucide-icon>
+                        <lucide-icon name="{{row.picto_name}}" [size]="24" [strokeWidth]="1" class="my-icon"></lucide-icon>
                         <div class="text" [innerHTML]="row.text | translate"></div>
                     </div>
                 </div>

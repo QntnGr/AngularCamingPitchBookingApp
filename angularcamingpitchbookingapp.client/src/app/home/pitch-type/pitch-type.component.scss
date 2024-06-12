@@ -95,7 +95,7 @@
         .pitch-title{
             position: absolute;
             text-transform: uppercase;
-            font-size: 34px;
+            font-size: 32px;
             text-align: center;
             width: 100%;
             bottom: 2rem;
@@ -109,20 +109,22 @@
         }
 
         .offers-box{
-            position: absolute;
-            padding-top: 3rem;
+            position: absolute;    
+            margin-top: 2.5rem;
             bottom: 2rem;
             transform: translate(0px, 150%);
             transition: transform 0.3s linear 0s;
             display: flex;
             width: 100%;
             justify-content: space-around;
+            font-size: 14px;
+            gap: 1rem;
             
             .offer{
 
                 .row{
                     display: flex;
-                    gap: 1rem;
+                    gap: 0.5rem;
                     
                     .text{
                         position: relative;
@@ -134,7 +136,7 @@
             .my-icon.pointer{
                 position: absolute;
                 right: 1rem;
-                bottom: 1rem;
+                bottom: 0.5rem;
 
                 &:hover{
                     transform: scale(1.2);
@@ -164,13 +166,13 @@
 
             .offers-box{
                 transform: translate(0px, 10%);
-                top: 10%;
+                top: 6%;
             }
     
             .pitch-title{
                 position: absolute;
                 transform: translate(0px, -10%);
-                top: 10%;
+                top: 6%;
                 
                 .my-icon{
                     display: none;

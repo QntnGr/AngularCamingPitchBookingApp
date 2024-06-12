@@ -53,7 +53,7 @@ export class PitchTypeComponent {
               text: "home.types-emplacements.tente-lodge.offre2.text-ligne2"
             },
             {
-              picto_name:"shower-head",
+              picto_name:"sun",
               text: "home.types-emplacements.tente-lodge.offre2.text-ligne3"
             },
           ]
