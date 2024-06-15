@@ -8,8 +8,10 @@ import { Card } from './card';
 })
 export class PitchTypeComponent {
   titlePitchTypeSection: string = "home.types-emplacements.titre-section";
+  text_lien: string = "home.types-emplacements.text-lien";
   pitches: Card[] = [
     {
+      file_url: "../../../assets/files/TARIFS_LODGE_2024.pdf",
       image_url : '../../../assets/Images/Home/Sections/PitchTypes/tente-lodge.jpg',
       title : "home.types-emplacements.tente-lodge.titre",
       text : "ma super tente lodge",
@@ -70,14 +72,6 @@ export class PitchTypeComponent {
               text: "home.types-emplacements.tente-lodge.offre3.text-ligne2"
             },
             {
-              picto_name:"shower-head",
-              text: "home.types-emplacements.tente-lodge.offre3.text-ligne3"
-            },
-            {
-              picto_name:"cooking-pot",
-              text: "home.types-emplacements.tente-lodge.offre3.text-ligne4"
-            },
-            {
               picto_name:"sun",
               text: "home.types-emplacements.tente-lodge.offre3.text-ligne5"
             },
@@ -86,6 +80,7 @@ export class PitchTypeComponent {
       ]
     },
     {
+      file_url: "../../../assets/files/TARIFS_EMPLACMENTS_2024.pdf",
       image_url : '../../../assets/Images/Home/Sections/PitchTypes/tente.jpg',
       title : "home.types-emplacements.tente.titre",
       text : "ma super tente, ma super tente , ma super tente <br> ma super tente ",
@@ -106,10 +101,6 @@ export class PitchTypeComponent {
             {
               picto_name:"caravan",
               text: "home.types-emplacements.tente.offre1.text-ligne3"
-            },
-            {
-              picto_name:"truck",
-              text: "home.types-emplacements.tente.offre1.text-ligne4"
             },
             {
               picto_name:"zap",

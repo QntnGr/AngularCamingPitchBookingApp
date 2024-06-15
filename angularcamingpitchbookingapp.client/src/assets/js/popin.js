@@ -1,21 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const toggleButtons = document.querySelectorAll(".togglePopin");
-    const closeButtons = document.querySelectorAll(".quit");
+    const buttons = document.querySelectorAll(".togglePopin, .quit");
     const popins = document.querySelectorAll(".popin");
-
-    toggleButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            popins.forEach(popin => {
-                popin.classList.toggle("hidden");
-            });
+    
+    function addEventListeners(elements, eventHandler) {
+        elements.forEach(element => {
+            element.addEventListener("click", eventHandler);
+            element.addEventListener("touchend", eventHandler);
         });
-    });
-
-    closeButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            popins.forEach(popin => {
-                popin.classList.add("hidden");
-            });
+    }
+    
+    function handleEvent(event) {
+        if (event.type === "touchend") {
+            event.preventDefault();
+        }
+    
+        if (event.type === "click" || event.type === "touchend") {
+            togglePopins();
+        }
+    }
+    
+    function togglePopins() {
+        popins.forEach(popin => {
+            popin.classList.toggle("hidden");
         });
-    });
+    }
+    
+    addEventListeners(buttons, handleEvent);
+    
 });

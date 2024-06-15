@@ -4,7 +4,7 @@
     </div>
 </div>
 <div class="container">
-    <a href="../../../assets/files/TARIFS MONTACABANA 2024 final.pdf" target="_blank"    
+    <a href="{{pitch.file_url}}" target="_blank"    
     *ngFor="let pitch of pitches">
         <picture class="pitch-card {{pitch.hover_background_color}}">
             <img src="{{pitch.image_url}}" alt="{{pitch.alt}}"/>
@@ -22,8 +22,8 @@
                         <div class="text" [innerHTML]="row.text | translate"></div>
                     </div>
                 </div>
-                <lucide-icon name="pointer" [size]="38" [strokeWidth]="1" class="my-icon pointer"></lucide-icon>
             </div>
+            <span class="link-fake">{{text_lien | translate}}</span>
         </picture>
     </a>
 </div>

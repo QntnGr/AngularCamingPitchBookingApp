@@ -7,4 +7,5 @@ export interface Card{
     alt: string;
     hover_background_color: string;
     offers?: OfferTypePitch[];
+    file_url? : string;
   }

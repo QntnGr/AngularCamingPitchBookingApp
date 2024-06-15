@@ -83,6 +83,16 @@
             height: 70vh;
         }
 
+        .link-fake{
+            font-weight: var(--regulard);
+            position: absolute;
+            color: var(--primary-theme-light);
+            text-decoration: underline;
+            text-align: center;
+            width: 100%;
+            bottom: -30px;
+        }
+
         img{
             width: 100%;
             min-height: 100%;
@@ -132,18 +142,6 @@
                     }
                 }
             }
-
-            .my-icon.pointer{
-                position: absolute;
-                right: 1rem;
-                bottom: 0.5rem;
-
-                &:hover{
-                    transform: scale(1.2);
-                    color: #ffffff;
-                }
-            }
-
         }
 
         .gradient-overlay{ 
@@ -158,6 +156,15 @@
         &:hover{
             cursor: pointer;
             transition: background 0.5s;
+
+            .link-fake{
+                bottom: 8px;
+                transition: bottom 0.3s ease-in;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
 
             .gradient-overlay{
                 height: 0%;

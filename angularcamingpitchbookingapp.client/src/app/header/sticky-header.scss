@@ -9,7 +9,8 @@ $header-height: 70px;
                 0 1px 7px 0 rgba(0, 0, 0, 0.12), 
                 0 3px 1px -1px rgba(0, 0, 0, 0.2);    
     .logo{
-        margin: 5px 0 !important;
+        margin: 0 !important;
+        margin-top: 5px !important;
 
         img{
             height: $header-height !important;
