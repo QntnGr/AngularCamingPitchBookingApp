@@ -11,7 +11,6 @@ namespace AngularCamingPitchBookingApp.Server.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            Down(migrationBuilder);
             migrationBuilder.CreateTable(
                 name: "Localisations",
                 columns: table => new
