@@ -80,7 +80,27 @@
         @media (max-width: 780px){
             width: 94%;
             margin-top: 2rem;
-            height: 70vh;
+            height: 64vh;
+
+            &.mobile_height{
+                height: 74vh;
+            }
+        }
+
+        .tente-img{
+            content: url('../../../assets/Images/Home/Sections/PitchTypes/tente.jpg');
+            
+            @media (max-width: 780px){
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/tente-mobile-tiny.jpg');
+            }
+        }
+
+        .tente-lodge-img{
+            content: url('../../../assets/Images/Home/Sections/PitchTypes/tente-lodge.jpg');
+
+            @media (max-width: 780px){
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/tentes-lodges-mobile-tiny.jpg');
+            }
         }
 
         .link-fake{
@@ -115,6 +135,10 @@
             .my-icon{
                 position: absolute;
                 right: 2%;
+
+                @media (max-width: 780px){
+                    display: none;
+                }
             }
         }
 
@@ -125,12 +149,24 @@
             transform: translate(0px, 150%);
             transition: transform 0.3s linear 0s;
             display: flex;
+            flex-wrap: wrap;
             width: 100%;
             justify-content: space-around;
             font-size: 14px;
             gap: 1rem;
+
+            @media (max-width: 780px){
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+            }
             
             .offer{
+                
+                @media (max-width: 780px){
+                    width: 150px;
+                    display: flex;
+                    flex-direction: column;
+                }
 
                 .row{
                     display: flex;
@@ -139,6 +175,12 @@
                     .text{
                         position: relative;
                         top: 6px;
+                    }
+                    
+                    .my-icon{                
+                        @media (max-width: 780px){
+                            transform: scale(0.8);
+                        }
                     }
                 }
             }
@@ -174,6 +216,12 @@
             .offers-box{
                 transform: translate(0px, 10%);
                 top: 6%;
+
+                @media (max-width: 780px){
+                    &.gap{
+                        top: 20%;
+                    }
+                }
             }
     
             .pitch-title{

@@ -4,16 +4,16 @@
     </div>
 </div>
 <div class="container">
-    <a href="{{pitch.file_url}}" target="_blank"    
+    <a (click)="manageTapOrClick($event, pitch.file_url!)"
     *ngFor="let pitch of pitches">
-        <picture class="pitch-card {{pitch.hover_background_color}}">
-            <img src="{{pitch.image_url}}" alt="{{pitch.alt}}"/>
+        <picture class="pitch-card {{pitch.hover_background_color}} {{pitch.height_mobile_class}}">
+            <img alt="{{pitch.alt}}" class="{{pitch.image_class}}"/>
             <div class="gradient-overlay"></div>
             <h3 class="pitch-title">
                 {{pitch.title | translate}}
                 <lucide-icon name="arrow-up-left" [size]="44" [strokeWidth]="1.5" class="my-icon"></lucide-icon>
             </h3>
-            <div class="offers-box">
+            <div class="offers-box {{pitch.gap_offers_class}}">
                 <div class="offer" 
                 *ngFor="let offer of pitch.offers">
                     <div class="row"
@@ -23,7 +23,7 @@
                     </div>
                 </div>
             </div>
-            <span class="link-fake">{{text_lien | translate}}</span>
+            <span class="link-fake" (click)="manageTapOrClick($event, pitch.file_url!)" >{{text_lien | translate}}</span>
         </picture>
     </a>
 </div>

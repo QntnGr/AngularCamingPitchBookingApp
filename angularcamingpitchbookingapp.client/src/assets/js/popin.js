@@ -5,14 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
     function addEventListeners(elements, eventHandler) {
         elements.forEach(element => {
             element.addEventListener("click", eventHandler);
-            element.addEventListener("touchend", eventHandler);
+            element.addEventListener("touchend", eventHandler, { passive: false });
         });
     }
     
     function handleEvent(event) {
-        if (event.type === "touchend") {
-            event.preventDefault();
-        }
+        event.preventDefault();
     
         if (event.type === "click" || event.type === "touchend") {
             togglePopins();

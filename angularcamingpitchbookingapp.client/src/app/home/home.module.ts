@@ -24,7 +24,8 @@ import { LucideAngularModule, Home, Menu, CalendarDays, Trees, Calendar,
     Users,
     Caravan,
     Truck,
-    Zap} from 'lucide-angular';
+    Zap,
+    Copy} from 'lucide-angular';
 import { MenuComponent } from '../header/menu/menu.component';
 import { ImportantInfoComponent } from './important-info/important-info.component';
 import { PitchTypeComponent } from './pitch-type/pitch-type.component';
@@ -51,7 +52,7 @@ register();
             , Trees, Calendar, MapPin, Tent, Phone, X, ChevronDown
             , ChevronLeft, ChevronRight, ChevronUp, MoveLeft, MoveRight
             , Mail, ArrowUpLeft, Pointer, CookingPot, Sun, ShowerHead
-            , BedDouble, Users, Caravan, Truck, Zap }),
+            , BedDouble, Users, Caravan, Truck, Zap, Copy}),
         ReplaceLinksPipe,
         AppRoutingModule
     ],

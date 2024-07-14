@@ -7,12 +7,13 @@ import { Card } from './card';
   styleUrl: './pitch-type.component.scss'
 })
 export class PitchTypeComponent {
-  titlePitchTypeSection: string = "home.types-emplacements.titre-section";
-  text_lien: string = "home.types-emplacements.text-lien";
-  pitches: Card[] = [
+
+  public titlePitchTypeSection: string = "home.types-emplacements.titre-section";
+  public text_lien: string = "home.types-emplacements.text-lien";
+  public pitches: Card[] = [
     {
       file_url: "../../../assets/files/TARIFS_LODGE_2024.pdf",
-      image_url : '../../../assets/Images/Home/Sections/PitchTypes/tente-lodge.jpg',
+      image_class: 'tente-lodge-img',
       title : "home.types-emplacements.tente-lodge.titre",
       text : "ma super tente lodge",
       alt : "type tente lodge",
@@ -28,10 +29,6 @@ export class PitchTypeComponent {
             {
               picto_name:"bed-double",
               text: "home.types-emplacements.tente-lodge.offre1.text-ligne2"
-            },
-            {
-              picto_name:"shower-head",
-              text: "home.types-emplacements.tente-lodge.offre1.text-ligne3"
             },
             {
               picto_name:"cooking-pot",
@@ -60,28 +57,12 @@ export class PitchTypeComponent {
             },
           ]
         },
-        {
-          title: "offre 3",
-          rows: [
-            {
-              picto_name:"users",
-              text: "home.types-emplacements.tente-lodge.offre3.text-ligne1"
-            },
-            {
-              picto_name:"bed-double",
-              text: "home.types-emplacements.tente-lodge.offre3.text-ligne2"
-            },
-            {
-              picto_name:"sun",
-              text: "home.types-emplacements.tente-lodge.offre3.text-ligne5"
-            },
-          ]
-        },
-      ]
+      ],
+      gap_offers_class: "gap"
     },
     {
       file_url: "../../../assets/files/TARIFS_EMPLACMENTS_2024.pdf",
-      image_url : '../../../assets/Images/Home/Sections/PitchTypes/tente.jpg',
+      image_class: 'tente-img',
       title : "home.types-emplacements.tente.titre",
       text : "ma super tente, ma super tente , ma super tente <br> ma super tente ",
       alt : "type tente",
@@ -108,8 +89,26 @@ export class PitchTypeComponent {
             },
           ]
         },
-      ]
+      ],
+      gap_offers_class: "gap"
     },
   ];
+
+  
+  public manageTapOrClick(e: Event, url: string) {
+    if (window.innerWidth < 720 
+      && e.target instanceof HTMLElement) {
+        let classNameTarget = e.target.classList;
+
+        if (classNameTarget.contains("link-fake")) {
+            window.open(url, '_blank');
+        }
+        e.stopPropagation();
+    }
+    else{
+      window.open(url, '_blank');
+    }
+  }
+  
 
 }
