@@ -12,6 +12,7 @@ swiper-container {
   width: 100%;
   height: 100vh;
   max-height: 1020px;
+  min-height: 562px;
 }
 
 swiper-slide {
@@ -74,18 +75,17 @@ swiper-slide img {
 }
 
 .title{
-  display: block;    
+  display: block;
   color: var(--white);
-  position: relative;
+  position: absolute;
   z-index: 1;
-  padding-left: 9%;
-  bottom: 6px;
+  padding-left: 6%;
+  top: calc(13rem + 10%);
   font-size: 48px;
   margin-top: 5rem;
   
   @media (max-width: 780px) {
     padding-left: 5%;
-    bottom: 95px;      
   }
 
   h1{
@@ -93,7 +93,8 @@ swiper-slide img {
     font-size: 48px;  
 
     @media (max-width: 780px) {
-      font-size: 28px;      
+      font-size: 40px;
+      margin-top: 1rem;    
     }
   }
 
@@ -103,7 +104,7 @@ swiper-slide img {
     font-size: 48px;  
 
     @media (max-width: 780px) {
-      font-size: 28px;      
+      font-size: 30px;      
     }
   }
 

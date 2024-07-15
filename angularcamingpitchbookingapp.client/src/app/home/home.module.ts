@@ -13,7 +13,19 @@ import { LucideAngularModule, Home, Menu, CalendarDays, Trees, Calendar,
     MapPin, Tent, Phone, X, ChevronDown, ChevronLeft, ChevronRight, 
     ChevronUp, 
     MoveLeft,
-    MoveRight} from 'lucide-angular';
+    MoveRight,
+    Mail,
+    ArrowUpLeft,
+    Pointer,
+    CookingPot,
+    Sun,
+    ShowerHead,
+    BedDouble,
+    Users,
+    Caravan,
+    Truck,
+    Zap,
+    Copy} from 'lucide-angular';
 import { MenuComponent } from '../header/menu/menu.component';
 import { ImportantInfoComponent } from './important-info/important-info.component';
 import { PitchTypeComponent } from './pitch-type/pitch-type.component';
@@ -21,6 +33,7 @@ import { ActivitySliderComponent } from './activity-slider/activity-slider.compo
 import { register } from 'swiper/element/bundle';
 import { ReplaceLinksPipe } from '../pipes/replace-link';
 import { AppRoutingModule } from '../app-routing.module';
+import { PopinContactComponent } from './popin-contact/popin-contact.component';
 register();
 
 @NgModule({
@@ -37,7 +50,9 @@ register();
         }),
         LucideAngularModule.pick({Home, Menu, CalendarDays
             , Trees, Calendar, MapPin, Tent, Phone, X, ChevronDown
-            , ChevronLeft, ChevronRight, ChevronUp, MoveLeft, MoveRight }),
+            , ChevronLeft, ChevronRight, ChevronUp, MoveLeft, MoveRight
+            , Mail, ArrowUpLeft, Pointer, CookingPot, Sun, ShowerHead
+            , BedDouble, Users, Caravan, Truck, Zap, Copy}),
         ReplaceLinksPipe,
         AppRoutingModule
     ],
@@ -45,7 +60,7 @@ register();
         HomeComponent,
         AccesibilityComponent,
         HeaderComponent, 
-        MenuComponent, ImportantInfoComponent, PitchTypeComponent, ActivitySliderComponent
+        MenuComponent, ImportantInfoComponent, PitchTypeComponent, ActivitySliderComponent, PopinContactComponent
     ],
     exports: [
         HomeComponent,

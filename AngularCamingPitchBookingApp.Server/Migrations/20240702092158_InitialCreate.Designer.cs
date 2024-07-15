@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AngularCamingPitchBookingApp.Server.Migrations
 {
     [DbContext(typeof(CatalogContext))]
-    [Migration("20240127182055_InitialCreate")]
+    [Migration("20240702092158_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

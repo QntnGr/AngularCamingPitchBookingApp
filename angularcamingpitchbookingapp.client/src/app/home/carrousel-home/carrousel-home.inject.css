@@ -14,4 +14,10 @@
     --mat-datepicker-calendar-date-preview-state-outline-color: #ffffff7d;
     --mat-datepicker-calendar-date-hover-state-background-color: #39615389;
     --mat-datepicker-toggle-active-state-icon-color: #FFF;
+
+    
+    .list{
+        margin-top: 4px;
+        padding-left: 1rem;
+    }
 }

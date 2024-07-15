@@ -9,70 +9,38 @@
         top: 0;
         left: 0;
         height: 100%;
-        width: 33%;
-        background-color: var(--primary-theme);
+        width: 100%;
+        background-color: var(--primary-theme-light);
         z-index: -1;
-
-        @media (max-width: 780px){
-            top: 11rem;
-            height: 91%;
-        }
     }
+
     .container-title{
         display: flex;
-        justify-content: flex-end;
         margin: 7rem 3%;
         height: 100%;
         position: relative;
-
-         
-            
+        top: -15rem;
+        
         @media (max-width: 780px){
             width: 100%;
             margin: 3rem 0;
-        }
-
-        .highlight{
-            width: 45%;
-            margin:  3.2rem 0.8rem 0 2.4rem;
-            display: flex;
-            justify-content: center;
-            position: absolute;            
-            
-            @media (max-width: 780px){
-                width: 100%;
-                margin: 0;
-            }
-            
-
-            span{
-                height: 2.2rem;
-                background-color: var(--secondary-theme-light2);
-                width: 34rem;
-                
-                @media (max-width: 780px){
-                    width: 22.3rem;
-                    margin: 0;
-                    height: 1.8rem;
-                    margin-top: 2.2rem;
-                }
-            }
+            top: -12rem;
         }
 
         h2{
             color: var(--primary-theme);
             font-size: var(--section-title);
-            font-family: 'LearningCurve';
+            font-weight: 400;
+            font-family: 'Inter';
             position: absolute;
-            width: 45%;
+            width: 67%;
             margin:  0 0.8rem 0 2.4rem;
             text-align: center;
-
+            
             @media (max-width: 780px){
                 width: 100%;
-                font-size: var(--section-title-mobile);
+                font-size: 2.9rem;
                 margin: 0;
-                white-space: nowrap;
             }
         }        
     }
@@ -81,13 +49,19 @@
 
 .container{
     margin: 3rem 3%;
+    margin-top: 10rem;
     display: flex;
     position: relative;
     justify-content: space-between;
 
     @media (max-width: 780px){
         flex-direction: column;
-        margin-top: 2rem;
+        margin-top: 10rem;
+    }
+
+    a{
+        width: 100%;
+        display: flex;
     }
 
     .pitch-card{
@@ -95,35 +69,48 @@
         flex-direction: column;
         position: relative;
         color: var(--grey);
-        margin: 0 0.8rem;
+        margin: 2rem 0.8rem;
         overflow: hidden;
-        width: 45%;
+        width: 100%;
         height: 50vh;
         max-height: 640px;
         background: #00000000;
         transition: background 0.5s;
 
-        &.first{
-            margin-top: 5rem;
-            
-            @media (max-width: 780px){
-                margin-top: 15rem;
-            }
-        }
-
-        &.second{
-            margin-top: 21rem;
-            
-            @media (max-width: 780px){
-                margin-top: 4rem;
-                margin-bottom: 0;
-            }
-        }
-
         @media (max-width: 780px){
             width: 94%;
             margin-top: 2rem;
-            height: 70vh;
+            height: 64vh;
+
+            &.mobile_height{
+                height: 74vh;
+            }
+        }
+
+        .tente-img{
+            content: url('../../../assets/Images/Home/Sections/PitchTypes/tente.jpg');
+            
+            @media (max-width: 780px){
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/tente-mobile-tiny.jpg');
+            }
+        }
+
+        .tente-lodge-img{
+            content: url('../../../assets/Images/Home/Sections/PitchTypes/tente-lodge.jpg');
+
+            @media (max-width: 780px){
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/tentes-lodges-mobile-tiny.jpg');
+            }
+        }
+
+        .link-fake{
+            font-weight: var(--regulard);
+            position: absolute;
+            color: var(--primary-theme-light);
+            text-decoration: underline;
+            text-align: center;
+            width: 100%;
+            bottom: -30px;
         }
 
         img{
@@ -131,26 +118,73 @@
             min-height: 100%;
             max-height: 700px;
             object-fit: cover;
+            object-position: bottom;
             z-index: -1;
         }
 
         .pitch-title{
             position: absolute;
             text-transform: uppercase;
-            font-size: 34px;
+            font-size: 32px;
             text-align: center;
             width: 100%;
             bottom: 2rem;
             transform: translate(0px, 100%);
             transition: transform 0.3s linear;
+            
+            .my-icon{
+                position: absolute;
+                right: 2%;
+
+                @media (max-width: 780px){
+                    display: none;
+                }
+            }
         }
 
-        p{
-            position: absolute;
-            padding: 5rem 2rem;
+        .offers-box{
+            position: absolute;    
+            margin-top: 2.5rem;
             bottom: 2rem;
             transform: translate(0px, 150%);
             transition: transform 0.3s linear 0s;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-around;
+            font-size: 14px;
+            gap: 1rem;
+
+            @media (max-width: 780px){
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                gap: 0;
+            }
+            
+            .offer{
+                
+                @media (max-width: 780px){
+                    width: 45%;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .row{
+                    display: flex;
+                    gap: 0.5rem;
+                    
+                    .text{
+                        position: relative;
+                        top: 6px;
+                    }
+                    
+                    .my-icon{                
+                        @media (max-width: 780px){
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
         }
 
         .gradient-overlay{ 
@@ -166,20 +200,39 @@
             cursor: pointer;
             transition: background 0.5s;
 
+            .link-fake{
+                bottom: 8px;
+                transition: bottom 0.3s ease-in;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+
             .gradient-overlay{
                 height: 0%;
                 transition: all 0.3s ease-in;
             }
 
-            p{
+            .offers-box{
                 transform: translate(0px, 10%);
-                top: 10%;
+                top: 6%;
+
+                @media (max-width: 780px){
+                    &.gap{
+                        top: 20%;
+                    }
+                }
             }
     
             .pitch-title{
                 position: absolute;
                 transform: translate(0px, -10%);
-                top: 10%;
+                top: 6%;
+                
+                .my-icon{
+                    display: none;
+                }
             }
 
             &.black{

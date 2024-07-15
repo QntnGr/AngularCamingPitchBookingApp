@@ -14,7 +14,13 @@ public class CatalogService : ICatalogService
 
     public async Task<int> DeleteById(int id)
     {
-        return await _dbContext.CampingPitches.Where(cp => cp.Id == id).ExecuteDeleteAsync();
+        var pitch = await _dbContext.CampingPitches.FindAsync(id);
+        if(pitch != null)
+        {
+            _dbContext.CampingPitches.Remove(pitch);
+            return await _dbContext.SaveChangesAsync();
+        }
+        return int.MinValue;
     }
 
     public async Task<List<CampingPitch>> GetAll()
@@ -29,11 +35,8 @@ public class CatalogService : ICatalogService
 
     public async Task Insert(CampingPitch item)
     {
-        // pas d'écriture en bdd
-        // ma requête = Insert into
         await _dbContext.AddAsync(item);
 
-        // exécution de l'insert
         await _dbContext.SaveChangesAsync();
     }
 
