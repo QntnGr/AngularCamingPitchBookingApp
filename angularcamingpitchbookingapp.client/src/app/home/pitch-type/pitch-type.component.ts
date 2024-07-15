@@ -12,7 +12,7 @@ export class PitchTypeComponent {
   public text_lien: string = "home.types-emplacements.text-lien";
   public pitches: Card[] = [
     {
-      file_url: "../../../assets/files/TARIFS_LODGE_2024.pdf",
+      file_url: "../../../assets/files/TARIFS_LODGE_2024_juillet.pdf",
       image_class: 'tente-lodge-img',
       title : "home.types-emplacements.tente-lodge.titre",
       text : "ma super tente lodge",

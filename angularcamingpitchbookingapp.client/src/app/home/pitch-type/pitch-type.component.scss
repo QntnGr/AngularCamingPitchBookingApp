@@ -158,12 +158,13 @@
             @media (max-width: 780px){
                 margin-top: 1rem;
                 margin-bottom: 2rem;
+                gap: 0;
             }
             
             .offer{
                 
                 @media (max-width: 780px){
-                    width: 150px;
+                    width: 45%;
                     display: flex;
                     flex-direction: column;
                 }
