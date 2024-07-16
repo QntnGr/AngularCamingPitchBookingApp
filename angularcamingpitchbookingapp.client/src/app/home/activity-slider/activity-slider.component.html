@@ -1,7 +1,7 @@
 <div class="bloc-title title-secondary">
     <h2>{{titleActivities | translate}}</h2>
 </div>
-<div class="container">
+<div class="container-activity">
     <swiper-container init="false" class="swiper-acivities">
         <swiper-slide *ngFor="let activity of activities">
             <img [src]="activity.image_url" [alt]="activity.alt">     

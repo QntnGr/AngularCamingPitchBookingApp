@@ -26,10 +26,17 @@
 
     /*FONTS*/
     --section-title: 3.8rem;
-    --section-title-mobile: 3.2rem;
+    --section-title-mobile: 2.5rem;
 
     --regulard: 400;
     --medium: 500; 
     --semi-bold: 600; 
     --bold: 700;
+
+
+    .swiper-camping-pictures{
+        swiper-slide{
+            overflow-x: visible;
+        }
+    }
 }

@@ -1,0 +1,129 @@
+.picture1{
+    content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping1.jpg');
+
+    @media (max-width: 780px){
+        content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile1.jpg');
+    }
+}
+.picture2{
+    content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping2.jpg');
+
+    @media (max-width: 780px){
+        content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile2.jpg');
+    }
+}
+.picture3{
+    content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping3.jpg');
+
+    @media (max-width: 780px){
+        content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile3.jpg');
+    }
+}
+.picture4{
+    content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping4.jpg');
+
+    @media (max-width: 780px){
+        content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile4.jpg');
+    }
+}
+.picture5{
+    content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping5.jpg');
+
+    @media (max-width: 780px){
+        content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile5.jpg');
+    }
+}
+.picture6{
+    content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping6.jpg');
+
+    @media (max-width: 780px){
+        content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile6.jpg');
+    }
+}
+.picture7{
+    content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping7.jpg');
+
+    @media (max-width: 780px){
+        content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile7.jpg');
+    }
+}
+.picture8{
+    content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping8.jpg');
+
+    @media (max-width: 780px){
+        content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile8.jpg');
+    }
+}
+
+.swiper-btn-box{
+    position: absolute;
+    display: flex;
+    right: 17.5%;
+    gap: 1rem;
+    
+    @media (max-width: 780px){
+        right: initial;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-btn{
+        color: var(--secondary-theme);
+        cursor: pointer;
+        user-select: none;
+        
+        &:hover{
+            transform: scale(1.1);
+            color: var(--primary-theme);
+        }
+    }
+}
+
+.container-camping-pictures{
+    position: relative;
+    top: 10rem;
+    
+    @media (max-width: 780px){        
+        top: 8rem;
+    }
+    
+    swiper-slide{
+        transform: translateX(51.5%);
+
+        @media (max-width: 780px){        
+            transform: translateX(0);
+        }
+
+        img{
+            width: 100%;
+            height: 60%;
+            max-height: 600px;
+            object-fit: cover;
+        }
+    }
+}
+.bloc-title{
+    &.camping-pictures{
+        background: linear-gradient(to bottom, var(--primary-theme) 0%, var(--primary-theme-light) 20%);
+        height: calc(100% + 13rem);
+        max-height: 775px;
+        width: 67%;
+        z-index: -1;
+        left: 0;
+        margin-top: 2rem;
+
+        @media (max-width: 780px){
+            width: 100%;
+            position: absolute;
+            height: 15rem;
+            background: linear-gradient(to bottom, var(--primary-theme) 0%, var(--primary-theme-light) 40%);
+        }
+    }
+    h2{
+        width: 100%;
+
+        @media (max-width: 780px){
+            margin-top: 1rem;
+        }
+    }
+}
