@@ -39,7 +39,7 @@
             
             @media (max-width: 780px){
                 width: 100%;
-                font-size: 2.9rem;
+                font-size: var(--section-title-mobile);
                 margin: 0;
             }
         }        
