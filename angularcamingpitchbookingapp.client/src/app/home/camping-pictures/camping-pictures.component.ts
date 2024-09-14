@@ -8,7 +8,7 @@ import { Picture } from './picture';
   styleUrl: './camping-pictures.component.scss'
 })
 export class CampingPicturesComponent {
-  titleCampingPicture: string = "Le Camping";
+  titleCampingPicture: string = "home.camping.title";
   camp_pictures: Picture[] = [];
 
   
