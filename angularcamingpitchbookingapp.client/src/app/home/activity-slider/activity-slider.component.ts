@@ -87,7 +87,6 @@ export class ActivitySliderComponent {
             }
           },
         },
-        speed: 1300,
         parallax: true,
         freeMode: {
           enabled: true,

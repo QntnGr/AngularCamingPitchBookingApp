@@ -18,6 +18,7 @@ h2{
     flex-wrap: wrap;
     width: 100%;
     align-content: center;
+    column-gap: 3rem;
 
     @media (max-width: 780px){
         height: auto;
@@ -27,7 +28,7 @@ h2{
         display: flex;
         align-items: center;
         height: 5rem;
-        width: 45vw;
+        width: 35vw;
         position: relative;
 
         @media (max-width: 780px){

@@ -5,6 +5,6 @@
         <div class="picto-box">
             <img src={{service_info.image_src}} alt="">
         </div>
-        <span class="info">{{service_info.text | translate}}</span>
+        <span class="info" [innerHTML]="service_info.text | translate"></span>
     </div>
 </section>

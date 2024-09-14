@@ -51,7 +51,6 @@ export class CampingPicturesComponent {
             }
           },
         },
-        speed: 1300,
         parallax: true,
         freeMode: {
           enabled: true,
