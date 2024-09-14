@@ -35,6 +35,7 @@ import { ReplaceLinksPipe } from '../pipes/replace-link';
 import { AppRoutingModule } from '../app-routing.module';
 import { PopinContactComponent } from './popin-contact/popin-contact.component';
 import { CampingPicturesComponent } from './camping-pictures/camping-pictures.component';
+import { ServicesComponent } from './services/services.component';
 register();
 
 @NgModule({
@@ -61,7 +62,7 @@ register();
         HomeComponent,
         AccesibilityComponent,
         HeaderComponent, 
-        MenuComponent, ImportantInfoComponent, PitchTypeComponent, ActivitySliderComponent, PopinContactComponent, CampingPicturesComponent
+        MenuComponent, ImportantInfoComponent, PitchTypeComponent, ActivitySliderComponent, PopinContactComponent, CampingPicturesComponent, ServicesComponent
     ],
     exports: [
         HomeComponent,
