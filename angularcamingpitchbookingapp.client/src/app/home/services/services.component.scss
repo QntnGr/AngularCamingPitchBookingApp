@@ -18,7 +18,7 @@ h2{
     flex-wrap: wrap;
     width: 100%;
     align-content: center;
-    column-gap: 3rem;
+    column-gap: 12rem;
 
     @media (max-width: 780px){
         height: auto;
@@ -28,7 +28,6 @@ h2{
         display: flex;
         align-items: center;
         height: 5rem;
-        width: 35vw;
         position: relative;
 
         @media (max-width: 780px){
@@ -40,6 +39,10 @@ h2{
             width: 10rem;
             display: flex;
             justify-content: center;
+            
+            @media (max-width: 780px){
+                width: 40%;
+            }
 
             img{
                 height: 70px;
@@ -47,9 +50,12 @@ h2{
         }
 
         span{
-            position: absolute;
-            left: 10rem;
             text-transform: uppercase;
+
+            @media (max-width: 780px){
+                width: 60%;
+                text-align: left;
+            }
         }
     }
 }

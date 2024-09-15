@@ -25,7 +25,7 @@
     --green-light-opa: #6DAE8Ed7;
 
     /*FONTS*/
-    --section-title: 3.8rem;
+    --section-title: 3.5rem;
     --section-title-mobile: 2.5rem;
 
     --regulard: 400;
@@ -38,5 +38,9 @@
         swiper-slide{
             overflow-x: visible;
         }
+    }
+    
+    .bold-green{
+        color: var(--primary-theme);
     }
 }

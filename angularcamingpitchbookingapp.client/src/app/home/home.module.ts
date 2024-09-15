@@ -36,6 +36,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { PopinContactComponent } from './popin-contact/popin-contact.component';
 import { CampingPicturesComponent } from './camping-pictures/camping-pictures.component';
 import { ServicesComponent } from './services/services.component';
+import { CommitmentsComponent } from './commitments/commitments.component';
 register();
 
 @NgModule({
@@ -62,7 +63,7 @@ register();
         HomeComponent,
         AccesibilityComponent,
         HeaderComponent, 
-        MenuComponent, ImportantInfoComponent, PitchTypeComponent, ActivitySliderComponent, PopinContactComponent, CampingPicturesComponent, ServicesComponent
+        MenuComponent, ImportantInfoComponent, PitchTypeComponent, ActivitySliderComponent, PopinContactComponent, CampingPicturesComponent, ServicesComponent, CommitmentsComponent
     ],
     exports: [
         HomeComponent,

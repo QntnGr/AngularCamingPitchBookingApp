@@ -143,15 +143,15 @@
         }
 
         .offers-box{
-            position: absolute;    
-            margin-top: 2.5rem;
+            position: absolute;
             bottom: 2rem;
             transform: translate(0px, 150%);
             transition: transform 0.3s linear 0s;
             display: flex;
             flex-wrap: wrap;
-            width: 100%;
             justify-content: space-around;
+            align-items: center;
+            width: 100%;
             font-size: 14px;
             gap: 1rem;
 
@@ -216,11 +216,11 @@
 
             .offers-box{
                 transform: translate(0px, 10%);
-                top: 6%;
+                top: 0;
 
                 @media (max-width: 780px){
                     &.gap{
-                        top: 20%;
+                        top: 0;
                     }
                 }
             }
