@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const header = document.querySelector(".container-header");
-
     window.addEventListener("scroll", function() {
-        let scroll = window.pageYOffset || document.documentElement.scrollTop;
+        let header = document.querySelector(".container-header");
+        let scroll = window.scrollY || document.documentElement.scrollTop;
         if (scroll >= 400) {
             header.classList.add("scrolled");
         } else {

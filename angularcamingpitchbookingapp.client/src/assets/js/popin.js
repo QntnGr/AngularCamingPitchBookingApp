@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(initPopinEventListeners, 1500);    
+});
+
+function initPopinEventListeners(){
     const buttons = document.querySelectorAll(".togglePopin, .quit");
     const popins = document.querySelectorAll(".popin");
     
@@ -24,5 +28,4 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     addEventListeners(buttons, handleEvent);
-    
-});
+}

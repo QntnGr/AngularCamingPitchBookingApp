@@ -45,7 +45,8 @@
             ],
             "scripts": [
               "src/assets/js/parallax.js",
-              "src/assets/js/popin.js"
+              "src/assets/js/popin.js",
+              "src/assets/js/sticky-header.js"
             ]
           },
           "configurations": {
