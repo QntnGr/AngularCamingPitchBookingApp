@@ -8,7 +8,7 @@ import { Picture } from './picture';
   styleUrl: './camping-pictures.component.scss'
 })
 export class CampingPicturesComponent {
-  titleCampingPicture: string = "Le Camping";
+  titleCampingPicture: string = "home.camping.title";
   camp_pictures: Picture[] = [];
 
   
@@ -51,7 +51,6 @@ export class CampingPicturesComponent {
             }
           },
         },
-        speed: 1300,
         parallax: true,
         freeMode: {
           enabled: true,

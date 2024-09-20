@@ -45,6 +45,7 @@
         align-items: center;
         gap: 28px;
         width: 440px;
+        color: var(--grey);
 
         @media (max-width: 780px){
             width: 87%;
@@ -52,7 +53,8 @@
             font-size: 14px;
             margin-right: 1rem;
         }
-        a{    
+
+        .copy-link{    
             position: absolute;
             right: 17%;
 
@@ -64,7 +66,9 @@
                 cursor: pointer;
                 color: var(--white);
             }
+        }
 
+        #email{
             color: var(--grey);
         }
     }

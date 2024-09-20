@@ -1,0 +1,21 @@
+.title-commitments{
+    color: var(--primary-theme);
+    font-size: var(--section-title);
+    font-weight: 400;
+    font-family: "Inter";
+    width: 100%;
+    text-align: center;
+    
+    @media (max-width: 780px){
+        font-size: var(--section-title-mobile);
+    }
+}
+.text-commitments{
+    padding: 0 25%;
+    position: relative;
+    text-align: justify;
+    
+    @media (max-width: 780px){
+        padding: 0 5%;
+    }
+}
