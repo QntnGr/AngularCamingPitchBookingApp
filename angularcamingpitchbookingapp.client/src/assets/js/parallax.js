@@ -7,6 +7,7 @@ const parallax = (elements, speed, maxPosition) => {
                 let translateXpos = speed * y;
                 if(translateXpos > maxPosition)
                     translateXpos = maxPosition;
+                element.style.transition = 'transform 1s ease';
                 element.style.transform = 'translate3d(-' + (translateXpos) + 'px, 0 ,0)';
             }
         })

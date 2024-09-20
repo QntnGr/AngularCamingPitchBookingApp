@@ -5,7 +5,7 @@
     <swiper-container init="false" class="swiper-acivities">
         <swiper-slide *ngFor="let activity of activities">
             <img [src]="activity.image_url" [alt]="activity.alt">     
-            <div class="info-box {{activity.hover_background_color}}">
+            <div class="info-box {{activity.class}}">
                 <div class="gradient-overlay"></div>
                 <h3 class="pitch-title">{{activity.title | translate}}</h3>
                 <p [innerHTML]="activity.text | translate | replaceLinks"></p>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Card } from './card';
+import { SwiperContainer } from 'swiper/element';
 
 @Component({
   selector: 'app-pitch-type',
@@ -17,10 +18,20 @@ export class PitchTypeComponent {
       title : "home.types-emplacements.tente-lodge.titre",
       text : "ma super tente lodge",
       alt : "type tente lodge",
-      hover_background_color: "black",
+      class: "lodge",
+      images: [
+        {
+          alt: "lodge 1",
+          class: "lodge1"
+        },
+        {
+          alt: "lodge 2",
+          class: "lodge2"
+        },
+      ],
       offers: [
         {
-          title: "offre 1",
+          title: "home.types-emplacements.tente-lodge.offre1.title",
           rows: [
             {
               picto_name:"users",
@@ -41,7 +52,7 @@ export class PitchTypeComponent {
           ]
         },
         {
-          title: "offre 2",
+          title: "home.types-emplacements.tente-lodge.offre2.title",
           rows: [
             {
               picto_name:"users",
@@ -66,10 +77,20 @@ export class PitchTypeComponent {
       title : "home.types-emplacements.tente.titre",
       text : "ma super tente, ma super tente , ma super tente <br> ma super tente ",
       alt : "type tente",
-      hover_background_color : "black",
+      class : "field",
+      images: [
+        {
+          alt : "emplacement 1",
+          class: "tent1"
+        },
+        {
+          alt : "emplacement 2",
+          class: "tent2"
+        },
+      ],
       offers: [
         {
-          title: "offre 1",
+          title: "home.types-emplacements.tente.offre1.title",
           rows: [
             {
               picto_name:"users",
@@ -95,6 +116,11 @@ export class PitchTypeComponent {
   ];
 
   
+  
+  ngAfterViewInit(){
+    this.initSliders();
+  }
+
   public manageTapOrClick(e: Event, url: string) {
     if (window.innerWidth < 720 
       && e.target instanceof HTMLElement) {
@@ -110,5 +136,31 @@ export class PitchTypeComponent {
     }
   }
   
-
+  initSliders(): void {
+    const swiperElements = document.querySelectorAll('.swiper-pitch-type-pictures') as NodeListOf<SwiperContainer>;
+  
+    swiperElements.forEach(swiperEl => {
+      const sliderParent = swiperEl.closest('.slider');
+      
+      if (sliderParent) {
+        const prevButton = sliderParent.querySelector('.swiper-button-pich-prev');
+        const nextButton = sliderParent.querySelector('.swiper-button-pitch-next');
+  
+        const swiperParams = {
+          allowTouchMove: true,
+          navigation: {
+            nextEl: nextButton, 
+            prevEl: prevButton,
+          },
+          rewind: true,
+          slidesPerView: 1,
+          spaceBetween: 8,
+        };
+  
+        Object.assign(swiperEl, swiperParams);
+        swiperEl.initialize();
+      }
+    });
+  }
+    
 }

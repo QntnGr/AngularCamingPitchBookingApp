@@ -108,7 +108,7 @@
 }
 .bloc-title{
     &.camping-pictures{
-        background: linear-gradient(to bottom, var(--primary-theme) 0%, var(--primary-theme-light) 20%);
+        background: linear-gradient(to bottom, var(--primary-theme) 0%, var(--primary-theme-light2) 20%);
         height: calc(100% + 21rem);
         max-height: 775px;
         width: 67%;
@@ -120,7 +120,7 @@
             width: 100%;
             position: absolute;
             height: 15rem;
-            background: linear-gradient(to bottom, var(--primary-theme) 0%, var(--primary-theme-light) 40%);
+            background: linear-gradient(to bottom, var(--primary-theme) 0%, var(--primary-theme-light2) 40%);
         }
     }
     h2{

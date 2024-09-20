@@ -12,11 +12,9 @@ app-accesibility{
 app-pitch-type{
     margin-top: 0.5rem;
     position: relative;
-    display: block;
-
-    @media (max-width: 780px){
-        margin-bottom: 5rem;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 app-activity-slider{

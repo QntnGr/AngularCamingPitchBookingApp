@@ -1,21 +1,33 @@
 <div class="bloc-title-pitch">
-    <div class="container-title">
-        <h2>{{titlePitchTypeSection | translate}}</h2>
-    </div>
+    <h2>{{titlePitchTypeSection | translate}}</h2>
 </div>
-<div class="container">
-    <a (click)="manageTapOrClick($event, pitch.file_url!)"
-    *ngFor="let pitch of pitches">
-        <picture class="pitch-card {{pitch.hover_background_color}} {{pitch.height_mobile_class}}">
-            <img alt="{{pitch.alt}}" class="{{pitch.image_class}}"/>
-            <div class="gradient-overlay"></div>
-            <h3 class="pitch-title">
-                {{pitch.title | translate}}
-                <lucide-icon name="arrow-up-left" [size]="44" [strokeWidth]="1.5" class="my-icon"></lucide-icon>
-            </h3>
+
+<div *ngFor="let pitch of pitches" 
+class="container {{pitch.class}}">
+    <div class="title-container">
+        <h3 class="card-title">{{pitch.title | translate}}</h3>
+    </div>
+    <div class="content">
+        <div class="slider">
+            <swiper-container init="false" class="swiper-pitch-type-pictures">
+                <swiper-slide *ngFor="let image of pitch.images">
+                    <img [ngClass]="image.class" [alt]="image.alt"> 
+                </swiper-slide>
+            </swiper-container>
+            <div class="swiper-btn-box">
+                <div class="swiper-button-pich-prev nav-btn" [ngClass]="pitch.gap_offers_class">
+                    <lucide-icon name="chevron-left" [size]="30" [strokeWidth]="1.3" class="my-icon arrow"></lucide-icon>
+                </div>
+                <div class="swiper-button-pitch-next nav-btn" [ngClass]="pitch.gap_offers_class">
+                    <lucide-icon name="chevron-right" [size]="30" [strokeWidth]="1.3" class="my-icon arrow"></lucide-icon>
+                </div>
+            </div>
+        </div>
+        <div class="informations">
             <div class="offers-box {{pitch.gap_offers_class}}">
                 <div class="offer" 
                 *ngFor="let offer of pitch.offers">
+                    <h4 class="option-title">{{offer.title | translate}}</h4>
                     <div class="row"
                     *ngFor="let row of offer.rows">
                         <lucide-icon name="{{row.picto_name}}" [size]="24" [strokeWidth]="1" class="my-icon"></lucide-icon>
@@ -23,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <span class="link-fake" (click)="manageTapOrClick($event, pitch.file_url!)" >{{text_lien | translate}}</span>
-        </picture>
-    </a>
+            <button class="pricing-btn button">{{text_lien | translate}}</button>
+        </div>
+    </div>
 </div>

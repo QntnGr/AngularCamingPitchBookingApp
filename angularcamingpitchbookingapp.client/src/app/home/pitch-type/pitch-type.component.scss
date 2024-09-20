@@ -1,243 +1,237 @@
 .bloc-title-pitch{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
+    h2{
         width: 100%;
-        background-color: var(--primary-theme-light);
-        z-index: -1;
-    }
-
-    .container-title{
-        display: flex;
-        margin: 7rem 3%;
-        height: 100%;
-        position: relative;
-        top: -15rem;
+        font-size: var(--section-title);
+        text-align: center;
+        color: var(--primary-theme);
+        font-weight: var(--medium);
         
         @media (max-width: 780px){
-            width: 100%;
-            margin: 3rem 0;
-            top: -12rem;
+            font-size: var(--section-title-mobile);
+        }
+    }
+}
+.container{
+    width: 63%;
+    padding: 2rem;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 66rem;
+
+    @media (max-width: 780px){
+        width: 100%;
+        min-width: inherit;
+        padding: 2rem 0;
+    }
+
+    &.lodge{
+        background-color: var(--primary-theme);
+        margin-bottom: 2rem;
+        color: var(--main-background);
+
+        .pricing-btn{
+            color: transparent var(--main-background);
+            border: 1px solid var(--main-background);
+        }        
+        .arrow{
+            color: var(--black-ish);
+            background-color: var(--main-background);
+        }
+    }
+    &.field{
+        background-color: var(--primary-theme-light2);
+        color: var(--black-ish);
+
+        .pricing-btn{
+            color: var(--black-ish);
+            border: 1px solid var(--black-ish);
+        }
+        .title-container{
+            justify-content: flex-end;
+        }
+        .content{
+            flex-direction: row-reverse;
+
+            @media (max-width: 780px){
+                flex-direction: column;
+            }
+        }
+        .arrow{
+            background-color: var(--black-ish);
+            color: var(--main-background);
+        }
+    }
+
+    .title-container{
+        display: flex;
+
+        .card-title{
+            width: 60%;
+            text-align: center;
+            font-weight: var(--medium);
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+
+            @media (max-width: 780px){
+                width: 100%;
+            }
+        }
+    }
+
+    .content{
+        display: flex;
+
+        @media (max-width: 780px){
+            flex-direction: column;
         }
 
-        h2{
-            color: var(--primary-theme);
-            font-size: var(--section-title);
-            font-weight: 400;
-            font-family: 'Inter';
-            position: absolute;
-            width: 67%;
-            margin:  0 0.8rem 0 2.4rem;
-            text-align: center;
+        .informations{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 40%;
             
             @media (max-width: 780px){
                 width: 100%;
-                font-size: var(--section-title-mobile);
-                margin: 0;
             }
-        }        
-    }
 
-}
-
-.container{
-    margin: 3rem 3%;
-    margin-top: 10rem;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-
-    @media (max-width: 780px){
-        flex-direction: column;
-        margin-top: 10rem;
-    }
-
-    a{
-        width: 100%;
-        display: flex;
-    }
-
-    .pitch-card{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        color: var(--grey);
-        margin: 2rem 0.8rem;
-        overflow: hidden;
-        width: 100%;
-        height: 50vh;
-        max-height: 640px;
-        background: #00000000;
-        transition: background 0.5s;
-
-        @media (max-width: 780px){
-            width: 94%;
-            margin-top: 2rem;
-            height: 64vh;
-
-            &.mobile_height{
-                height: 74vh;
-            }
-        }
-
-        .tente-img{
-            content: url('../../../assets/Images/Home/Sections/PitchTypes/tente.jpg');
-            
-            @media (max-width: 780px){
-                content: url('../../../assets/Images/Home/Sections/PitchTypes/tente-mobile-tiny.jpg');
-            }
-        }
-
-        .tente-lodge-img{
-            content: url('../../../assets/Images/Home/Sections/PitchTypes/tente-lodge.jpg');
-
-            @media (max-width: 780px){
-                content: url('../../../assets/Images/Home/Sections/PitchTypes/tentes-lodges-mobile-tiny.jpg');
-            }
-        }
-
-        .link-fake{
-            font-weight: var(--regulard);
-            position: absolute;
-            color: var(--primary-theme-light);
-            text-decoration: underline;
-            text-align: center;
-            width: 100%;
-            bottom: -30px;
-        }
-
-        img{
-            width: 100%;
-            min-height: 100%;
-            max-height: 700px;
-            object-fit: cover;
-            object-position: bottom;
-            z-index: -1;
-        }
-
-        .pitch-title{
-            position: absolute;
-            text-transform: uppercase;
-            font-size: 32px;
-            text-align: center;
-            width: 100%;
-            bottom: 2rem;
-            transform: translate(0px, 100%);
-            transition: transform 0.3s linear;
-            
-            .my-icon{
-                position: absolute;
-                right: 2%;
-
-                @media (max-width: 780px){
-                    display: none;
-                }
-            }
-        }
-
-        .offers-box{
-            position: absolute;
-            bottom: 2rem;
-            transform: translate(0px, 150%);
-            transition: transform 0.3s linear 0s;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
-            width: 100%;
-            font-size: 14px;
-            gap: 1rem;
-
-            @media (max-width: 780px){
-                margin-top: 1rem;
+            .offers-box{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;    
+                align-items: flex-start;
                 margin-bottom: 2rem;
-                gap: 0;
-            }
-            
-            .offer{
-                
-                @media (max-width: 780px){
-                    width: 45%;
-                    display: flex;
-                    flex-direction: column;
+
+                &.gap{
+                    gap: 1rem;
+                }
+
+                .option-title{
+                    font-weight: var(--medium);
+                    margin-top: 0;
+
+                    @media (max-width: 780px){
+                        margin-top: 2rem;
+                        text-align: center;
+                    }
                 }
 
                 .row{
                     display: flex;
-                    gap: 0.5rem;
-                    
-                    .text{
-                        position: relative;
-                        top: 6px;
-                    }
-                    
-                    .my-icon{                
-                        @media (max-width: 780px){
-                            transform: scale(0.8);
-                        }
-                    }
-                }
-            }
-        }
-
-        .gradient-overlay{ 
-            position: absolute;
-            width: 100%;        
-            background: linear-gradient(#00000000, #000000);
-            bottom: 0;
-            height: 50%;
-            transition: all 0.3s ease;
-        }
-
-        &:hover{
-            cursor: pointer;
-            transition: background 0.5s;
-
-            .link-fake{
-                bottom: 8px;
-                transition: bottom 0.3s ease-in;
-
-                &:hover{
-                    transform: scale(1.1);
+                    align-items: flex-start;
+                    gap: 1rem;
                 }
             }
 
-            .gradient-overlay{
-                height: 0%;
-                transition: all 0.3s ease-in;
+            .pricing-btn{
+                background-color: transparent;
+                width: 180px;
+                height: 28px;
+                text-transform: uppercase;
+            }
+        }
+
+        .slider{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media (max-width: 780px){
+                width: 100%;
             }
 
-            .offers-box{
-                transform: translate(0px, 10%);
-                top: 0;
+            .lodge1{
+                content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping7.jpg');
 
                 @media (max-width: 780px){
-                    &.gap{
-                        top: 0;
-                    }
+                    content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile4.jpg');
                 }
             }
-    
-            .pitch-title{
-                position: absolute;
-                transform: translate(0px, -10%);
-                top: 6%;
-                
-                .my-icon{
-                    display: none;
-                }
-            }
+            
+            .lodge2{
+                content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping5.jpg');
 
-            &.black{
-                background-color: var(--black-shadow);
+                @media (max-width: 780px){
+                    content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile3.jpg');
+                }
+            }
+            
+            .tent1{
+                content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping8.jpg');
+
+                @media (max-width: 780px){
+                    content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile2.jpg');
+                }
+            }
+            
+            .tent2{
+                content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping3.jpg');
+
+                @media (max-width: 780px){
+                    content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile7.jpg');
+                }
             }
         }
-    }    
+    }
+}
+
+.slider{
+    position: relative;
+
+    .swiper-btn-box{
+        display: flex;
+        gap: 28rem;
+        position: absolute;
+        z-index: 2;
+        top: 45%;
+    
+        @media (max-width: 780px){
+            right: initial;
+            justify-content: center;
+            width: 100%;
+            gap: 81%;
+        }
+
+        .nav-btn{
+            cursor: pointer;
+            user-select: none;
+            
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        .my-icon{
+            display: flex;
+        }
+    }
+}
+
+.swiper-pitch-type-pictures{
+    display: flex;
+    width: 30rem;
+    height: 20rem;
+    margin: 0;            
+    
+    @media (max-width: 780px){                
+        width: 90%;
+        height: 25rem;
+    }
+
+    swiper-slide{
+        img{
+            width: 30rem;
+            height: 20rem;
+            object-fit: cover;
+            
+            @media (max-width: 780px){                
+                width: 100%;
+                height: 25rem;
+            }
+        }
+    }
 }

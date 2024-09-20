@@ -18,35 +18,35 @@ export class ActivitySliderComponent {
       title : "home.activites.le-marche.titre",
       text : "home.activites.le-marche.text",
       alt : "le marché de vendays-montalivet",
-      hover_background_color: "black"
+      class: "black"
     },
     {
       image_url : this.baseUrl + 'sur-tiny.jpg',
       title : "home.activites.surf.titre",
       text : "home.activites.surf.text",
       alt : "activité surf, cours de surf",
-      hover_background_color: "black"
+      class: "black"
     },
     {
       image_url : this.baseUrl + 'velo-tiny.jpg',
       title : "home.activites.velo.titre",
       text : "home.activites.velo.text",
       alt : "type tente",
-      hover_background_color : "black"
+      class : "black"
     },
     {
       image_url : this.baseUrl + 'vignobles-tiny.png',
       title : "home.activites.vignobles.titre",
       text : "home.activites.vignobles.text",
       alt : "activité vignobles",
-      hover_background_color : "black"
+      class : "black"
     },
     {
       image_url : this.baseUrl + 'parc-a-laventure-tiny.jpg',
       title : "home.activites.parc-de-l-aventure.titre",
       text : "home.activites.parc-de-l-aventure.text",
       alt : "activité Parc de l'aventure",
-      hover_background_color : "black"
+      class : "black"
     },
   ];
   
