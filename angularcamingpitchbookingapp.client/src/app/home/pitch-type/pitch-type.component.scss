@@ -36,8 +36,7 @@
             border: 1px solid var(--main-background);
         }        
         .arrow{
-            color: var(--black-ish);
-            background-color: var(--main-background);
+            color: var(--main-background);
         }
     }
     &.field{
@@ -59,8 +58,11 @@
             }
         }
         .arrow{
-            background-color: var(--black-ish);
-            color: var(--main-background);
+            color: var(--black-ish);
+
+            @media (max-width: 780px){
+                color: var(--main-background);
+            }
         }
     }
 
@@ -185,7 +187,7 @@
 
     .swiper-btn-box{
         display: flex;
-        gap: 28rem;
+        gap: 29rem;
         position: absolute;
         z-index: 2;
         top: 45%;
@@ -194,7 +196,7 @@
             right: initial;
             justify-content: center;
             width: 100%;
-            gap: 81%;
+            gap: 72%;
         }
 
         .nav-btn{
