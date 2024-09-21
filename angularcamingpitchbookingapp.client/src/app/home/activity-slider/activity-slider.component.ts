@@ -79,6 +79,10 @@ export class ActivitySliderComponent {
             slidesPerView: 3,
             spaceBetween: 32
           },
+          2150: {
+            slidesPerView: 6,
+            spaceBetween: 32
+          },
         },
         on: {
           init() {

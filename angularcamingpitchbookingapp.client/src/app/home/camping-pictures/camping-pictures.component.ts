@@ -43,6 +43,10 @@ export class CampingPicturesComponent {
             slidesPerView: 2.18,
             spaceBetween: 16
           },
+          2150: {
+            slidesPerView: 3.04,
+            spaceBetween: 32
+          },
         },
         on: {
           init() {
