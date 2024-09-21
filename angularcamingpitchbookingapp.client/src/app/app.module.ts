@@ -11,13 +11,14 @@ import { Facebook, Instagram, LucideAngularModule, Phone, Youtube} from 'lucide-
 import { TranslateModule } from '@ngx-translate/core';
 import { ReplaceLinksPipe } from "./pipes/replace-link";
 import { AccommodationComponent } from './accommodation/accommodation.component';
+import { NoPageComponent } from './no-page/no-page.component';
 
 @NgModule({
     providers: [
         provideAnimationsAsync(),
     ],
     bootstrap: [AppComponent],
-    declarations: [AppComponent, FooterComponent, AccommodationComponent],
+    declarations: [AppComponent, FooterComponent, AccommodationComponent, NoPageComponent],
     imports: [
         BrowserModule, HttpClientModule,
         AppRoutingModule, HomeModule,
