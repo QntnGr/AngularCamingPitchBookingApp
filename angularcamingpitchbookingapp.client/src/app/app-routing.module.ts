@@ -5,7 +5,7 @@ import { NoPageComponent } from './no-page/no-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: '**', component: NoPageComponent },
+  { path: '**', pathMatch: 'full', component: NoPageComponent }
 ];
 
 @NgModule({
