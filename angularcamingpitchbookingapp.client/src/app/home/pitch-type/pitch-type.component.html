@@ -35,7 +35,7 @@ class="container {{pitch.class}}">
                     </div>
                 </div>
             </div>
-            <button class="pricing-btn button">{{text_lien | translate}}</button>
+            <button class="pricing-btn button {{pitch.class}}" (click)="onClick($event)">{{text_lien | translate}}</button>
         </div>
     </div>
 </div>

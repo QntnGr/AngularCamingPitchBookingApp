@@ -10,6 +10,8 @@ import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
 
 export class PopinContactComponent {
   title_popin: string = "home.popin-contact.titre";
+  opening_hours: string = "home.services.reception";
+
   @ViewChildren('copyLink') copyLinks?: QueryList<ElementRef>;
 
   constructor(private clipboard: Clipboard, private _snackBar: MatSnackBar) {}

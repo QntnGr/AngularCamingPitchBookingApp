@@ -162,5 +162,26 @@ export class PitchTypeComponent {
       }
     });
   }
-    
+  
+  
+  onClick(event: MouseEvent) {
+    const button = event.target as HTMLElement;
+    this.downloadPdf(button.className);
+  }
+
+  downloadPdf(classes: string) {    
+    const link = document.createElement('a');
+    if(classes.includes('lodge')){
+      link.download = 'TARIFS_LODGE_2024_juillet.pdf';
+    }
+    else if(classes.includes('field')){
+      link.download = 'TARIFS_EMPLACMENTS_2024.pdf';
+    }
+    else{
+      return;
+    }
+    link.href = 'assets/files/' + link.download;
+    link.target = '_blank';
+    link.click();
+  }
 }

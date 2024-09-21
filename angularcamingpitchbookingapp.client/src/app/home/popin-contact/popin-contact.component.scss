@@ -8,9 +8,12 @@
     color: var(--grey);
     flex-direction: column;
     align-items: center;
+    max-width: 860px;
+    min-width: 560px;
 
     @media (max-width: 780px){
         width: 90%;
+        min-width: inherit;
     }
 
     .quit{
@@ -29,8 +32,8 @@
 
     h2{
         text-align: center;
-        margin-top: 4rem;
-        margin-bottom: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
         font-size: 28px;
 
         @media (max-width: 780px){
