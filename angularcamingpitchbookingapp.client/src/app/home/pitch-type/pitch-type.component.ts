@@ -13,9 +13,10 @@ export class PitchTypeComponent {
   
   public titlePitchTypeSection: string = "home.types-emplacements.titre-section";
   public text_lien: string = "home.types-emplacements.text-lien";
+  public text_btn_inventory: string = "home.types-emplacements.text-btn-inventory";
   public pitches: Card[] = [
     {
-      file_url: "../../../assets/files/TARIFS_LODGE_2024_juillet.pdf",
+      file_url: "../../../assets/files/TARIF_LODGE_2024.pdf",
       image_class: 'tente-lodge-img',
       title : "home.types-emplacements.tente-lodge.titre",
       text : "ma super tente lodge",
@@ -29,6 +30,22 @@ export class PitchTypeComponent {
         {
           alt: "lodge 2",
           class: "lodge2"
+        },
+        {
+          alt: "lodge 3",
+          class: "lodge3"
+        },
+        {
+          alt: "lodge 4",
+          class: "lodge4"
+        },
+        {
+          alt: "lodge 5",
+          class: "lodge5"
+        },
+        {
+          alt: "lodge 6",
+          class: "lodge6"
         },
       ],
       offers: [
@@ -44,14 +61,15 @@ export class PitchTypeComponent {
               text: "home.types-emplacements.tente-lodge.offre1.text-ligne2"
             },
             {
-              picto_name:"cooking-pot",
-              text: "home.types-emplacements.tente-lodge.offre1.text-ligne4"
-            },
-            {
               picto_name:"sun",
               text: "home.types-emplacements.tente-lodge.offre1.text-ligne5"
             },
-          ]
+            {
+              picto_name:"cooking-pot",
+              text: "home.types-emplacements.tente-lodge.offre1.text-ligne4"
+            },
+          ],
+          class: "kitchen"
         },
         {
           title: "home.types-emplacements.tente-lodge.offre2.title",
@@ -68,13 +86,14 @@ export class PitchTypeComponent {
               picto_name:"sun",
               text: "home.types-emplacements.tente-lodge.offre2.text-ligne3"
             },
-          ]
+          ],
+          class: "no_kitchen"
         },
       ],
       gap_offers_class: "gap"
     },
     {
-      file_url: "../../../assets/files/TARIFS_EMPLACMENTS_2024.pdf",
+      file_url: "../../../assets/files/TARIF_EMPLACEMENT_NUS.pdf",
       image_class: 'tente-img',
       title : "home.types-emplacements.tente.titre",
       text : "ma super tente, ma super tente , ma super tente <br> ma super tente ",
@@ -88,6 +107,10 @@ export class PitchTypeComponent {
         {
           alt : "emplacement 2",
           class: "tent2"
+        },
+        {
+          alt : "emplacement 3",
+          class: "tent3"
         },
       ],
       offers: [
@@ -175,10 +198,16 @@ export class PitchTypeComponent {
     let newUrl = 'assets/files/';
     let fileName = '';
     if(classes.includes('lodge')){
-      fileName = 'TARIFS_LODGE_2024_juillet.pdf';
+      fileName = 'TARIF_LODGE_2024.pdf';
     }
     else if(classes.includes('field')){
-      fileName = 'TARIFS_EMPLACMENTS_2024.pdf';
+      fileName = 'TARIF_EMPLACEMENT_NUS.pdf';
+    }
+    else if(classes.includes('no_kitchen')){
+      fileName = 'Inventaire_lodge_sans_cuisine.pdf';
+    }
+    else if(classes.includes('kitchen')){
+      fileName = 'Inventaire_lodge_avec_cuisine.pdf';
     }
     else{
       return;

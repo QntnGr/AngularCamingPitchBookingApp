@@ -1,6 +1,7 @@
 export interface OfferTypePitch{
     title: string;
     rows: RowEl[];
+    class?: string;
 }
 
 export interface RowEl{

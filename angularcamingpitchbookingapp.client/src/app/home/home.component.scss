@@ -49,9 +49,8 @@ app-camping-pictures{
     height: 800px;
 
     
-    @media (max-width: 780px){                
-        height: 100vh;
-        margin-bottom: 5rem;
+    @media (max-width: 780px){
+        margin-bottom: 0;
     }
 }
 

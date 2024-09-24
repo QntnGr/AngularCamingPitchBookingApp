@@ -34,9 +34,14 @@
         .pricing-btn{
             color: transparent var(--main-background);
             border: 1px solid var(--main-background);
-        }        
+        }
+
         .arrow{
             color: var(--main-background);
+        }
+        
+        .offer{
+            width: calc(50% - 0.5rem);
         }
     }
     &.field{
@@ -55,6 +60,16 @@
 
             @media (max-width: 780px){
                 flex-direction: column;
+            }
+
+            .offers-box{
+                .offer{
+                    .rows{
+                        @media (max-width: 780px){
+                            height: 10rem;
+                        }
+                    }
+                }
             }
         }
         .arrow{
@@ -122,10 +137,38 @@
                     }
                 }
 
-                .row{
+                .offer{
+                    min-height: 16rem;
                     display: flex;
-                    align-items: flex-start;
-                    gap: 1rem;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .rows{
+                    height: 11rem;
+
+                    @media (max-width: 780px){
+                        height: 12rem;
+                    }
+                    
+                    .row{
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 1rem;
+                    }
+                }
+
+                .container-btn{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    .inventory-btn{
+                        background-color: var(--main-background);
+                        color: var(--primary-theme);
+                        border: 0;
+                        padding: 0.2rem 1rem;
+                    }
                 }
             }
 
@@ -148,22 +191,55 @@
             }
 
             .lodge1{
-                content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping7.jpg');
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/tente-lodge.jpg');
+                
 
                 @media (max-width: 780px){
-                    content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile4.jpg');
+                    content: url('../../../assets/Images/Home/Sections/PitchTypes/tentes-lodges-mobile-tiny.jpg');
                 }
             }
             
             .lodge2{
-                content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping5.jpg');
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/lodge1.jpg');
 
                 @media (max-width: 780px){
-                    content: url('../../../assets/Images/Home/Sections/CampingPictures/mobile/camping_mobile3.jpg');
+                    content: url('../../../assets/Images/Home/Sections/PitchTypes/mobile-lodge1.jpg');
                 }
             }
             
+            .lodge3{
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/lodge2.jpg');
+
+                @media (max-width: 780px){
+                    content: url('../../../assets/Images/Home/Sections/PitchTypes/mobile-lodge2.jpg');
+                }
+            }
+            
+            .lodge4{
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/lodge3.jpg');
+
+                @media (max-width: 780px){
+                    content: url('../../../assets/Images/Home/Sections/PitchTypes/mobile-lodge1.jpg');
+                }
+            }
+            
+            .lodge5{
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/plan_lodge_avec_cuisine.png');
+            }
+            
+            .lodge6{
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/plan_lodge_sans_cuisine.png');
+            }
+            
             .tent1{
+                content: url('../../../assets/Images/Home/Sections/PitchTypes/tente.jpg');
+
+                @media (max-width: 780px){
+                    content: url('../../../assets/Images/Home/Sections/PitchTypes/tente-mobile-tiny.jpg');
+                }
+            }
+
+            .tent2{
                 content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping8.jpg');
 
                 @media (max-width: 780px){
@@ -171,7 +247,7 @@
                 }
             }
             
-            .tent2{
+            .tent3{
                 content: url('../../../assets/Images/Home/Sections/CampingPictures/desktop/camping3.jpg');
 
                 @media (max-width: 780px){
