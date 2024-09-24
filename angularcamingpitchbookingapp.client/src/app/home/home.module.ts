@@ -38,6 +38,7 @@ import { PopinContactComponent } from './popin-contact/popin-contact.component';
 import { CampingPicturesComponent } from './camping-pictures/camping-pictures.component';
 import { ServicesComponent } from './services/services.component';
 import { CommitmentsComponent } from './commitments/commitments.component';
+import { DynamicIframeComponent } from './dynamic-iframe/dynamic-iframe.component';
 register();
 
 @NgModule({
@@ -64,7 +65,7 @@ register();
         HomeComponent,
         AccesibilityComponent,
         HeaderComponent, 
-        MenuComponent, ImportantInfoComponent, PitchTypeComponent, ActivitySliderComponent, PopinContactComponent, CampingPicturesComponent, ServicesComponent, CommitmentsComponent
+        MenuComponent, ImportantInfoComponent, PitchTypeComponent, ActivitySliderComponent, PopinContactComponent, CampingPicturesComponent, ServicesComponent, CommitmentsComponent, DynamicIframeComponent
     ],
     exports: [
         HomeComponent,

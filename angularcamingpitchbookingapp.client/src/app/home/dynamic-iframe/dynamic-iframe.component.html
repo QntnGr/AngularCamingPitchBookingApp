@@ -1,0 +1,6 @@
+<div class="container-iframe" *ngIf="isVisible && sanitizedUrl">
+    <iframe [src]="sanitizedUrl" width="80%" height="90%" title="dynamic-iframe"></iframe>
+    <button (click)="closePopin()" class="button">
+        <lucide-icon name="x" [size]="34" class="my-icon"></lucide-icon>
+    </button>
+</div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Card } from './card';
 import { SwiperContainer } from 'swiper/element';
 
@@ -9,6 +9,8 @@ import { SwiperContainer } from 'swiper/element';
 })
 export class PitchTypeComponent {
 
+  @Output() urlChangeEvent = new EventEmitter<string>();
+  
   public titlePitchTypeSection: string = "home.types-emplacements.titre-section";
   public text_lien: string = "home.types-emplacements.text-lien";
   public pitches: Card[] = [
@@ -166,22 +168,22 @@ export class PitchTypeComponent {
   
   onClick(event: MouseEvent) {
     const button = event.target as HTMLElement;
-    this.downloadPdf(button.className);
+    this.displayPdf(button.className);
   }
 
-  downloadPdf(classes: string) {    
-    const link = document.createElement('a');
+  displayPdf(classes: string) {    
+    let newUrl = 'assets/files/';
+    let fileName = '';
     if(classes.includes('lodge')){
-      link.download = 'TARIFS_LODGE_2024_juillet.pdf';
+      fileName = 'TARIFS_LODGE_2024_juillet.pdf';
     }
     else if(classes.includes('field')){
-      link.download = 'TARIFS_EMPLACMENTS_2024.pdf';
+      fileName = 'TARIFS_EMPLACMENTS_2024.pdf';
     }
     else{
       return;
     }
-    link.href = 'assets/files/' + link.download;
-    link.target = '_blank';
-    link.click();
+    newUrl += fileName;
+    this.urlChangeEvent.emit(newUrl);
   }
 }

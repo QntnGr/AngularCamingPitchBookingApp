@@ -24,5 +24,15 @@ export class HomeComponent {
     //   imgAlt: 'camping foret'
     // }
   ];
+  documentUrl: string = '';
+  showIframe: boolean = false;
+  
+  updateUrl(newUrl: string) {
+    this.documentUrl = newUrl;
+    this.showIframe = true;
+  }
 
+  onCloseIframe() {
+    this.showIframe = false;
+  }
 }

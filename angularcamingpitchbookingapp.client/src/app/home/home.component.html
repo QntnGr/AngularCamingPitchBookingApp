@@ -9,7 +9,7 @@
 
 <app-services></app-services>
 
-<app-pitch-type></app-pitch-type>
+<app-pitch-type (urlChangeEvent)="updateUrl($event)"></app-pitch-type>
 
 <app-activity-slider></app-activity-slider>
 
@@ -18,3 +18,5 @@
 <app-commitments></app-commitments>
 
 <app-popin-contact class="popin hidden"></app-popin-contact>
+
+<app-dynamic-iframe [documentUrl]="documentUrl" [isVisible]="showIframe" (closeIframe)="onCloseIframe()"></app-dynamic-iframe>
