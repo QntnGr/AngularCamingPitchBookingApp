@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Card } from './card';
 import { SwiperContainer } from 'swiper/element';
+import { GoogleStorageService } from '../../services/storage/google-storage.service';
 
 @Component({
   selector: 'app-pitch-type',
@@ -140,7 +141,11 @@ export class PitchTypeComponent {
     },
   ];
 
+  constructor(private storageService: GoogleStorageService) {}
   
+  async getUriFromStorageService(fileName: string): Promise<any> {
+    return this.storageService.getDownloadUrl(fileName);
+  }
   
   ngAfterViewInit(){
     this.initSliders();
@@ -194,25 +199,28 @@ export class PitchTypeComponent {
     this.displayPdf(button.className);
   }
 
-  displayPdf(classes: string) {    
+  async displayPdf(classes: string) {    
     let newUrl = 'assets/files/';
     let fileName = '';
     if(classes.includes('lodge')){
-      fileName = 'TARIF_LODGE_2024.pdf';
+      fileName = 'TARIF_LODGE.pdf';
+      newUrl = await this.getUriFromStorageService(fileName);
     }
     else if(classes.includes('field')){
       fileName = 'TARIF_EMPLACEMENT_NUS.pdf';
+      newUrl = await this.getUriFromStorageService(fileName);
     }
     else if(classes.includes('no_kitchen')){
       fileName = 'Inventaire_lodge_sans_cuisine.pdf';
+      newUrl += fileName;
     }
     else if(classes.includes('kitchen')){
       fileName = 'Inventaire_lodge_avec_cuisine.pdf';
+      newUrl += fileName;
     }
     else{
       return;
     }
-    newUrl += fileName;
     this.urlChangeEvent.emit(newUrl);
   }
 }
